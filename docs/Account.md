@@ -260,6 +260,42 @@ query{
       }
 ```
 
+### AccountByTopAccBal
+Returns the accounts with the 10 largest holdings (In Lamports)
 
+#### **Parameters**:
+None
+
+#### Example:
+```
+query{
+ accountByTopAccBal{
+  hash
+  balance
+	}
+}
+```
+
+#### Result:
+```
+"data": {
+    "accountByTopAccBal": [
+      {
+        "hash": "CakcnaRDHka2gXyfbEd2d3xsvkJkqsLw2akB3zsN1D2S",
+        "balance": 189193618919
+      },
+      {
+        "hash": "7Np41oeYqPefeNQEHSv1UDhYrehxin3NStELsSKCT4K2",
+        "balance": 189011797602
+      },
+      {
+        "hash": "GdnSyH3YtwcxFvQrVVJMm1JhTS4QVX7MFsX56uJLUfiZ",
+        "balance": 187148343190
+      },
+      {
+        "hash": "DE1bawNcRJB9rVm3buyMVfr8mBEoyyu73NBovf2oXJsJ",
+        "balance": 181616059448
+      }
+```
 
 
