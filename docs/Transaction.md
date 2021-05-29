@@ -44,5 +44,34 @@ query{
       }
 ```
 
+### TransactionByTxnHash
+Returns a specific instance of a transaction.
+
+#### ** Parameters ** : 
+* Hash: `<String>` Transaction Hash 
+
+#### Example:
+```
+query{
+	transactionByTxnHash(txnHash:"2WGfxBa23ZoMoQ4Hsw9a4p7DR695tTRX6y6cAeURkim5LmT9axVM51iHARpR2bXQVpbDUmvAxcLqGAFK453sfwxo"){
+    block
+    timestamp
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "transactionByTxnHash": {
+      "block": "3kF1owv5JsgpxRxdriAM3S5LHgFmUYedTSHXze9YzdCM",
+      "timestamp": 0
+    }
+  }
+}
+```
+
+
 
 
