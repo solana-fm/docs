@@ -16,7 +16,7 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 * Transactions: `<List>` The transactions involved in the Block 
 
 
-### blocks
+### Blocks
 Returns first 25 Blocks
 
 #### ** Parameters ** : 
@@ -56,4 +56,38 @@ query{
         "isSkipped": false
       }
 ```
+
+### BlockByNum
+Returns a specific instance of a block
+
+
+#### ** Parameters ** : 
+* Number: `<int>` Block Number
+
+#### Example:
+```
+query{
+	blockByNum(number: 43777){
+    hash
+    isConfirmed
+    timestamp
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "blockByNum": {
+      "hash": "ADRpYBgDP2FFbakbfKxZcoaLTaE87pPXaCS6sUWRbMr4",
+      "isConfirmed": true,
+      "timestamp": 0
+    }
+  }
+}
+```
+
+
+
 
