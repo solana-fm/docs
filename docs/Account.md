@@ -201,6 +201,33 @@ query{
 ```
 
 
+### AccountByData
+Returns the accounts that have the same data.
+
+#### **Parameters**:
+* Data: `<String>` (Required) The data of an Account
+
+#### Example:
+```
+query{
+ accountByData(acctData: "c29sYW5hX3N5c3RlbV9wcm9ncmFt"){
+  data
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "accountByData": [
+      {
+        "data": "c29sYW5hX3N5c3RlbV9wcm9ncmFt"
+      }
+    ]
+  }
+}
+```
 
 
 
