@@ -298,4 +298,9 @@ query{
       }
 ```
 
+### AccountCreatedByTime
 
+#### **Parameters**:
+* TimeFrame(1D,1W,1M)
+
+#### Example: 
