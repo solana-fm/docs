@@ -229,5 +229,37 @@ query{
 }
 ```
 
+### AccountByCreation
+Returns the accounts that are created at that point of time. 
+
+#### **Parameters**:
+* AcctCreatedAt: `<Float>` (Required) A specific time (In Epochs)
+
+#### Example:
+```
+query{
+ accountByCreation(acctCreatedAt:1621619107){
+  createdAt
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "accountByCreation": [
+      {
+        "createdAt": 1621619107
+      },
+      {
+        "createdAt": 1621619107
+      },
+      {
+        "createdAt": 1621619107
+      }
+```
+
+
 
 
