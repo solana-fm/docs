@@ -16,13 +16,9 @@ For more Information on Accounts: https://docs.solana.com/developing/programming
 * CreatedAt: Time (in epochs) it was created at  
 
 
-### accounts
-
-```
-/api/v1/Accounts
-```
-
+### Accounts
 Returns first 25 accounts
+
 #### ** Parameters ** : 
 
 None 
@@ -44,7 +40,7 @@ query{
 ```
 
 
-### Result:
+#### Result:
 ```
 {
   "data": {
@@ -68,3 +64,143 @@ query{
         "upgradeAuthority": null
       }
 ```
+### AccountByBalance
+Returns the first 25 Accounts with the input balance
+
+#### **Parameters**:
+* AcctBalance: `<Float>` (Required) The balance of the account in lamports
+
+#### Example:
+```
+query{
+  accountByBalance(acctBal: 1141440){
+  	hash
+    balance
+    data
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "accountByBalance": [
+      {
+        "hash": "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8",
+        "balance": 1141440,
+        "data": "AgAAANc5gByFhKTMS4SiwcYAMdAvBrqKB1JMLgCoMUSoJrrB"
+      },
+      {
+        "hash": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin",
+        "balance": 1141440,
+        "data": "AgAAALk0OyjVxscV3kUnBlXNDLMf1DnOeSjUyKR5YAjurHP6"
+      }
+    ]
+  }
+}
+
+```
+
+### AccountByHash
+Returns a specific account via the hash.
+
+#### **Parameters**: 
+* AccountHash: `<String>` (Required) The Hash of an Account
+
+#### Example:
+```
+query{
+  accountByHash(acctHash: "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8"){
+  	hash
+    balance
+    data
+    upgradeAuthority
+  }
+}
+```
+#### Result:
+```
+{
+  "data": {
+    "accountByHash": {
+      "hash": "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8",
+      "balance": 1141440,
+      "data": "AgAAANc5gByFhKTMS4SiwcYAMdAvBrqKB1JMLgCoMUSoJrrB",
+      "upgradeAuthority": null
+    }
+  }
+}
+```
+### AccountByOwner
+Returns the accounts that have the same owner.
+
+#### **Parameters**:
+* Owner: `<String>` (Required) The Owner of Account
+
+#### Example:
+```
+query{
+  accountByOwner(acctOwner: "11111111111111111111111111111111"){
+    hash
+    owner
+    balance
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "accountByOwner": [
+      {
+        "hash": "DE1bawNcRJB9rVm3buyMVfr8mBEoyyu73NBovf2oXJsJ",
+        "owner": "11111111111111111111111111111111",
+        "balance": 181616059448
+      },
+      {
+        "hash": "7Np41oeYqPefeNQEHSv1UDhYrehxin3NStELsSKCT4K2",
+        "owner": "11111111111111111111111111111111",
+        "balance": 189011797602
+      }
+```
+
+### AccountByLabel
+Returns the accounts that have the same label.
+
+#### **Parameters**:
+* Label: `<String>` (Required) The Label of an Account
+
+#### Example:
+```
+query{
+  accountByLabel(acctLabel: "Stake Program"){
+    hash
+    owner
+    balance
+    label
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "accountByLabel": [
+      {
+        "hash": "Stake11111111111111111111111111111111111111",
+        "owner": "NativeLoader1111111111111111111111111111111",
+        "balance": 1,
+        "label": "Stake Program"
+      }
+    ]
+  }
+}
+```
+
+
+
+
+
