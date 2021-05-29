@@ -88,6 +88,40 @@ query{
 }
 ```
 
+### BlockCount
+Returns the number of blocks in a specific timeframe.
+
+#### ** Parameters ** : 
+* TimeFrame: (1D/1W/1W)
 
 
+### BlocksByEpochId
+Returns the blocks in a specific Epoch.
 
+#### ** Parameters ** : 
+* EpochID: `<String>` The Id of an Epoch
+
+#### Example:
+```
+query{
+	blocksByEpochId(epochId:"null"){
+    hash
+    number
+  }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "blocksByEpochId": [
+      {
+        "hash": "DmDcyyexLcANQmQisb759G8GwWmMEdbFmd8EhWPuQKof",
+        "number": 43779
+      },
+      {
+        "hash": "2nprnTyVLKcQXtJyj1XGEjXgRonV2pWvRimG4eTFS5i1",
+        "number": 43778
+      }
+```
