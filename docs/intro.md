@@ -2,15 +2,15 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to **SolanaFM**.
+Explore our how-to guides, example codes using the SolanaFM API.
+SolanaFM is the only project to fully index the entire Solana Blockchain & provides easy access to Solana's blockchain and data. 
 
-## Getting Started
+## Getting to know Solana's deep Infrastructure
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
+Solana's documentation can be found here (https://docs.solana.com/).
 
 ## Generate a new site
 
