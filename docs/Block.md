@@ -125,3 +125,23 @@ query{
         "number": 43778
       }
 ```
+
+### BlocksByEpochIdWithTransactions
+Returns the transactions involved in the block within an epoch.
+
+#### ** Parameters ** : 
+* EpochID: `<String>` The Id of an Epoch
+
+#### Example:
+```
+query{
+	blocksByEpochIdWithTransactions(epochId:"0"){
+   hash
+    number
+  }
+}
+```
+
+
+#### Result:
+
