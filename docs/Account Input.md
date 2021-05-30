@@ -71,6 +71,22 @@ query{
 }
 ```
 
+### AccountBalanceByCreatedTime
+Returns the number of instances in the provided time period.
+
+#### ** Parameters ** : 
+* TimeFrame: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example: 
+```
+query{
+	accountBalanceByCreatedTime(timeFrame:ONE_DAY){
+	}
+}
+```
+
+
+
 
 
 
