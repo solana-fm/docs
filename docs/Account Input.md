@@ -55,5 +55,22 @@ query{
 ```
 
 
+### AccountBalanceByToken
+Returns the number of transactions of a specific token within a time period.
+
+#### ** Parameters ** : 
+* TokenId: `<String>` (required)
+* TimeFrame: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+
+### Example: 
+```
+query{
+	accountBalanceByToken(tokenId:"",timeFrame:ONE_DAY){
+	}
+}
+```
+
+
 
 
