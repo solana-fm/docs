@@ -26,3 +26,22 @@ query{
 
 ```
 
+### accountInstructions
+Returns the first 25 account Instructions
+
+#### ** Parameters ** : 
+None
+
+#### Example:
+```
+query{
+	accountInstructions{
+	}
+}
+```
+
+#### Result:
+```
+
+```
+

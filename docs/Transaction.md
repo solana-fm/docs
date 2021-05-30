@@ -75,7 +75,7 @@ query{
 ### TransactionCount
 
 #### ** Parameters ** : 
-* timeFrame: `<enum>` 1D/1W/1M
+* timeFrame: `<enum>` 1D/1W/1M (required)
 
 
 
