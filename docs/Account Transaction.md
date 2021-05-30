@@ -98,6 +98,60 @@ query{
 }
 ```
 
+### accountTransactionByHash
+Returns an instance of Account Transaction.
+
+#### ** Parameters ** : 
+* transactionHash: `<String>` The Hash of a transaction (required)
+
+#### Example:
+```
+query{
+	accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+    transactionHash
+    account
+	}
+}
+```
+
+### Result:
+```
+{
+  "data": {
+    "accountTransactionByHash": {
+      "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
+      "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx"
+    }
+  }
+}
+```
+
+### accountTransactionsByPk
+Returns specific instance of an Account Transaction 
+
+#### ** Parameters ** : 
+* accountTransactionRole: `<String>` The role of an account in a transaction (required)
+* transactionHash: `<String>` The transaction Hash (required)
+* account: `<String>` The account Hash (required)
+
+
+#### Example:
+```
+query{
+	accountTransactionByPk(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",account:"Vote111111111111111111111111111111111111111",accountTransactionRole:"4"){
+    account
+    transactionHash
+    accountTransactionRole
+  }
+}
+```
+
+#### Result:
+```
+something wrong
+```
+
+
 
 
 
