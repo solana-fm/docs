@@ -33,3 +33,27 @@ query{
 ```
 
 ```
+
+### AccountBalanceByAccAndTxHash
+Returns a specific instance of an Account Input after a transaction.
+
+#### ** Parameters ** : 
+* transactionHash: `<String>` (required)
+* account: `<String>` (required) Account Hash
+
+#### Example:
+```
+query{
+	accountBalanceByAccAndTxHash(accHash: "asfasfa",txHash: "124124"){
+  }
+}
+```
+
+#### Result:
+```
+
+```
+
+
+
+
