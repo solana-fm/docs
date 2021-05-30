@@ -80,3 +80,22 @@ query{
 
 
 
+### TransactionByResult
+Returns Transactions by Results
+
+#### ** Parameters ** : 
+* TxnResult: `<String>` The result of a transaction 
+
+#### Example:
+```
+query{
+	blockByNum(txnResult: xxx){
+    hash
+    isConfirmed
+    timestamp
+  }
+}
+```
+
+
+
