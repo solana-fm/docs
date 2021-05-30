@@ -40,5 +40,35 @@ query{
 
 ```
 
+### accountTransactionByHash
+Returns an instance of Account Transaction.
+
+#### ** Parameters ** : 
+* transactionHash: `<String>` The Hash of a transaction (required)
+
+#### Example:
+```
+query{
+	accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+    transactionHash
+    account
+	}
+}
+```
+
+### Result:
+```
+{
+  "data": {
+    "accountTransactionByHash": {
+      "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
+      "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx"
+    }
+  }
+}
+```
+
+
+
 
 
