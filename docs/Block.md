@@ -3,20 +3,20 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 
 
 ### Elements of Blocks
-* Number : `<Float>` Unique Identifier of a Block 
-* Hash: `<String>` The Hash of the Block
-* IsConfirmed: `<Boolean>` If the Block is Confirmed in the ledger
-* Timestamp: `<Float>` Production Time of a block 
-* Proposer: `<String>` The Proposer of the Block
-* Parent: `<String>` The Parent of the Block 
-* IsSkipped: `<Boolean>` If an Block is skipped
-* EpochId: `<Float>` The epoch the block belongs to
-* Finality: `<Boolean>` Confirmation of the Block
-* CreatedAt: `<Float>` Time (in epochs) the Block was created at  
-* Transactions: `<List>` The transactions involved in the Block 
+* number : `<Float>` Unique Identifier of a Block 
+* hash: `<String>` The Hash of the Block
+* isConfirmed: `<Boolean>` If the Block is Confirmed in the ledger
+* timestamp: `<Float>` Production Time of a block 
+* proposer: `<String>` The Proposer of the Block
+* parent: `<String>` The Parent of the Block 
+* isSkipped: `<Boolean>` If an Block is skipped
+* epochId: `<Float>` The epoch the block belongs to
+* finality: `<Boolean>` Confirmation of the Block
+* createdAt: `<Float>` Time (in epochs) the Block was created at  
+* transactions: `<List>` The transactions involved in the Block 
 
 
-### Blocks
+### blocks
 Returns first 25 Blocks
 
 #### ** Parameters ** : 
@@ -57,12 +57,12 @@ query{
       }
 ```
 
-### BlockByNum
+### blockByNum
 Returns a specific instance of a block
 
 
 #### ** Parameters ** : 
-* Number: `<int>` Block Number
+* Number: `<int>` (Required) Block Number
 
 #### Example:
 ```
@@ -88,18 +88,18 @@ query{
 }
 ```
 
-### BlockCount
+### blockCount
 Returns the number of blocks in a specific timeframe.
 
 #### ** Parameters ** : 
-* TimeFrame: (1D/1W/1W)
+* timeFrame: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_WEEK
 
 
-### BlocksByEpochId
+### blocksByEpochId
 Returns the blocks in a specific Epoch.
 
 #### ** Parameters ** : 
-* EpochID: `<String>` The Id of an Epoch
+* epochID: `<String>` The Id of an Epoch
 
 #### Example:
 ```
@@ -126,11 +126,11 @@ query{
       }
 ```
 
-### BlocksByEpochIdWithTransactions
+### blocksByEpochIdWithTransactions
 Returns the transactions involved in the block within an epoch.
 
 #### ** Parameters ** : 
-* EpochID: `<String>` The Id of an Epoch
+* epochID: `<String>` (required) The Id of an Epoch
 
 #### Example:
 ```
