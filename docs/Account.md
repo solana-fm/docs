@@ -304,3 +304,25 @@ query{
 * TimeFrame `<Enum>` (required) ONE_DAY, ONE_WEEK, ONE_MONTH 
 
 #### Example: 
+
+### accountTopBalancesByToken
+
+#### **Parameters**:
+* tokenId `<String>` (required) Token Hash
+
+#### Example: 
+```
+query{
+  solana{
+    accountTopBalancesByToken(tokenId = ""){
+
+    }
+  }
+}
+```
+
+#### Result:
+```
+
+```
+

@@ -18,8 +18,10 @@ None
 #### Example:
 ```
 query{
-	clusters{
+  solana{
+    clusters{
 
+    }
   }
 }
 ```
