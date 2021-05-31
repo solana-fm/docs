@@ -17,10 +17,12 @@ None
 #### Example:
 ```
 query{
-	accountTransactions{
-    transactionHash
-    account
-	}
+  solana{
+    accountTransactions{
+      transactionHash
+      account
+    }
+  }
 }
 ```
 
@@ -28,14 +30,16 @@ query{
 ```
 {
   "data": {
-    "accountTransactions": [
-      {
-        "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
-        "account": "Vote111111111111111111111111111111111111111"
-      },
-      {
-        "transactionHash": "5UWiw5opuQhpgakKNCUTaFZgZEjZMR6KesLVjo3x3e3vEZeeNKskkvw6YYmePcHGMUCN6soLgKfnVeA3mFzz5nnj",
-        "account": "Vote111111111111111111111111111111111111111"
+    solana{
+      "accountTransactions": [
+        {
+          "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
+          "account": "Vote111111111111111111111111111111111111111"
+        },
+        {
+          "transactionHash": "5UWiw5opuQhpgakKNCUTaFZgZEjZMR6KesLVjo3x3e3vEZeeNKskkvw6YYmePcHGMUCN6soLgKfnVeA3mFzz5nnj",
+          "account": "Vote111111111111111111111111111111111111111"
+        }
       }
 
 ```
@@ -49,10 +53,12 @@ Returns an instance of Account Transaction.
 #### Example:
 ```
 query{
-	accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
-    transactionHash
-    account
-	}
+  solana{
+    accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+      transactionHash
+      account
+    }
+  }
 }
 ```
 
@@ -77,11 +83,13 @@ Returns Account Transactions by Role
 #### Example:
 ```
 query{
-	accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
-    transactionHash
-    account
-    accountTransactionRole
-	}
+  solana{
+    accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+      transactionHash
+      account
+      accountTransactionRole
+    }
+  }
 }
 ```
 
@@ -107,10 +115,12 @@ Returns an instance of Account Transaction.
 #### Example:
 ```
 query{
-	accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
-    transactionHash
-    account
-	}
+  solana{
+    accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+      transactionHash
+      account
+    }
+  }
 }
 ```
 
@@ -138,10 +148,12 @@ Returns specific instance of an Account Transaction
 #### Example:
 ```
 query{
-	accountTransactionByPk(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",account:"Vote111111111111111111111111111111111111111",accountTransactionRole:"4"){
-    account
-    transactionHash
-    accountTransactionRole
+  solana{
+    accountTransactionByPk(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",account:"Vote111111111111111111111111111111111111111",accountTransactionRole:"4"){
+      account
+      transactionHash
+      accountTransactionRole
+    }
   }
 }
 ```
