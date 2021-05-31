@@ -34,9 +34,9 @@ query{
 Returns specific instance of a Block Reward
 
 #### ** Parameters ** : 
-* account: `<String>` Account Hash
-* hash: `<String>` Block Hash
-* blockRewardType: `<String>` 
+* account: `<String>` (required) Account Hash
+* hash: `<String>` (required) Block Hash
+* blockRewardType: `<String>` (required)
 
 #### Example:
 ```
