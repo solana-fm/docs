@@ -8,7 +8,7 @@
 * transactionHashNavigation: `<List>` List of transaction 
 
 ### accountTransactions
-Returns the first 25 accountTransactions 
+Returns accountTransactions 
 
 #### ** Parameters ** : 
 
