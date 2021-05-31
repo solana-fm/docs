@@ -11,7 +11,7 @@ For more information on Instructions: https://docs.solana.com/developing/program
 
 
 ### intructions
-Returns the first 25 Instructions
+Returns Instructions
 
 
 #### ** Parameters ** : 
@@ -36,7 +36,7 @@ query{
 Returns a specific instance of an instruction
 
 #### ** Parameters ** : 
-* instructionID: `<Float>` (Required) 
+* instructionID: `<Float>` (required) 
 
 #### Example:
 ```

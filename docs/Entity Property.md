@@ -1,6 +1,6 @@
 
 ### Elements of Entity Properties
-* Hash: `<Float>` Unique Identifier of a Cluster
+* hash: `<Float>` Unique Identifier of a Cluster
 * firstBlock: `<Float>` The first Block of the Cluster
 * clusterType: `<String>` 
 * statusType: `<String>` 

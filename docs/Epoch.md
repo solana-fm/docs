@@ -12,7 +12,7 @@ Returns a specific Epoch
 
 
 #### ** Parameters ** : 
-* id: `<ID>` Unique Identifier of an Epoch
+* id: `<ID>` (required) Unique Identifier of an Epoch
 
 
 #### Example:
