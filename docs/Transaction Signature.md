@@ -31,7 +31,7 @@ Returns of a list of transaction signatures via transaction Hash
 
 
 #### ** Parameters ** : 
-* txHash: `<String>` Unique Identifier of a transaction (Required)
+* txHash: `<String>` (required) Unique Identifier of a transaction 
 
 
 #### Example:
@@ -53,7 +53,7 @@ Returns of a specific instance of Transaction Signature via signature
 
 
 #### ** Parameters ** : 
-* signature: `<String>` Unique Identifier of a transaction signature (Required)
+* signature: `<String>` (required) Unique Identifier of a transaction signature 
 
 
 #### Example:

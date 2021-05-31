@@ -1,17 +1,17 @@
 For more information on Transactions: https://docs.solana.com/developing/programming-model/transactions
 
 ### Elements of Transactions
-* Hash: `<String>` Unique Identifier of a Transaction
-* IsConfirmed: `<Boolean>` If a transaction is confirmed
-* Block: `<String>` Block the Transaction is in
-* Result: `<String>` 
-* Fee: `<Float>` Fee of the transaction (in Lamports)
-* Timestamp: `<Float>` Time of the Transaction (in Epochs)
-* ProgramLog: `<String>` 
-* TransactionStatus: `<String>` Status of the Transaction 
+* hash: `<String>` Unique Identifier of a Transaction
+* isConfirmed: `<Boolean>` If a transaction is confirmed
+* block: `<String>` Block the Transaction is in
+* result: `<String>` 
+* fee: `<Float>` Fee of the transaction (in Lamports)
+* timestamp: `<Float>` Time of the Transaction (in Epochs)
+* programLog: `<String>` 
+* transactionStatus: `<String>` Status of the Transaction 
 
-### Transactions
-Returns the first 25 Transactions 
+### transactions
+Returns Transactions 
 
 
 #### ** Parameters ** : 
@@ -28,7 +28,7 @@ query{
 }
 ```
 
-#### Result:
+#### result:
 ```
 {
   {
@@ -44,11 +44,11 @@ query{
       }
 ```
 
-### TransactionByTxnHash
+### transactionByTxnHash
 Returns a specific instance of a transaction.
 
 #### ** Parameters ** : 
-* Hash: `<String>` Transaction Hash 
+* Hash: `<String>` (required) Transaction Hash 
 
 #### Example:
 ```
@@ -72,19 +72,19 @@ query{
 }
 ```
 
-### TransactionCount
+### transactionCount
 
 #### ** Parameters ** : 
-* timeFrame: `<enum>` 1D/1W/1M (required)
+* timeFrame: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
 
 
 
 
-### TransactionByResult
+### transactionByResult
 Returns Transactions by Results
 
 #### ** Parameters ** : 
-* TxnResult: `<String>` The result of a transaction 
+* TxnResult: `<String>` (required) The result of a transaction 
 
 #### Example:
 ```
