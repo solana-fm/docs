@@ -16,8 +16,10 @@ Returns a specific isntance of accountInstruction
 #### Example:
 ```
 query{
-	accountInstructionByKey(txHash:"",accHash:"",index:""){
-	}
+  solana{
+	  accountInstructionByKey(txHash:"",accHash:"",index:""){
+	  }
+  }
 }
 ```
 
@@ -35,8 +37,10 @@ None
 #### Example:
 ```
 query{
-	accountInstructions{
-	}
+  solana{
+    accountInstructions{
+    }
+  }
 }
 ```
 
