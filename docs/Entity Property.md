@@ -1,13 +1,14 @@
 
 ### Elements of Entity Properties
-* hash: `<Float>` Unique Identifier of a Cluster
-* firstBlock: `<Float>` The first Block of the Cluster
-* clusterType: `<String>` 
-* statusType: `<String>` 
+* hash: `<String>` 
+* key: `<Float>` 
+* value: `<String>` 
+* hash1: `<Token>`
+* hashNavigation: `<Account>`
 
 
-### clusters
-Returns the first 25 clusters
+### entityProperties
+Returns Entity Properties
 
 
 #### ** Parameters ** : 
@@ -17,7 +18,7 @@ None
 #### Example:
 ```
 query{
-	clusters{
+	entityProperties{
 
   }
 }
@@ -28,18 +29,41 @@ query{
 
 ```
 
-### clusterbyKeyPair
-Returns a specific instance of a cluster
+### entityPropertyByHashAndKey
+Returns a specific instance of a entity Property
 
 
 #### ** Parameters ** : 
-* genKeypair: `<Float>` Unique Identifier of a Cluster
+* hash: `<String>` (required)
+* key: `<String>` (required)
+
 
 
 #### Example:
 ```
 query{
-	clusterbyKeyPair(genKeyPair:213){
+	entityPropertyByHashAndKey(hash:"213", key: " "){
+
+  }
+}
+```
+
+#### Result:
+```
+
+```
+
+### entityPropertiesByValue
+Returns entity Property that has the input value 
+
+
+#### ** Parameters ** : 
+* value: `<String>` (required)
+
+#### Example:
+```
+query{
+	entityPropertiesByValue(value: " "){
 
   }
 }
