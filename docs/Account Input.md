@@ -21,9 +21,11 @@ None
 #### Example:
 ```
 query{
-	accountInputs{
-    transactionHash
-    account
+  solana{
+	  accountInputs{
+      transactionHash
+      account
+    }
   }
 }
 ```
@@ -44,7 +46,9 @@ Returns a specific instance of an Account Input after a transaction.
 #### Example:
 ```
 query{
+  solana{
 	accountBalanceByAccAndTxHash(accHash: "asfasfa",txHash: "124124"){
+    }
   }
 }
 ```
@@ -66,8 +70,10 @@ Returns the number of transactions of a specific token within a time period.
 ### Example: 
 ```
 query{
+  solana{
 	accountBalanceByToken(tokenId:"",timeFrame:ONE_DAY){
-	}
+	  }
+  }
 }
 ```
 
@@ -80,8 +86,10 @@ Returns the number of instances in the provided time period.
 ### Example: 
 ```
 query{
+  solana{
 	accountBalanceByCreatedTime(timeFrame:ONE_DAY){
-	}
+	  }
+  }
 }
 ```
 
