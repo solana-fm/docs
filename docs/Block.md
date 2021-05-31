@@ -26,11 +26,13 @@ None
 #### Example:
 ```
 query{
-	blocks{
-  	hash
-    CreatedAt
-    isSkipped
-	}
+  solana{
+    blocks{
+      hash
+      CreatedAt
+      isSkipped
+    }
+  }
 }
 ```
 
@@ -67,10 +69,12 @@ Returns a specific instance of a block
 #### Example:
 ```
 query{
-	blockByNum(number: 43777){
-    hash
-    isConfirmed
-    timestamp
+  solana{
+    blockByNum(number: 43777){
+      hash
+      isConfirmed
+      timestamp
+    }
   }
 }
 ```
@@ -104,9 +108,11 @@ Returns the blocks in a specific Epoch.
 #### Example:
 ```
 query{
-	blocksByEpochId(epochId:"null"){
-    hash
-    number
+  solana{
+    blocksByEpochId(epochId:"null"){
+      hash
+      number
+    }
   }
 }
 ```
@@ -135,9 +141,11 @@ Returns the transactions involved in the block within an epoch.
 #### Example:
 ```
 query{
-	blocksByEpochIdWithTransactions(epochId:"0"){
-   hash
-    number
+  solana{
+    blocksByEpochIdWithTransactions(epochId:"0"){
+    hash
+      number
+    }
   }
 }
 ```
