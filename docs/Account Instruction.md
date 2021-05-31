@@ -1,17 +1,17 @@
 
 
 ### Elements of Account Instruction
-* InstructionId: `<Float>` Unique Identifier of Instruction
-* Index: `<Float>` 
-* AccountHash: `<String>` Hash of Account
+* instructionId: `<Float>` Unique Identifier of Instruction
+* index: `<Float>` 
+* iccountHash: `<String>` Hash of Account
 
 ### accountInstructionByKey
 Returns a specific isntance of accountInstruction
 
 #### ** Parameters ** : 
-* InstructionId: `<Float>` Unique Identifier of Instruction
-* Index: `<Float>` 
-* AccountHash: `<String>` Hash of Account
+* instructionId: `<Float>` Unique Identifier of Instruction
+* index: `<Float>` 
+* accountHash: `<String>` Hash of Account
 
 #### Example:
 ```
