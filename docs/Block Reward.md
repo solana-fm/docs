@@ -41,8 +41,10 @@ Returns specific instance of a Block Reward
 #### Example:
 ```
 query{
-	blockRewardByPk(account:"",hash:"",blockRewardType:""){
+  solana{
+    blockRewardByPk(account:"",hash:"",blockRewardType:""){
 
+    }
   }
 }
 ```
