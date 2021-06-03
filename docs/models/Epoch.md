@@ -1,3 +1,7 @@
+---
+title: Epoch
+---
+
 For more information on Epochs: https://docs.solana.com/terminology#epoch
 
 ### Elements of Epochs

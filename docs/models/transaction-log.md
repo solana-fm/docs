@@ -1,3 +1,6 @@
+---
+title: Transaction Log
+---
 
 ### Elements of Transaction Log
 * transactionHash: `<String>` Unique Identifier of a Transaction

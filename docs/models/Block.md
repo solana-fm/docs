@@ -1,3 +1,7 @@
+---
+title: Block
+---
+
 For more Information on Blocks: https://docs.solana.com/developing/programming-model/accounts
 
 

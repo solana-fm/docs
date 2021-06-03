@@ -1,3 +1,7 @@
+---
+title: Cluster
+---
+
 For more information on clusters: https://docs.solana.com/cluster/overview
 
 ### Elements of Transactions

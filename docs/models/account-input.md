@@ -1,3 +1,7 @@
+---
+title: Account Input
+---
+
 For more Information on AccountsInputs: https://docs.solana.com/developing/programming-model/accounts
 
 
