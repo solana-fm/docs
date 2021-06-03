@@ -4,11 +4,11 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Explore The Solana Blokchain',
+    title: 'The First Solana Indexer',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Access data from the solana blockchain with a click of a button and built in APIs
+        Access data from the solana blockchain with a click of a button with built in APIs
       </>
     ),
   },
@@ -17,8 +17,8 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Solan.Fm allows data to be easily queried and shown via GraphQL. Go
+        ahead and try out docs in the <code>docs</code> directory.
       </>
     ),
   },

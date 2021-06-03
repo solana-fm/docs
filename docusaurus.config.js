@@ -14,16 +14,21 @@ module.exports = {
       title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/nozomi.png',
+        src: 'img/icon.svg',
       },
       items: [
         {
           type: 'doc',
           docId: 'intro',
           position: 'left',
-          label: 'Overview',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          type: 'doc',
+          docId: 'intro',
+          position: 'left',
+          label: 'ChangeLog'
+        },
         {
           href: 'https://github.com/nozomi-ai',
           label: 'GitHub',
@@ -38,7 +43,7 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Overview',
+              label: 'Documentation',
               to: '/docs/intro',
             },
           ],
