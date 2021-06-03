@@ -1,18 +1,22 @@
+---
+title: Account Input
+---
+
 For more Information on AccountsInputs: https://docs.solana.com/developing/programming-model/accounts
 
 
 
 ### Elements of Account Inputs
-* TransactionHash : `<String>` The hash of a specific transaction
-* Account: `<String>` The hash of a specific account
-* TokenId: `<String>` The ID of a specific Token
-* PreBalance: `<Float>` The Pre Balance of an account in Lamports
-* PostBalance: `<Float>` The Post Balance of an account in Lamports
-* CreatedAt: `<Float>` Time (in epochs) it was created at  
+* transactionHash : `<String>` The hash of a specific transaction
+* account: `<String>` The hash of a specific account
+* tokenId: `<String>` The ID of a specific Token
+* preBalance: `<Float>` The Pre Balance of an account in Lamports
+* postBalance: `<Float>` The Post Balance of an account in Lamports
+* createdAt: `<Float>` Time (in epochs) it was created at  
 
 
-### AccountInputs
-Returns first 25 accounts
+### accountInputs
+Returns account Inputs. 
 
 #### ** Parameters ** : 
 
@@ -21,9 +25,11 @@ None
 #### Example:
 ```
 query{
-	accountInputs{
-    transactionHash
-    account
+  solana{
+	  accountInputs{
+      transactionHash
+      account
+    }
   }
 }
 ```
@@ -34,7 +40,7 @@ query{
 
 ```
 
-### AccountBalanceByAccAndTxHash
+### accountBalanceByAccAndTxHash
 Returns a specific instance of an Account Input after a transaction.
 
 #### ** Parameters ** : 
@@ -44,7 +50,9 @@ Returns a specific instance of an Account Input after a transaction.
 #### Example:
 ```
 query{
+  solana{
 	accountBalanceByAccAndTxHash(accHash: "asfasfa",txHash: "124124"){
+    }
   }
 }
 ```
@@ -55,7 +63,7 @@ query{
 ```
 
 
-### AccountBalanceByToken
+### accountBalanceByToken
 Returns the number of transactions of a specific token within a time period.
 
 #### ** Parameters ** : 
@@ -66,12 +74,14 @@ Returns the number of transactions of a specific token within a time period.
 ### Example: 
 ```
 query{
+  solana{
 	accountBalanceByToken(tokenId:"",timeFrame:ONE_DAY){
-	}
+	  }
+  }
 }
 ```
 
-### AccountBalanceByCreatedTime
+### accountBalanceByCreatedTime
 Returns the number of instances in the provided time period.
 
 #### ** Parameters ** : 
@@ -80,8 +90,10 @@ Returns the number of instances in the provided time period.
 ### Example: 
 ```
 query{
+  solana{
 	accountBalanceByCreatedTime(timeFrame:ONE_DAY){
-	}
+	  }
+  }
 }
 ```
 

@@ -1,3 +1,7 @@
+---
+title: Block Reward
+---
+
 For more information: https://docs.solana.com/cluster/stake-delegation-and-rewards
 
 ### Elements of Block Reward
@@ -34,15 +38,17 @@ query{
 Returns specific instance of a Block Reward
 
 #### ** Parameters ** : 
-* account: `<String>` Account Hash
-* hash: `<String>` Block Hash
-* blockRewardType: `<String>` 
+* account: `<String>` (required) Account Hash
+* hash: `<String>` (required) Block Hash
+* blockRewardType: `<String>` (required)
 
 #### Example:
 ```
 query{
-	blockRewardByPk(account:"",hash:"",blockRewardType:""){
+  solana{
+    blockRewardByPk(account:"",hash:"",blockRewardType:""){
 
+    }
   }
 }
 ```

@@ -1,7 +1,11 @@
+---
+title: Token
+---
+
 For more information on Tokens: https://docs.solana.com/terminology#token
 
 ### Elements of Tokens
-* Hash: `<String>` Unique Identifier of a token
+* hash: `<String>` Unique Identifier of a token
 * name: `<String>` Name of Token
 * currentSupply: `<Float>` Current Supply of token
 * mintAuthority: `<String>` 
@@ -14,7 +18,7 @@ For more information on Tokens: https://docs.solana.com/terminology#token
 
 
 ### tokens
-Returns the first 25 token instances
+Returns tokens
 
 
 #### ** Parameters ** : 
@@ -40,7 +44,7 @@ Returns an instance of a token
 
 
 #### ** Parameters ** : 
-* Hash: `<String>` Unique Identifier of a token
+* Hash: `<String>` (required) Unique Identifier of a token
 
 
 #### Example:

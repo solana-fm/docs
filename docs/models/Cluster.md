@@ -1,13 +1,18 @@
+---
+title: Cluster
+---
 
-### Elements of Entity Properties
-* Hash: `<Float>` Unique Identifier of a Cluster
+For more information on clusters: https://docs.solana.com/cluster/overview
+
+### Elements of Transactions
+* genKeypair: `<Float>` Unique Identifier of a Cluster
 * firstBlock: `<Float>` The first Block of the Cluster
 * clusterType: `<String>` 
 * statusType: `<String>` 
 
 
 ### clusters
-Returns the first 25 clusters
+Returns clusters
 
 
 #### ** Parameters ** : 
@@ -17,8 +22,10 @@ None
 #### Example:
 ```
 query{
-	clusters{
+  solana{
+    clusters{
 
+    }
   }
 }
 ```
@@ -33,7 +40,7 @@ Returns a specific instance of a cluster
 
 
 #### ** Parameters ** : 
-* genKeypair: `<Float>` Unique Identifier of a Cluster
+* genKeypair: `<Float>` (required) Unique Identifier of a Cluster
 
 
 #### Example:

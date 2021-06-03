@@ -1,23 +1,26 @@
+---
+title: Account
+---
 
 For more Information on Accounts: https://docs.solana.com/developing/programming-model/accounts
 
 
 
 ### Elements of Accounts
-* Hash : The Hash of a specific account
-* AccountType: The Type of the account
-* Balance: The Balance of the account in lamports
-* Data: The Data the account contains
-* Owner: The Owner of the account
-* Label: The Label of the account 
-* Executable: If an account can execute a program
-* Upgrade Authority: The ability to deploy a program
-* RentEpoch: Epoch at which this account will next owe rent
-* CreatedAt: Time (in epochs) it was created at  
+* hash : The Hash of a specific account
+* accountType: The Type of the account
+* balance: The Balance of the account in lamports
+* data: The Data the account contains
+* owner: The Owner of the account
+* label: The Label of the account 
+* executable: If an account can execute a program
+* upgrade Authority: The ability to deploy a program
+* rentEpoch: Epoch at which this account will next owe rent
+* createdAt: Time (in epochs) it was created at  
 
 
 ### Accounts
-Returns first 25 accounts
+Returns accounts
 
 #### ** Parameters ** : 
 
@@ -64,7 +67,7 @@ query{
         "upgradeAuthority": null
       }
 ```
-### AccountByBalance
+### accountByBalance
 Returns the first 25 Accounts with the input balance
 
 #### **Parameters**:
@@ -102,7 +105,7 @@ query{
 
 ```
 
-### AccountByHash
+### accountByHash
 Returns a specific account via the hash.
 
 #### **Parameters**: 
@@ -132,11 +135,11 @@ query{
   }
 }
 ```
-### AccountByOwner
+### accountByOwner
 Returns the accounts that have the same owner.
 
 #### **Parameters**:
-* Owner: `<String>` (Required) The Owner of Account
+* Owner: `<String>` (required) The Owner of Account
 
 #### Example:
 ```
@@ -166,11 +169,11 @@ query{
       }
 ```
 
-### AccountByLabel
+### accountByLabel
 Returns the accounts that have the same label.
 
 #### **Parameters**:
-* Label: `<String>` (Required) The Label of an Account
+* Label: `<String>` (required) The Label of an Account
 
 #### Example:
 ```
@@ -201,11 +204,11 @@ query{
 ```
 
 
-### AccountByData
+### accountByData
 Returns the accounts that have the same data.
 
 #### **Parameters**:
-* Data: `<String>` (Required) The data of an Account
+* Data: `<String>` (required) The data of an Account
 
 #### Example:
 ```
@@ -229,11 +232,11 @@ query{
 }
 ```
 
-### AccountByCreation
+### accountByCreation
 Returns the accounts that are created at that point of time. 
 
 #### **Parameters**:
-* AcctCreatedAt: `<Float>` (Required) A specific time (In Epochs)
+* AcctCreatedAt: `<Float>` (required) A specific time (In Epochs)
 
 #### Example:
 ```
@@ -260,7 +263,7 @@ query{
       }
 ```
 
-### AccountByTopAccBal
+### accountByTopAccBal
 Returns the accounts with the 10 largest holdings (In Lamports)
 
 #### **Parameters**:
@@ -298,9 +301,31 @@ query{
       }
 ```
 
-### AccountCreatedByTime
+### accountCreatedByTime
 
 #### **Parameters**:
-* TimeFrame(1D,1W,1M)
+* TimeFrame `<Enum>` (required) ONE_DAY, ONE_WEEK, ONE_MONTH 
 
 #### Example: 
+
+### accountTopBalancesByToken
+
+#### **Parameters**:
+* tokenId `<String>` (required) Token Hash
+
+#### Example: 
+```
+query{
+  solana{
+    accountTopBalancesByToken(tokenId = ""){
+
+    }
+  }
+}
+```
+
+#### Result:
+```
+
+```
+

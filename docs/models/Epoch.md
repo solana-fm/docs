@@ -1,3 +1,7 @@
+---
+title: Epoch
+---
+
 For more information on Epochs: https://docs.solana.com/terminology#epoch
 
 ### Elements of Epochs
@@ -12,7 +16,7 @@ Returns a specific Epoch
 
 
 #### ** Parameters ** : 
-* id: `<ID>` Unique Identifier of an Epoch
+* id: `<ID>` (required) Unique Identifier of an Epoch
 
 
 #### Example:

@@ -1,3 +1,7 @@
+---
+title: Cluster
+---
+
 For more information on clusters: https://docs.solana.com/cluster/overview
 
 ### Elements of Transactions
@@ -8,7 +12,7 @@ For more information on clusters: https://docs.solana.com/cluster/overview
 
 
 ### clusters
-Returns the first 25 clusters
+Returns clusters
 
 
 #### ** Parameters ** : 
@@ -18,8 +22,10 @@ None
 #### Example:
 ```
 query{
-	clusters{
+  solana{
+    clusters{
 
+    }
   }
 }
 ```
@@ -34,7 +40,7 @@ Returns a specific instance of a cluster
 
 
 #### ** Parameters ** : 
-* genKeypair: `<Float>` Unique Identifier of a Cluster
+* genKeypair: `<Float>` (required) Unique Identifier of a Cluster
 
 
 #### Example:
