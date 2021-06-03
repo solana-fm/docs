@@ -12,7 +12,12 @@ SolanaFM is the only project to fully index the entire Solana Blockchain & provi
 
 Solana's documentation can be found here (https://docs.solana.com/).
 
-## Generate a new site
+## So what exactly is an indexer?
+
+#### An indexer is a GUI-less application that: 
+1. Fetches **raw** blockchain data from a fully synced node
+2. Processes the raw data into a **queryable** (such as GraphQL) format.
+3. Stores the queryable dataset into a database for **quick and easy access**.
 
 Generate a new Docusaurus site using the **classic template**:
 
