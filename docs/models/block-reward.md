@@ -1,3 +1,7 @@
+---
+title: Block Reward
+---
+
 For more information: https://docs.solana.com/cluster/stake-delegation-and-rewards
 
 ### Elements of Block Reward

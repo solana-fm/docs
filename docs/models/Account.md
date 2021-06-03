@@ -1,3 +1,6 @@
+---
+title: Account
+---
 
 For more Information on Accounts: https://docs.solana.com/developing/programming-model/accounts
 

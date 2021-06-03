@@ -1,3 +1,6 @@
+---
+title: Entity Property
+---
 
 ### Elements of Entity Properties
 * hash: `<String>` 

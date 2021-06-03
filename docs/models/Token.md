@@ -1,3 +1,7 @@
+---
+title: Token
+---
+
 For more information on Tokens: https://docs.solana.com/terminology#token
 
 ### Elements of Tokens
