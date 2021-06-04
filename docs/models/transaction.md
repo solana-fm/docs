@@ -19,8 +19,9 @@ Returns Transactions
 
 
 #### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
-None
 
 #### Example:
 ```
@@ -89,6 +90,8 @@ Returns Transactions by Results
 
 #### ** Parameters ** : 
 * TxnResult: `<String>` (required) The result of a transaction 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
 #### Example:
 ```
