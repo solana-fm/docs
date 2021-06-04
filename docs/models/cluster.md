@@ -16,8 +16,9 @@ Returns clusters
 
 
 #### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
-None
 
 #### Example:
 ```
