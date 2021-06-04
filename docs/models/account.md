@@ -22,8 +22,8 @@ For more Information on Accounts: https://docs.solana.com/developing/programming
 Returns accounts
 
 #### ** Parameters ** : 
-
-None 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -71,6 +71,9 @@ Returns the first 25 Accounts with the input balance
 
 #### **Parameters**:
 * AcctBalance: `<Float>` (Required) The balance of the account in lamports
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
 
 #### Example:
 ```
@@ -139,6 +142,8 @@ Returns the accounts that have the same owner.
 
 #### **Parameters**:
 * Owner: `<String>` (required) The Owner of Account
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -173,6 +178,8 @@ Returns the accounts that have the same label.
 
 #### **Parameters**:
 * Label: `<String>` (required) The Label of an Account
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -208,6 +215,9 @@ Returns the accounts that have the same data.
 
 #### **Parameters**:
 * Data: `<String>` (required) The data of an Account
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
 
 #### Example:
 ```
@@ -236,6 +246,9 @@ Returns the accounts that are created at that point of time.
 
 #### **Parameters**:
 * AcctCreatedAt: `<Float>` (required) A specific time (In Epochs)
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
 
 #### Example:
 ```
@@ -263,10 +276,12 @@ query{
 ```
 
 ### accountByTopAccBal
-Returns the accounts with the 10 largest holdings (In Lamports)
+Returns the accounts with the largest holdings (In Lamports)
 
 #### **Parameters**:
-None
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
 
 #### Example:
 ```
@@ -311,6 +326,9 @@ query{
 
 #### **Parameters**:
 * tokenId `<String>` (required) Token Hash
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
 
 #### Example: 
 ```
