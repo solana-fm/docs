@@ -37,7 +37,14 @@ query{
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "accountInputs": [
+        {
+          "transactionHash": "4ATViT4FmkNdK52vakMC1BGFmzWjioF6cmsM4uXKhKSi6AuQzX2ueuKd7r2c5eqUxPPtbNCwJnH6nhAhLsj955YF",
+          "account": "2PDvmDx6HeKv3wtdwmGQGmz9pGXXDKNFVvGizGGaAqxL"
+        }
 ```
 
 ### accountBalanceByAccAndTxHash
@@ -51,7 +58,9 @@ Returns a specific instance of an Account Input after a transaction.
 ```
 query{
   solana{
-	accountBalanceByAccAndTxHash(accHash: "asfasfa",txHash: "124124"){
+	  accountBalanceByAccAndTxHash(txHash:"4ATViT4FmkNdK52vakMC1BGFmzWjioF6cmsM4uXKhKSi6AuQzX2ueuKd7r2c5eqUxPPtbNCwJnH6nhAhLsj955YF",accHash:"SysvarS1otHashes111111111111111111111111111"){
+      preBalance
+      postBalance
     }
   }
 }
@@ -59,7 +68,16 @@ query{
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "accountBalanceByAccAndTxHash": {
+        "preBalance": 1,
+        "postBalance": 1
+      }
+    }
+  }
+}
 ```
 
 
