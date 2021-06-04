@@ -13,8 +13,9 @@ Returns Transaction Signatures
 
 
 #### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
-None
 
 #### Example:
 ```
@@ -36,7 +37,8 @@ Returns of a list of transaction signatures via transaction Hash
 
 #### ** Parameters ** : 
 * txHash: `<String>` (required) Unique Identifier of a transaction 
-
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
 #### Example:
 ```
