@@ -13,7 +13,8 @@ title: Instruction Property
 Returns instruction Properties
 
 #### ** Parameters ** : 
-None
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
 #### Example:
 ```
@@ -51,6 +52,8 @@ Returns instruction property instance with key input
 
 #### ** Parameters ** : 
 * key: `<String>` (required)
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
 #### Example:
 ```
@@ -69,6 +72,8 @@ Returns instruction property instance with parent key
 
 #### ** Parameters ** : 
 * key: `<String>` (required)
+* Paging: (Optional) `<int>` 
+  - Page: `<int>` Start of Page 
 
 #### Example:
 ```
