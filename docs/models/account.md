@@ -7,17 +7,16 @@ For more Information on Accounts: https://docs.solana.com/developing/programming
 
 
 ### Elements of Accounts
-* hash : The Hash of a specific account
-* accountType: The Type of the account
-* balance: The Balance of the account in lamports
-* data: The Data the account contains
-* owner: The Owner of the account
-* label: The Label of the account 
-* executable: If an account can execute a program
-* upgrade Authority: The ability to deploy a program
-* rentEpoch: Epoch at which this account will next owe rent
-* createdAt: Time (in epochs) it was created at  
-
+* hash : `<String>` The Hash of a specific account
+* accountType: `<Enum>` The Type of the account
+* balance: `<String>` The Balance of the account in lamports
+* data: `<Float>` The Data the account contains
+* owner: `<String>` The Owner of the account
+* label: `<String>` The Label of the account 
+* executable: `<Boolean>` If an account can execute a program
+* upgrade Authority: `<String>` The ability to deploy a program
+* rentEpoch: `<Float>` Epoch at which this account will next owe rent
+* createdAt: `<Float>` Time (in epochs) it was created at  
 
 ### Accounts
 Returns accounts
