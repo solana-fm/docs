@@ -19,8 +19,8 @@ For more Information on AccountsInputs: https://docs.solana.com/developing/progr
 Returns account Inputs. 
 
 #### ** Parameters ** : 
-
-None 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
