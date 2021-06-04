@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'The First Solana Indexer',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('../../static/img/solana-sol-logo.svg').default,
     description: (
       <>
         Access data from the solana blockchain with a click of a button with built in APIs
@@ -13,22 +13,20 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Easily Accessible and Readable Data',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Readable Data',
+    Svg: require('../../static/img/graphql.svg').default,
     description: (
       <>
-        Solan.Fm allows data to be easily queried and shown via GraphQL. Go
-        ahead and try out docs in the <code>docs</code> directory.
+        Solana.Fm allows data to be easily queried and displayed on GraphQL.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
+    title: 'Powered by Nozomi',
+    Svg: require('../../static/img/icon.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Built through accuracy and for scalability.
       </>
     ),
   },

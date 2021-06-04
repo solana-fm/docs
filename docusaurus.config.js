@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/nozomi.png',
+  favicon: 'img/icon.svg',
   organizationName: 'nozomi', // Usually your GitHub org/user name.
   projectName: 'nozomi-ai', // Usually your repo name.
   themeConfig: {
@@ -14,7 +14,7 @@ module.exports = {
       title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/icon.svg',
+        src: 'img/nozomi.png',
       },
       items: [
         {
@@ -46,13 +46,17 @@ module.exports = {
               label: 'Documentation',
               to: '/docs/intro',
             },
+            {
+              label:'ChangeLog',
+              to: '/docs/intro'
+            }
           ],
         },
         {
           title: 'Social',
           items: [
             {
-              label: 'Nomozi',
+              label: 'Nozomi',
               href: 'https://blog.nozomi.ai/',
             },
             {
