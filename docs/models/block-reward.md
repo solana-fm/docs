@@ -13,12 +13,13 @@ For more information: https://docs.solana.com/cluster/stake-delegation-and-rewar
 * postBalance: `<Float>` Post Balance of an account after block reward 
 
 ### blockRewards
-Returns the first 25 Transactions 
+Returns blockRewards
 
 
 #### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
-None
 
 #### Example:
 ```

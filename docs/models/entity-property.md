@@ -15,8 +15,9 @@ Returns Entity Properties
 
 
 #### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
-None
 
 #### Example:
 ```
@@ -57,11 +58,13 @@ query{
 ```
 
 ### entityPropertiesByValue
-Returns entity Property that has the input value 
+Returns entity Property that includes the input value 
 
 
 #### ** Parameters ** : 
 * value: `<String>` (required)
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```

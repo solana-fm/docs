@@ -13,8 +13,8 @@ title: Account Transaction
 Returns accountTransactions 
 
 #### ** Parameters ** : 
-
-None
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -81,6 +81,8 @@ Returns Account Transactions by Role
 
 #### ** Parameters ** : 
 * accountTransactionRole: `<String>` The role of an account in a transaction. 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```

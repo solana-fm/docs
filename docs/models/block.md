@@ -21,11 +21,11 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 
 
 ### blocks
-Returns first 25 Blocks
+Returns Blocks
 
 #### ** Parameters ** : 
-
-None 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -108,6 +108,8 @@ Returns the blocks in a specific Epoch.
 
 #### ** Parameters ** : 
 * epochID: `<String>` The Id of an Epoch
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
@@ -141,6 +143,8 @@ Returns the transactions involved in the block within an epoch.
 
 #### ** Parameters ** : 
 * epochID: `<String>` (required) The Id of an Epoch
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
 
 #### Example:
 ```
