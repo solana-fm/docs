@@ -7,6 +7,37 @@ title: Account Instruction
 * index: `<Float>` 
 * iccountHash: `<String>` Hash of Account
 
+### accountInstructions
+Returns accountInstructions
+
+#### ** Parameters ** : 
+* Paging: (Optional) `<int>` 
+  - Page: `<int>`Start of Page 
+
+#### Example:
+```
+query{
+	solana{
+   accountInstructions{
+    account
+    instructionId
+			}
+    }
+}
+```
+
+#### Result:
+```
+{
+  "data": {
+    "solana": {
+      "accountInstructions": [
+        {
+          "account": "4E7oqDNWg8hFiSQYNdetf7oGbQCJzrZDW1Czn5wjvXrg",
+          "instructionId": 1
+        }instuction.debug
+```
+
 ### accountInstructionByKey
 Returns a specific isntance of accountInstruction
 
@@ -30,25 +61,4 @@ query{
 
 ```
 
-### accountInstructions
-Returns account Instructions
-
-#### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
-
-#### Example:
-```
-query{
-  solana{
-    accountInstructions{
-    }
-  }
-}
-```
-
-#### Result:
-```
-
-```
 
