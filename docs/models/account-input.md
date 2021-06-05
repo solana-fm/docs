@@ -99,6 +99,11 @@ query{
 }
 ```
 
+### Result:
+```
+TokenId still blank 
+```
+
 ### accountBalanceByCreatedTime
 Returns the number of instances in the provided time period.
 
@@ -107,10 +112,11 @@ Returns the number of instances in the provided time period.
 
 ### Example: 
 ```
-query{
-  solana{
-	accountBalanceByCreatedTime(timeFrame:ONE_DAY){
-	  }
+{
+  "data": {
+    "solana": {
+      "accountBalanceByCreatedTime": 373915
+    }
   }
 }
 ```
