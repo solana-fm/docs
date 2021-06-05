@@ -26,15 +26,27 @@ Returns Instructions
 #### Example:
 ```
 query{
-	instructions{
-    
-  }
+	solana{
+   intructions{
+    id
+    txInstructionId
+    transactionHash
+  	}
+	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "intructions": [
+        {
+          "id": 1,
+          "txInstructionId": 0,
+          "transactionHash": "4ATViT4FmkNdK52vakMC1BGFmzWjioF6cmsM4uXKhKSi6AuQzX2ueuKd7r2c5eqUxPPtbNCwJnH6nhAhLsj955YF"
+        }
 ```
 
 ### instructionByKey
