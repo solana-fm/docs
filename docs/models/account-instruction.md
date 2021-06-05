@@ -5,7 +5,7 @@ title: Account Instruction
 ### Elements of Account Instruction
 * instructionId: `<Float>` Unique Identifier of Instruction
 * index: `<Float>` 
-* iccountHash: `<String>` Hash of Account
+* AccountHash: `<String>` Hash of Account
 
 ### accountInstructions
 Returns accountInstructions
@@ -50,15 +50,30 @@ Returns a specific instance of accountInstruction
 ```
 query{
   solana{
-	  accountInstructionByKey(txHash:"",accHash:"",index:""){
-	  }
+	  accountInstructionByKey(accHash: "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
+          idx: 0,
+          iId: 1){
+      account
+      index
+      instructionId
+    }
   }
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "accountInstructionByKey": {
+        "account": "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
+        "index": 0,
+        "instructionId": 1
+      }
+    }
+  }
+}
 ```
 
 
