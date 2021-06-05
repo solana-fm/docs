@@ -82,7 +82,25 @@ query{
 #### ** Parameters ** : 
 * timeFrame: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
 
+#### Example:
+```
+query{
+	solana{
+   transactionCount(timeFrame:ONE_DAY)
+	}
+}
+```
 
+#### Result:
+```
+{
+  "data": {
+    "solana": {
+      "transactionCount": 0
+    }
+  }
+}
+```
 
 
 ### transactionByResult
@@ -96,11 +114,10 @@ Returns Transactions by Results
 #### Example:
 ```
 query{
-	blockByNum(txnResult: xxx){
+	solana{
+   transactionsByResult(txnResult:null){
     hash
-    isConfirmed
-    timestamp
-  }
+	}
 }
 ```
 
