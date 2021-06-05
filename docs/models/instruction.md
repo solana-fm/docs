@@ -58,13 +58,26 @@ Returns a specific instance of an instruction
 #### Example:
 ```
 query{
-	instructionByKey(instructionID:""){
+  solana{
+	  instructionByKey(instructionId:1){
+      id
+      data
+   }
   }
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionByKey": {
+        "id": 1,
+        "data": "{\"hash\":[134,71,50,174,231,22,114,84,172,147,235,36,221,190,61,195,1,165,112,236,109,176,46,150,57,137,159,36,217,247,180,201],\"slots\":[37499],\"timestamp\":null}"
+      }
+    }
+  }
+}
 ```
 
