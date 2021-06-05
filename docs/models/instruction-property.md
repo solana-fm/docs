@@ -3,8 +3,8 @@ title: Instruction Property
 ---
 
 ### Elements of Instruction Property
-* id: `<Float>` 
-* instructionId: `<Float>` 
+* id: `<Float>` The unique Id of an Instruction Property
+* instructionId: `<Float>` Unique Id of an Instruction 
 * key: `<String>` 
 * value: `<String>` 
 * instruction: `<Instruction>` 
@@ -19,14 +19,29 @@ Returns instruction Properties
 #### Example:
 ```
 query{
-	instructionProperties{
+	solana{
+   instructionProperties{
+    id
+    instructionId
+    key
+    value
+  	}
 	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionProperties": [
+        {
+          "id": 1,
+          "instructionId": 1,
+          "key": "hash",
+          "value": "4pxhAVJsDkfGw3WukcmjyWbtJ3oP4biVhqe5xG9za94W"
+        }
 ```
 
 ### instructionPropertiesByInstructionId
@@ -38,14 +53,33 @@ Returns instruction property instance with instructionid input
 #### Example:
 ```
 query{
-	instructionPropertiesByInstructionId(instructionId:""){
+	solana{
+   instructionPropertiesByInstructionId(instructionId:1){
+    id
+    key
+  	}
 	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionPropertiesByInstructionId": [
+        {
+          "id": 1,
+          "key": "hash"
+        },
+        {
+          "id": 2,
+          "key": "timestamp"
+        },
+        {
+          "id": 4,
+          "key": "slots"
+        }
 ```
 ### instructionPropertiesByKey
 Returns instruction property instance with key input
@@ -58,14 +92,29 @@ Returns instruction property instance with key input
 #### Example:
 ```
 query{
-	instructionPropertiesByKey(key:""){
+	solana{
+   instructionPropertiesByKey(key:"timestamp"){
+    id
+    key
+  	}
 	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionPropertiesByKey": [
+        {
+          "id": 2,
+          "key": "timestamp"
+        },
+        {
+          "id": 5,
+          "key": "timestamp"
+        }
 ```
 ### instructionPropertiesByParent
 Returns instruction property instance with parent key
@@ -78,14 +127,29 @@ Returns instruction property instance with parent key
 #### Example:
 ```
 query{
-	instructionPropertiesByParent(key:""){
+	solana{
+   instructionPropertiesByParent(key:"slots"){
+    id
+    key
+  	}
 	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionPropertiesByParent": [
+        {
+          "id": 6,
+          "key": "slots/0"
+        },
+        {
+          "id": 8,
+          "key": "slots/1"
+        }
 ```
 
 ### instructionPropertyById
@@ -97,12 +161,25 @@ Returns specific instance of instruction Property
 #### Example:
 ```
 query{
-	instructionPropertyById(id:2134){
+	solana{
+   instructionPropertyById(id:1){
+    id
+    key
+  	}
 	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructionPropertyById": {
+        "id": 1,
+        "key": "hash"
+      }
+    }
+  }
+}
 ```
