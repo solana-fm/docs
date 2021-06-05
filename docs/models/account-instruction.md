@@ -39,7 +39,7 @@ query{
 ```
 
 ### accountInstructionByKey
-Returns a specific isntance of accountInstruction
+Returns a specific instance of accountInstruction
 
 #### ** Parameters ** : 
 * instructionId: `<Float>` Unique Identifier of Instruction

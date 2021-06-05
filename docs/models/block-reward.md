@@ -24,15 +24,37 @@ Returns blockRewards
 #### Example:
 ```
 query{
-	blockRewards{
+	solana{
+   blockRewards{
+    hash
+    isConfirmed
     amount
-  }
+  	}
+	}
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "blockRewards": [
+        {
+          "hash": "1356MayXhLkr6Htt35bqtDxhGQZDRwoLkoHksXtzQ8qR",
+          "isConfirmed": true,
+          "amount": 3727500
+        },
+        {
+          "hash": "2bCg1JrL7697EG7mjZVR5q78H4VAadbKj1aDoRDqF4eT",
+          "isConfirmed": true,
+          "amount": 11
+        },
+        {
+          "hash": "2bCg1JrL7697EG7mjZVR5q78H4VAadbKj1aDoRDqF4eT",
+          "isConfirmed": true,
+          "amount": -11700
+        }
 ```
 
 ### blockRewardByPk
@@ -46,15 +68,29 @@ Returns specific instance of a Block Reward
 #### Example:
 ```
 query{
-  solana{
-    blockRewardByPk(account:"",hash:"",blockRewardType:""){
-
-    }
-  }
+	solana{
+   blockRewardByPk(account: "54fB9K9FV7Q5ptZuPr17Dob6SYdHJyLXnxVomoPnm16w",
+          hash: "2bCg1JrL7697EG7mjZVR5q78H4VAadbKj1aDoRDqF4eT",
+          blockRewardType: "RENT"){
+    	amount
+      postBalance
+      
+  	}
+	}
 }
+
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "blockRewardByPk": {
+        "amount": -11700,
+        "postBalance": 5500
+      }
+    }
+  }
+}
 ```
