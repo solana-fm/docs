@@ -23,7 +23,7 @@ Returns a specific Epoch
 #### Example:
 ```
 query{
-	epochById(epochId:123){
+	epochById(epochId:188){
 endTimestamp
   }
 }
@@ -31,6 +31,13 @@ endTimestamp
 
 ### Result:
 ```
-
+query{
+  solana{
+	  epochById(epochId:188){
+      startTimestamp
+      endTimestamp
+   }
+  }
+}
   
 ```
