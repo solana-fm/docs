@@ -29,15 +29,29 @@ Returns tokens
 #### Example:
 ```
 query{
-	tokens{
-  
+  solana{
+	  tokens{
+      hash
+    freezeAuthority
+   }
   }
 }
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "tokens": [
+        {
+          "hash": "4NPzwMK2gfgQ6rTv8x4EE1ZvKW6MYyYTSrAZCx7zxyaX",
+          "freezeAuthority": null
+        },
+        {
+          "hash": "8b9mQo6ZU2rwZQgSFqGNQvXzrUSHDTRpKSKi9XXdGmqN",
+          "freezeAuthority": null
+        }
 ```
 
 ### tokenByHash
@@ -51,13 +65,28 @@ Returns an instance of a token
 #### Example:
 ```
 query{
-	tokenByHash{
-  
+  solana{
+	  tokenByHash(tokenHash:"4NPzwMK2gfgQ6rTv8x4EE1ZvKW6MYyYTSrAZCx7zxyaX"){
+      hash
+      createdAt
+      decimals
+   }
   }
 }
+  
 ```
 
 #### Result:
 ```
-
+{
+  "data": {
+    "solana": {
+      "tokenByHash": {
+        "hash": "4NPzwMK2gfgQ6rTv8x4EE1ZvKW6MYyYTSrAZCx7zxyaX",
+        "createdAt": 1622987450,
+        "decimals": 0
+      }
+    }
+  }
+}
 ```
