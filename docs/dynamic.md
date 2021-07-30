@@ -60,6 +60,7 @@ query{
 
 ## orderBy 
 
+
 #### Example:
 ```
 query{
@@ -94,3 +95,30 @@ query{
 ## Distinct: 
 
 
+### Example: 
+```
+query{
+  solana{
+    accounts(distinct:hash){
+    hash
+    balance
+    }
+  }
+}
+```
+
+### Result:
+```
+{
+  "data": {
+    "solana": {
+      "accounts": [
+        {
+          "hash": "11111111111111111111111111111111",
+          "balance": 1
+        },
+        {
+          "hash": "4785anyR2rYSas6cQGHtykgzwYEtChvFYhcEgdDw3gGL",
+          "balance": 8055353873
+        }
+```
