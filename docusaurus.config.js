@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/icon.svg',
+  favicon: 'img/logo2.svg',
   organizationName: 'nozomi', // Usually your GitHub org/user name.
   projectName: 'nozomi-ai', // Usually your repo name.
   themeConfig: {
