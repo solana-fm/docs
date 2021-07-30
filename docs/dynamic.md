@@ -6,9 +6,32 @@ sidebar_position: 3
 
 # Dynamic Queries
 
-Welcome to **SolanaFM**.
-Explore our how-to guides, example codes using the SolanaFM API.
-SolanaFM is the only project to fully index the entire Solana Blockchain & provides easy access to Solana's blockchain and data. 
+These dynamic queries work the same as SQL. 
 
-## Getting to know Solana's deep Infrastructure
+
+
+## Where
+To extract only those records that fulfill a specifified condition.
+
+
+
+#### Example:
+```
+query{
+  solana{
+    accounts(where:{balance:{_eq:1141440}}){
+    hash
+    balance
+    }
+  }
+}
+
+```
+
+
+
+## orderBy 
+
+
+## Distinct 
 
