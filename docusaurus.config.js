@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Solana.Fm',
+  title: 'Solana.Fm Documentation',
   tagline: 'The most robust and performant GraphQL-based analytics engine.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
