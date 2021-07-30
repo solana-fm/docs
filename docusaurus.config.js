@@ -14,9 +14,14 @@ module.exports = {
       title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/nozomi.png',
+        src: 'img/logo2.png',
       },
       items: [
+        {
+          href: 'http://solana.fm',
+          label:'Home',
+          position:'left',
+        },
         {
           type: 'doc',
           docId: 'intro',
