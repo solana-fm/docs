@@ -1,13 +1,5 @@
-/* stylelint-disable docusaurus/copyright-header */
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #bc8de2;
+  --ifm-color-primary: #B026FF;
   --ifm-color-primary-dark: rgb(137, 63, 221);
   --ifm-color-primary-darker: rgb(133, 77, 236);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -22,4 +14,35 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.card {
+  padding: 1rem;
+  margin-top: 0rem;
+  animation: fadeInUp 400ms backwards;
+  animation-delay: 150ms;
+  transition-property: all;
+  transition-duration: 200ms;
+  box-shadow: 0 8px 28px 4px rgba(207, 156, 248, 0.705);
+}
+
+
+.card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translate(0px, -5px);
+}
+
+.footer--dark {
+  background-color: #232323 !important;
+}
+
+footer .text--center {
+  padding: 2rem 0 0 0;
+}
+
+.card__header h3 {
+  color: #B026FF;
 }

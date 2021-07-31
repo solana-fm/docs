@@ -1,34 +1,69 @@
-import React from 'react';
-import clsx from 'clsx';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import React from 'react'
+import clsx from 'clsx'
+import Layout from '@theme/Layout'
+import Link from '@docusaurus/Link'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import styles from './index.module.css'
+import HomepageFeatures from '../components/HomepageFeatures'
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext()
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <section className={styles.features}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        
+        <h3></h3>
       </div>
-    </header>
-  );
+      <div className="container">
+        <div className="row cards__container">
+          <div className={clsx('col col--4', styles.feature)}>
+            <div className="card">
+              <div className="card__header">
+                <h3>⛏ Solana Official Docs</h3>
+              </div>
+              <div className="card__body">
+                <p>
+                  Click <a href="https://docs.solana.com/"> here</a> to find out
+                  more about Solana's infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <h3></h3>
+        </div>
+        <div className="row cards__container">
+          <div className={clsx('col col--4', styles.feature)}>
+            <div className="card">
+              <div className="card__header">
+                <h3>⛏ Solana Official Docs</h3>
+              </div>
+              <div className="card__body">
+                <p>
+                  Click <a href="https://docs.solana.com/"> here</a> to find out
+                  more about Solana's infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+function Home() {
+  const { siteConfig } = useDocusaurusContext()
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
       </main>
     </Layout>
-  );
+  )
 }
+export default Home
