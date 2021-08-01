@@ -32,7 +32,7 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Share your thoughts & queries on our discord channel to
+                    Share your thoughts on our discord channel to
                     improve Solana.Fm.
                   </p>
                 </div>
