@@ -11,42 +11,84 @@ function HomepageHeader() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <h3></h3>
-      </div>
-      <div className="container">
         <div className="row cards__container">
           <div className={clsx('col col--4', styles.feature)}>
-            <Link 
-            className="navbar__link"to =
-              "https://docs.solana.com/">
-            <div className="card">
-              <div className="card__header">
-                <h3>⛏ Solana Official Docs</h3>
+            <Link className="navbar__link" to="https://docs.solana.com/">
+              <div className="card">
+                <div className="card__header">
+                  <h3> 📓 Solana Official Docs</h3>
+                </div>
+                <div className="card__body">
+                  <p>Find out more about Solana's infrastructure.</p>
+                </div>
               </div>
-              <div className="card__body">
-                <p>
-                  Find out
-                  more about Solana's infrastructure.
-                </p>
-              </div>
-            </div>
             </Link>
           </div>
-        </div>
-        <div className="container">
-          <h3></h3>
-        </div>
-        <div className="row cards__container">
+          <div className={clsx('col col--4', styles.feature)}>
+            <Link className="navbar__link" to="https://discord.gg/TrRmqvG4">
+              <div className="card">
+                <div className="card__header">
+                  <h3>🙌 Join our community</h3>
+                </div>
+                <div className="card__body">
+                  <p>
+                    Share your thoughts & queries on our discord channel to
+                    improve Solana.Fm.
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className={clsx('col col--4', styles.feature)}>
+            <Link className="navbar__link" to="https://solana.fm/">
+              <div className="card">
+                <div className="card__header">
+                  <h3>😊 Create a free account</h3>
+                </div>
+                <div className="card__body">
+                  <p>Try out our Free plan and query on Solana.Fm</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className={clsx('col col--4', styles.feature)}>
+            <Link className="navbar__link" to="/docs/models/Account">
+              <div className="card">
+                <div className="card__header">
+                  <h3>🤔 Standard Queries</h3>
+                </div>
+                <div className="card__body">
+                  <p>
+                    Use our built-in queires to retrieve data about Tokens,
+                    Epochs & more!
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className={clsx('col col--4', styles.feature)}>
+            <Link
+              className="navbar__link" to="docs/DynamicQ">
+              <div className="card">
+                <div className="card__header">
+                  <h3>🤩 Dynamic Queries</h3>
+                </div>
+                <div className="card__body">
+                  <p>
+                    Build your own queires using where, orderby & distinct
+                    clauses
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
           <div className={clsx('col col--4', styles.feature)}>
             <div className="card">
               <div className="card__header">
-                <h3>⛏ Solana Official Docs</h3>
+                <h3>🙌 Feedback & Improvements</h3>
               </div>
               <div className="card__body">
-                <p>
-                  Click <a href="https://docs.solana.com/"> here</a> to find out
-                  more about Solana's infrastructure.
-                </p>
+                <p>Share on our discord channel to improve Sol.Fm.</p>
               </div>
             </div>
           </div>
