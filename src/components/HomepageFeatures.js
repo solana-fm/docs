@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Readable Data',
+    title: 'GraphQL Readable Data',
     Svg: require('../../static/img/graphql.svg').default,
     description: (
       <>

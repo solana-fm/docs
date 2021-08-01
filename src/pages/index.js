@@ -45,7 +45,7 @@ function HomepageHeader() {
                   <h3>😊 Create a free account</h3>
                 </div>
                 <div className="card__body">
-                  <p>Try out our Free plan and query on Solana.Fm</p>
+                  <p>Try out our Free plan and query on Solana.Fm.</p>
                 </div>
               </div>
             </Link>
