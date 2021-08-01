@@ -32,8 +32,8 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Share your thoughts on our discord channel to
-                    improve Solana.Fm.
+                    Share your thoughts on our discord channel to improve
+                    Solana.Fm.
                   </p>
                 </div>
               </div>
@@ -67,8 +67,7 @@ function HomepageHeader() {
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <Link
-              className="navbar__link" to="docs/DynamicQ">
+            <Link className="navbar__link" to="docs/DynamicQ">
               <div className="card">
                 <div className="card__header">
                   <h3>🤩 Dynamic Queries</h3>
@@ -76,21 +75,23 @@ function HomepageHeader() {
                 <div className="card__body">
                   <p>
                     Build your own queires using where, orderby & distinct
-                    clauses
+                    clauses.
                   </p>
                 </div>
               </div>
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <div className="card">
-              <div className="card__header">
-                <h3>🙌 Feedback & Improvements</h3>
+            <Link className="navbar__link" to="https://graphql.org/learn/queries/">
+              <div className="card">
+                <div className="card__header">
+                  <h3> 📊 GraphQL Queires</h3>
+                </div>
+                <div className="card__body">
+                  <p>Find out how to query on GraphQL using their docs.</p>
+                </div>
               </div>
-              <div className="card__body">
-                <p>Share on our discord channel to improve Sol.Fm.</p>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
