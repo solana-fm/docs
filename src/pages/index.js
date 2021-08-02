@@ -28,11 +28,11 @@ function HomepageHeader() {
             <Link className="navbar__link" to="https://discord.gg/TrRmqvG4">
               <div className="card">
                 <div className="card__header">
-                  <h3>🙌 Join our community</h3>
+                  <h3>🙌 Join our Discord Community</h3>
                 </div>
                 <div className="card__body">
                   <p>
-                    Share your thoughts on our discord channel!
+                    Connect with the <b>Core Team</b> and other users!
                   </p>
                 </div>
               </div>
@@ -42,10 +42,10 @@ function HomepageHeader() {
             <Link className="navbar__link" to="https://solana.fm/">
               <div className="card">
                 <div className="card__header">
-                  <h3>😊 Create a free account</h3>
+                  <h3>😊 Create a Free Account</h3>
                 </div>
                 <div className="card__body">
-                  <p>Try out our Free plan and query on Solana.Fm.</p>
+                  <p>Try out our Free Plan & Query on <b><u>Solana.FM</u></b>.</p>
                 </div>
               </div>
             </Link>
@@ -58,8 +58,7 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Use our built-in queires to retrieve data about Tokens,
-                    Epochs & more!
+                    Utilise our built-in queries to retrieve data on <b>Tokens</b>, <b>Blocks</b> & more!
                   </p>
                 </div>
               </div>
@@ -73,8 +72,7 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Build your own queires using where, orderby & distinct
-                    clauses.
+                    Build your own queries using <b><u>WHERE</u></b>, <b><u>ORDERBY</u></b> & <b><u>DISTINCT</u></b> clauses.
                   </p>
                 </div>
               </div>
@@ -84,10 +82,10 @@ function HomepageHeader() {
             <Link className="navbar__link" to="https://graphql.org/learn/queries/">
               <div className="card">
                 <div className="card__header">
-                  <h3> 📊 GraphQL Queires</h3>
+                  <h3> 📊 GraphQL Queries</h3>
                 </div>
                 <div className="card__body">
-                  <p>Find out how to query on GraphQL using their docs.</p>
+                  <p>Find out how to query on <b><u>GraphQL</u></b> using their docs.</p>
                 </div>
               </div>
             </Link>
