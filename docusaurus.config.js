@@ -29,10 +29,9 @@ module.exports = {
           label: 'Documentation',
         },
         {
-          type: 'doc',
-          docId: 'intro',
           position: 'left',
-          label: 'ChangeLog'
+          label: 'ChangeLog',
+          to: '/blog'
         },
         {
           href: 'https://github.com/nozomi-ai',
@@ -53,7 +52,7 @@ module.exports = {
             },
             {
               label:'ChangeLog',
-              to: '/docs/intro'
+              to: '/blog/hello-world'
             }
           ],
         },
