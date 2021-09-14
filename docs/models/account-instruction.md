@@ -13,12 +13,14 @@ Returns accountInstructions
 #### ** Parameters ** : 
 * Paging: (Optional) `<int>` 
   - Page: `<int>`Start of Page 
+- from: `<DateTime>` (Required)
+- to: `<DateTime>`
 
 #### Example:
 ```
 query{
 	solana{
-   accountInstructions{
+   accountInstructions(date: {from:"2021-01-09T05:30:00Z", to: "2021-10-10T05:30:00Z"}){
     account
     instructionId
 			}
@@ -37,43 +39,4 @@ query{
           "instructionId": 1
         }instuction.debug
 ```
-
-### accountInstructionByKey
-Returns a specific instance of accountInstruction
-
-#### ** Parameters ** : 
-* instructionId: `<Float>` Unique Identifier of Instruction
-* index: `<Float>` 
-* accountHash: `<String>` Hash of Account
-
-#### Example:
-```
-query{
-  solana{
-	  accountInstructionByKey(accHash: "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
-          idx: 0,
-          iId: 1){
-      account
-      index
-      instructionId
-    }
-  }
-}
-```
-
-#### Result:
-```
-{
-  "data": {
-    "solana": {
-      "accountInstructionByKey": {
-        "account": "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
-        "index": 0,
-        "instructionId": 1
-      }
-    }
-  }
-}
-```
-
 
