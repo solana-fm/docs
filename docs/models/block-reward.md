@@ -11,6 +11,7 @@ For more information: https://docs.solana.com/cluster/stake-delegation-and-rewar
 * isConfirmed: `<Boolean>` If the block reward is confirmed
 * amount: `<Float>` Amount of the block reward (in Lamports)
 * postBalance: `<Float>` Post Balance of an account after block reward 
+* timeStamp: `<DateTime>` 
 
 ### blockRewards
 Returns blockRewards
@@ -90,6 +91,67 @@ query{
         "amount": -11700,
         "postBalance": 5500
       }
+    }
+  }
+}
+```
+
+### totalValidatorReward
+
+#### ** Parameters ** :
+
+- timeStamp `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    totalValidatorReward(timeStamp: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "totalValidatorReward": 10213094
+    }
+  }
+}
+```
+### totalValidatorRewardInTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: ``
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    totalValidatorRewardInTimeRange(ƒtime:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "totalValidatorRewardInTimeRange": []
     }
   }
 }
