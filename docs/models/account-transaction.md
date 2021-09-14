@@ -5,9 +5,8 @@ title: Account Transaction
 ### Elements of Account Transactions 
 * transactionHash: `<String>` Unique Identifier of a Transaction
 * account: `<String>` Hash of an Account
-* accountTransactionRole: `<String>` Role of an account in a transaction 
-* accountNavigation: `<List>` List of accounts
-* transactionHashNavigation: `<List>` List of transaction 
+* Role: `<String>` Role of an account in a transaction 
+* timestamp: `<DateTime>`
 
 ### accountTransactions
 Returns accountTransactions 
@@ -165,6 +164,69 @@ query{
 #### Result:
 ```
 something wrong
+```
+
+### accountActive
+
+Returns number of active Accounts
+#### ** Parameters ** :
+
+- timeStamp `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    accountsCreated(timeStamp: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "accountActive": 10094
+    }
+  }
+}
+```
+
+### accountActiveOverTime
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: ``
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    accountActiveOverTime(ƒtime:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "accountActiveOverTime": []
+    }
+  }
+}
 ```
 
 
