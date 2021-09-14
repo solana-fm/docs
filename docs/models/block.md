@@ -10,13 +10,12 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 * number : `<Float>` Unique Identifier of a Block 
 * hash: `<String>` The Hash of the Block
 * isConfirmed: `<Boolean>` If the Block is Confirmed in the ledger
-* timestamp: `<Float>` Production Time of a block 
 * proposer: `<String>` The Proposer of the Block
 * parent: `<String>` The Parent of the Block 
 * isSkipped: `<Boolean>` If an Block is skipped
 * epochId: `<Float>` The epoch the block belongs to
 * finality: `<Boolean>` Confirmation of the Block
-* createdAt: `<Float>` Time (in epochs) the Block was created at  
+* timeStamp: `<DateTime>` 
 * transactions: `<List>` The transactions involved in the Block 
 
 
@@ -26,12 +25,14 @@ Returns Blocks
 #### ** Parameters ** : 
 * Paging: (Optional) `<int>` 
   - Page: `<int>`Start of Page 
+- from: `<DateTime>` (Required)
+- to: `<DateTime>`
 
 #### Example:
 ```
 query{
   solana{
-    blocks{
+    blocks(date: {from:"2021-01-09T05:30:00Z", to: "2021-10-10T05:30:00Z"} ){
       hash
       CreatedAt
       isSkipped
@@ -77,7 +78,6 @@ query{
     blockByNum(number: 43777){
       hash
       isConfirmed
-      timestamp
     }
   }
 }
@@ -90,17 +90,10 @@ query{
     "blockByNum": {
       "hash": "ADRpYBgDP2FFbakbfKxZcoaLTaE87pPXaCS6sUWRbMr4",
       "isConfirmed": true,
-      "timestamp": 0
     }
   }
 }
 ```
-
-### blockCount
-Returns the number of blocks in a specific timeframe.
-
-#### ** Parameters ** : 
-* timeFrame: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_WEEK
 
 
 ### blocksByEpochId
@@ -138,26 +131,124 @@ query{
       }
 ```
 
-### blocksByEpochIdWithTransactions
-Returns the transactions involved in the block within an epoch.
+### blockCount
 
-#### ** Parameters ** : 
-* epochID: `<String>` (required) The Id of an Epoch
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
+Returns number of blocks created
+#### ** Parameters ** :
+
+- from `<DateTime>`
 
 #### Example:
+
 ```
-query{
-  solana{
-    blocksByEpochIdWithTransactions(epochId:"0"){
-    hash
-      number
+query {
+  solana {
+    blockCount(from: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blockCount": 10094
     }
   }
 }
 ```
 
+### blocksCreatedByTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blocksCreatedByTimeRange": []
+    }
+  }
+} 
+```
+
+### uniqueValidators
+
+#### ** Parameters ** :
+
+- from `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    uniqueValidators(from: "2021-05-05")
+  }
+}
+```
 
 #### Result:
 
+```
+{
+  "data": {
+    "solana": {
+      "uniqueValidators": 10094
+    }
+  }
+}
+```
+
+### uniqueValidatorsinTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    uniqueValidatorsinTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "uniqueValidatorsinTimeRange": []
+    }
+  }
+}
