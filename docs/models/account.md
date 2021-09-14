@@ -107,36 +107,7 @@ query{
 
 ```
 
-### accountByHash
-Returns a specific account via the hash.
 
-#### **Parameters**: 
-* AccountHash: `<String>` (Required) The Hash of an Account
-
-#### Example:
-```
-query{
-  accountByHash(acctHash: "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8"){
-  	hash
-    balance
-    data
-    upgradeAuthority
-  }
-}
-```
-#### Result:
-```
-{
-  "data": {
-    "accountByHash": {
-      "hash": "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8",
-      "balance": 1141440,
-      "data": "AgAAANc5gByFhKTMS4SiwcYAMdAvBrqKB1JMLgCoMUSoJrrB",
-      "upgradeAuthority": null
-    }
-  }
-}
-```
 ### accountByOwner
 Returns the accounts that have the same owner.
 
