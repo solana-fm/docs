@@ -7,9 +7,8 @@ For more information on Epochs: https://docs.solana.com/terminology#epoch
 
 ### Elements of Epochs
 * id: `<ID>` Unique Identifier of an Epoch
-* startTimestamp: `<Float>` Start time of an Epoch
-* endTimestamp: `<Float>` End time of an epoch
-* blocks: `[Blocks]` Accessing blocks via an epoch
+* highestSlot: `<Float>` 
+* lowestSlot: `<Float>` 
 
 
 ### epochById
@@ -31,12 +30,11 @@ endTimestamp
 
 ### Result:
 ```
-query{
-  solana{
-	  epochById(epochId:188){
-      startTimestamp
-      endTimestamp
-   }
+{
+  "data": {
+    "solana": {
+      "epochById": null
+    }
   }
 }
   
