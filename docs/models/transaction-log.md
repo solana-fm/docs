@@ -3,8 +3,8 @@ title: Transaction Log
 ---
 
 ### Elements of Transaction Log
-* transactionHash: `<String>` Unique Identifier of a Transaction
-* data: `<String>` Data a transaction has
+* transactionHash: `<String>` 
+* data: `<String>` 
 * timestamp: `<DateTime>`
 * line: `<Int>`
 

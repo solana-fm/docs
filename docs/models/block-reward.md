@@ -7,7 +7,7 @@ For more information: https://docs.solana.com/cluster/stake-delegation-and-rewar
 ### Elements of Block Reward
 * account: `<String>` Account Hash
 * hash: `<String>` Block Hash
-* blockRewardType: `<String>` 
+* rewardType: `<String>` 
 * isConfirmed: `<Boolean>` If the block reward is confirmed
 * amount: `<Float>` Amount of the block reward (in Lamports)
 * postBalance: `<Float>` Post Balance of an account after block reward 

@@ -6,8 +6,8 @@ For more information of a transaction signature: https://docs.solana.com/develop
 
 ### Elements of Transaction Signature
 
-- transactionHash: `<String>` Unique Identifier of a Transaction
-- signature: `<String>` Unique Identifier of a Transaction Signature
+- transactionHash: `<String>` 
+- signature: `<String>` 
 - timestamp: `<DateTime>`
 
 ### transactionSignatures

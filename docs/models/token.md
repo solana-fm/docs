@@ -7,14 +7,14 @@ For more information on Tokens: https://docs.solana.com/terminology#token
 ### Elements of Tokens
 * hash: `<String>` Unique Identifier of a token
 * name: `<String>` Name of Token
-* currentSupply: `<Float>` Current Supply of token
+* abbreviation: `<String>`
+* currentSupply: `<Float>` 
 * mintAuthority: `<String>` 
-* freezeAuthority: `<String>`  This allows them to freeze the assets in a given account at will, rendering the account unusable until thawed
-* decimals: `<Float>` Number of decimals configured for token's mint.
-* createdAt: `<Float>` Time the token is created at (in Epochs)
+* freezeAuthority: `<String>`  
+* decimals: `<Int>` Number of decimals configured for token's mint.
 * owner: `<String>` Owner of the Token
-* entityProperties: `<[entityProperties]>`  
-
+* genesisTimestamp: `<DateTime>`
+* updatedTimestamp: `<DateTime>`
 
 
 ### tokens

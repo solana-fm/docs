@@ -3,9 +3,12 @@ title: Account Instruction
 ---
 
 ### Elements of Account Instruction
-* instructionId: `<Float>` Unique Identifier of Instruction
+* txinstructionId: `<Float>` Unique Identifier of Instruction
+* transactionHash: `<String>` 
+* parentIndex: `<Int>`
 * index: `<Float>` 
-* AccountHash: `<String>` Hash of Account
+* account: `<String>` Hash of Account
+* timestamp: `<DateTime>`
 
 ### accountInstructions
 Returns accountInstructions

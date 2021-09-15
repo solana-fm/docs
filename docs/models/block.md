@@ -9,6 +9,7 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 ### Elements of Blocks
 * number : `<Float>` Unique Identifier of a Block 
 * hash: `<String>` The Hash of the Block
+* fetchstatus: `<Int>` 
 * isConfirmed: `<Boolean>` If the Block is Confirmed in the ledger
 * proposer: `<String>` The Proposer of the Block
 * parent: `<String>` The Parent of the Block 
@@ -16,7 +17,6 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 * epochId: `<Float>` The epoch the block belongs to
 * finality: `<Boolean>` Confirmation of the Block
 * timeStamp: `<DateTime>` 
-* transactions: `<List>` The transactions involved in the Block 
 
 
 ### blocks

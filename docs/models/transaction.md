@@ -6,13 +6,11 @@ For more information on Transactions: https://docs.solana.com/developing/program
 
 ### Elements of Transactions
 * hash: `<String>` Unique Identifier of a Transaction
-* isConfirmed: `<Boolean>` If a transaction is confirmed
-* block: `<String>` Block the Transaction is in
-* result: `<String>` 
+* isConfirmed: `<Bool>` 
+* block: `<String>` 
+* Status: `<Int>` 
 * fee: `<Float>` Fee of the transaction (in Lamports)
-* timestamp: `<Float>` Time of the Transaction (in Epochs)
-* programLog: `<String>` 
-* transactionStatus: `<String>` Status of the Transaction 
+* timestamp: `<DateTime>`
 
 ### transactions
 Returns Transactions 

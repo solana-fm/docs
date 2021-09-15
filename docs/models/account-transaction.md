@@ -5,7 +5,7 @@ title: Account Transaction
 ### Elements of Account Transactions 
 * transactionHash: `<String>` Unique Identifier of a Transaction
 * account: `<String>` Hash of an Account
-* Role: `<String>` Role of an account in a transaction 
+* role: `<String>` Role of an account in a transaction 
 * timestamp: `<DateTime>`
 
 ### accountTransactions
