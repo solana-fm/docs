@@ -14,7 +14,7 @@ Returns accountInstructions
 * Paging: (Optional) `<int>` 
   - Page: `<int>`Start of Page 
 - from: `<DateTime>` (Required)
-- to: `<DateTime>`
+- to: `<DateTime>` (Required)
 
 #### Example:
 ```
@@ -37,6 +37,6 @@ query{
         {
           "account": "4E7oqDNWg8hFiSQYNdetf7oGbQCJzrZDW1Czn5wjvXrg",
           "instructionId": 1
-        }instuction.debug
+        }
 ```
 

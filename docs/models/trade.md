@@ -12,8 +12,8 @@ title: Trade
 Returns the total serum transactions count within a time period 
 
 #### ** Parameters ** : 
-* resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
-
+- from: `<DateTime>` (Required)
+- to: `<DateTime>` (Required)
 
 ### GetSerumTxCountByTimeRange 
 Returns a list of serum transactions count within a time period 
@@ -28,8 +28,8 @@ Returns a list of serum transactions count within a time period
 Returns total serum volume within a time period 
 
 #### ** Parameters ** : 
-* resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
-
+- from: `<DateTime>` (Required)
+- to: `<DateTime>` (Required)
 
 ### GetSerumVolumeByTimeRange 
 Returns a list of Serum Volume within a time period 
@@ -43,8 +43,8 @@ Returns a list of Serum Volume within a time period
 Returns a list of Raydium Transaction Count within a time period 
 
 #### ** Parameters ** : 
-* resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
-
+- from: `<DateTime>` (Required)
+- to: `<DateTime>` (Required)
 ### GetRaydiumTxCountByTimeRange 
 Returns a list of Raydium transactions count within a time period 
 
@@ -57,8 +57,8 @@ Returns a list of Raydium transactions count within a time period
 Returns total Raydium volume within a time period 
 
 #### ** Parameters ** : 
-* resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
-
+- from: `<DateTime>` (Required)
+- to: `<DateTime>` (Required)
 
 ### GetRaydiumVolumeByTimeRange 
 Returns a list of Raydium Volume within a time period 

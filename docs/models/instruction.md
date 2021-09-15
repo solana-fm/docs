@@ -22,8 +22,7 @@ Returns Instructions
 * Paging: (Optional) `<int>` 
   - Page: `<int>` Start of Page 
 - from: `<DateTime>` (Required)
-- to: `<DateTime>`
-
+- to: `<DateTime>` (Required)
 
 
 #### Example:
