@@ -12,6 +12,7 @@ For more information: https://docs.solana.com/cluster/stake-delegation-and-rewar
 * amount: `<Float>` Amount of the block reward (in Lamports)
 * postBalance: `<Float>` Post Balance of an account after block reward 
 * timeStamp: `<DateTime>` 
+* accountInstructions: `[Object]` Account Instructions Object where the account Hashes matches the accountInstructions 
 
 ### blockRewards
 Returns blockRewards

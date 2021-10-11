@@ -1,6 +1,7 @@
 ---
 title: Token
 ---
+COMING SOON!
 
 For more information on Tokens: https://docs.solana.com/terminology#token
 

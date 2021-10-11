@@ -85,27 +85,3 @@ query {
 ```
 
 ```
-
-### transactionSignatureBySignature
-
-Returns of a specific instance of Transaction Signature via signature
-
-#### ** Parameters ** :
-
-- signature: `<String>` (required) Unique Identifier of a transaction signature
-
-#### Example:
-
-```
-query{
-	transactionSignatureBySignature(Signature: ""){
-
-  }
-}
-```
-
-#### Result:
-
-```
-
-```

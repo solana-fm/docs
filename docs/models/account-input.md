@@ -12,6 +12,7 @@ For more Information on AccountsInputs: https://docs.solana.com/developing/progr
 - preBalance: `<Float>` The Pre Balance of an account in Lamports
 - postBalance: `<Float>` The Post Balance of an account in Lamports
 - timeStamp: `<Float>` Time (in epochs) it was created at
+- transactions: `<Object>` The transactions that matches the returned account Hashes
 
 ### accountInputs
 
@@ -55,36 +56,27 @@ query {
         }...
 ```
 
-### ByHash
+### accountInputByPk
 
-Returns a specific account Input via transactionHash and accountHash.
+Returns an account Input via Primary Key
 
-#### **Parameters**:
+#### ** Parameters ** :
 
-- Hash: `<String>` (Required) The Hash of an Account
+- txHash: `<String>` (Required)
+- accountHash: `<String>` (Required)
+- tokenId: `<String>` (Required)
 
 #### Example:
 
 ```
-query{
-  ByHash(Hash: "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8"){
-  	hash
-    balance
-  }
-}
+
+
 ```
 
 #### Result:
 
 ```
-{
-  "data": {
-    "ByHash": {
-      "hash": "SwaPpA9LAaLfeLi3a68M4DjnLqgtticKg6CnyNwgAC8",
-      "balance": 1141440,
-    }
-  }
-}
+
 ```
 
 ### accountBalance

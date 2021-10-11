@@ -17,6 +17,8 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 * epochId: `<Float>` The epoch the block belongs to
 * finality: `<Boolean>` Confirmation of the Block
 * timeStamp: `<DateTime>` 
+* transactions: `<Object>` The transactions that matches the returned block number
+
 
 
 ### blocks
@@ -64,7 +66,7 @@ query{
       }
 ```
 
-### blockByNum
+### blockByNumber
 Returns a specific instance of a block
 
 
@@ -135,8 +137,8 @@ query{
 
 Returns number of blocks created
 #### ** Parameters ** :
-
 - from `<DateTime>`
+- to `<DateTime>`
 
 #### Example:
 

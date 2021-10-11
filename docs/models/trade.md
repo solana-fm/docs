@@ -15,7 +15,7 @@ Returns the total serum transactions count within a time period
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
 
-### GetSerumTxCountByTimeRange 
+### serumTransactionCountHistory 
 Returns a list of serum transactions count within a time period 
 
 #### ** Parameters ** : 
@@ -31,7 +31,7 @@ Returns total serum volume within a time period
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
 
-### GetSerumVolumeByTimeRange 
+### serumVolumeTimeRange 
 Returns a list of Serum Volume within a time period 
 
 #### ** Parameters ** : 
@@ -39,13 +39,13 @@ Returns a list of Serum Volume within a time period
 * from: `<DateTime>` The start time of a specified query 
 * to: `<DateTime>` The end time of a specified query 
 
-### TotalRaydiumTxCount
+### totalRaydiumTxCount
 Returns a list of Raydium Transaction Count within a time period 
 
 #### ** Parameters ** : 
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
-### GetRaydiumTxCountByTimeRange 
+### raydiumTxCountTimeRange 
 Returns a list of Raydium transactions count within a time period 
 
 #### ** Parameters ** : 
@@ -60,10 +60,44 @@ Returns total Raydium volume within a time period
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
 
-### GetRaydiumVolumeByTimeRange 
+### raydiumVolumeTimeRange 
 Returns a list of Raydium Volume within a time period 
 
 #### ** Parameters ** : 
 * resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
+* from: `<DateTime>` The start time of a specified query 
+* to: `<DateTime>` The end time of a specified query 
+
+### volumeByToken 
+Returns a the Volume of a specific token within a time period 
+
+#### ** Parameters ** : 
+* from: `<DateTime>` The start time of a specified query 
+* to: `<DateTime>` The end time of a specified query 
+
+### volumeChangeByToken 
+Returns a list of a specific token Volume within a time period 
+
+#### ** Parameters ** : 
+* resolution: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
+* from: `<DateTime>` The start time of a specified query 
+* to: `<DateTime>` The end time of a specified query
+
+### uniqueSerumUsers 
+Returns the number of unique Serum Users
+
+#### ** Parameters ** : 
+* from: `<DateTime>` The start time of a specified query 
+* to: `<DateTime>` The end time of a specified query 
+
+### totalvalLocked 
+
+#### ** Parameters ** : 
+* from: `<DateTime>` The start time of a specified query 
+* to: `<DateTime>` The end time of a specified query 
+
+### totalvalLockedAmt 
+
+#### ** Parameters ** : 
 * from: `<DateTime>` The start time of a specified query 
 * to: `<DateTime>` The end time of a specified query 

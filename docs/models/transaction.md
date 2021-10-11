@@ -11,6 +11,8 @@ For more information on Transactions: https://docs.solana.com/developing/program
 * Status: `<Int>` 
 * fee: `<Float>` Fee of the transaction (in Lamports)
 * timestamp: `<DateTime>`
+* signatures: `<Object>` Transaction_Signatures Object where the transaction Hashes matches the transactions_signature's hashes 
+* logs: `<Object>` Transaction_Logs Object where the transaction Hashes matches the transactions_log's hashes 
 
 ### transactions
 Returns Transactions 
@@ -49,7 +51,7 @@ query{
       }
 ```
 
-### transactionByTxnHash
+### transactionByTxHash
 Returns a specific instance of a transaction.
 
 #### ** Parameters ** : 
@@ -78,16 +80,199 @@ query{
 ```
 
 ### transactionCount
+Returns number of transactions in a given time 
+
+#### ** Parameters ** :
+- from `<DateTime>`
+- to `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    blockCount(from: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blockCount": 10094
+    }
+  }
+}
+```
+### transactionsByTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blocksCreatedByTimeRange": []
+    }
+  }
+} 
+```
+### medianFees
+Returns median fees over time range
+
+#### ** Parameters ** :
+- from `<DateTime>`
+- to `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    blockCount(from: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blockCount": 10094
+    }
+  }
+}
+```
+### totalMedianInTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blocksCreatedByTimeRange": []
+    }
+  }
+} 
+```
+### totalFees
+Returns Total Fees in Time Range
+
+#### ** Parameters ** :
+- from `<DateTime>`
+- to `<DateTime>`
+
+#### Example:
+
+```
+query {
+  solana {
+    blockCount(from: "2021-05-05")
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blockCount": 10094
+    }
+  }
+}
+```
+### totalFeesInTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+
+### Example:
+
+```
+query {
+  solana {
+    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    timestamp
+    value
+    }
+  }
+}
+```
+
+### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "blocksCreatedByTimeRange": []
+    }
+  }
+} 
+```
+
+### transactionByBlockNumber
+Returns a specific instance of a transaction.
 
 #### ** Parameters ** : 
-* timeFrame: `<Enum>` (required) ONE_DAY,ONE_WEEK,ONE_MONTH
+* block: `<Float>` (required) 
 
 #### Example:
 ```
 query{
-	solana{
-   transactionCount(timeFrame:ONE_DAY)
-	}
+	transactionByTxnHash(txnHash:"2WGfxBa23ZoMoQ4Hsw9a4p7DR695tTRX6y6cAeURkim5LmT9axVM51iHARpR2bXQVpbDUmvAxcLqGAFK453sfwxo"){
+    block
+    timestamp
+  }
 }
 ```
 
@@ -95,36 +280,12 @@ query{
 ```
 {
   "data": {
-    "solana": {
-      "transactionCount": 0
+    "transactionByTxnHash": {
+      "block": "3kF1owv5JsgpxRxdriAM3S5LHgFmUYedTSHXze9YzdCM",
+      "timestamp": 0
     }
   }
 }
-```
-
-
-### transactionByResult
-Returns Transactions by Results
-
-#### ** Parameters ** : 
-* TxnResult: `<String>` (required) The result of a transaction 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
-
-#### Example:
-```
-query{
-	solana{
-   transactionsByResult(txnResult:null){
-    hash
-	}
-}
-```
-
-#### Result:
-```
-
-
 ```
 
 

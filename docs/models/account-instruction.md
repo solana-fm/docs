@@ -9,6 +9,7 @@ title: Account Instruction
 * index: `<Float>` 
 * account: `<String>` Hash of Account
 * timestamp: `<DateTime>`
+* transactions: `<String>` Transaction Object where the account Hashes matches the transactions 
 
 ### accountInstructions
 Returns accountInstructions
@@ -16,8 +17,8 @@ Returns accountInstructions
 #### ** Parameters ** : 
 * Paging: (Optional) `<int>` 
   - Page: `<int>`Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+- from: `<DateTime>` 
+- to: `<DateTime>` 
 
 #### Example:
 ```
