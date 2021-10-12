@@ -112,35 +112,6 @@ query{
 }
 ```
 
-### accountTransactionByHash
-Returns an instance of Account Transaction.
-
-#### ** Parameters ** : 
-* transactionHash: `<String>` The Hash of a transaction (required)
-
-#### Example:
-```
-query{
-  solana{
-    accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
-      transactionHash
-      account
-    }
-  }
-}
-```
-
-### Result:
-```
-{
-  "data": {
-    "accountTransactionByHash": {
-      "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
-      "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx"
-    }
-  }
-}
-```
 
 ### accountTransactionsByAccount
 Returns an instance of Account Transaction.
@@ -183,12 +154,12 @@ Returns specific instance of an Account Transaction
 
 #### Example:
 ```
-query{
-  solana{
-    accountTransactionByPk(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",account:"Vote111111111111111111111111111111111111111",accountTransactionRole:"4"){
+query {
+  solana {
+    accountTransactionByPk(txHash: "3rNNt2pxYq3LyEXAdhcP5skfbcxgwka6zPVfvKDXnjqDKYvCU16pqGbbJ8nNqGdenMi5zaxGnYGcqXM9bBHEzhYb", accountHash: "11111111111111111111111111111111", role: NONE) {
       account
-      transactionHash
-      accountTransactionRole
+      role
+      timestamp
     }
   }
 }
@@ -196,8 +167,17 @@ query{
 
 #### Result:
 ```
-something wrong
-```
+{
+  "data": {
+    "solana": {
+      "accountTransactionByPk": {
+        "account": "11111111111111111111111111111111",
+        "role": "NONE",
+        "timestamp": "2021-08-11T03:54:04.000Z"
+      }
+    }
+  }
+}```
 
 ### accountActive
 

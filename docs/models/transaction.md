@@ -91,7 +91,7 @@ Returns number of transactions in a given time
 ```
 query {
   solana {
-    blockCount(from: "2021-05-05")
+     transactionCount(date: { from: "2021-05-30T00:00:00Z", to: "2021-06-30T00:00:00Z" })
   }
 }
 ```
@@ -102,7 +102,7 @@ query {
 {
   "data": {
     "solana": {
-      "blockCount": 10094
+      "transactionCount": 1369869
     }
   }
 }

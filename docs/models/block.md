@@ -145,7 +145,7 @@ Returns number of blocks created
 ```
 query {
   solana {
-    blockCount(from: "2021-05-05")
+    blockCount(date: { from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z" })
   }
 }
 ```
@@ -156,7 +156,7 @@ query {
 {
   "data": {
     "solana": {
-      "blockCount": 10094
+      "blockCount": 2090
     }
   }
 }
@@ -175,9 +175,9 @@ query {
 ```
 query {
   solana {
-    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
+    blocksCreatedByTimeRange(time: {from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z", resolution: ONE_MIN}) {
+     time
+     value 
     }
   }
 }
@@ -189,10 +189,111 @@ query {
 {
   "data": {
     "solana": {
-      "blocksCreatedByTimeRange": []
+      "blocksCreatedByTimeRange": [
+        {
+          "time": "2021-06-29T23:32:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:33:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:34:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:35:00.000Z",
+          "value": 82
+        },
+        {
+          "time": "2021-06-29T23:36:00.000Z",
+          "value": 75
+        },
+        {
+          "time": "2021-06-29T23:37:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:38:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:39:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:40:00.000Z",
+          "value": 66
+        },
+        {
+          "time": "2021-06-29T23:41:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:42:00.000Z",
+          "value": 87
+        },
+        {
+          "time": "2021-06-29T23:43:00.000Z",
+          "value": 61
+        },
+        {
+          "time": "2021-06-29T23:44:00.000Z",
+          "value": 114
+        },
+        {
+          "time": "2021-06-29T23:45:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:46:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:47:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:48:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:49:00.000Z",
+          "value": 70
+        },
+        {
+          "time": "2021-06-29T23:50:00.000Z",
+          "value": 93
+        },
+        {
+          "time": "2021-06-29T23:51:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:52:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:53:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:54:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:55:00.000Z",
+          "value": 72
+        },
+        {
+          "time": "2021-06-29T23:56:00.000Z",
+          "value": 71
+        }
+      ]
     }
   }
-} 
+}
 ```
 
 ### uniqueValidators
@@ -200,13 +301,14 @@ query {
 #### ** Parameters ** :
 
 - from `<DateTime>`
+- to `<DateTime>`
 
 #### Example:
 
 ```
 query {
   solana {
-    uniqueValidators(from: "2021-05-05")
+    uniqueValidators(date: {from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z"})
   }
 }
 ```
@@ -217,7 +319,7 @@ query {
 {
   "data": {
     "solana": {
-      "uniqueValidators": 10094
+      "uniqueValidators": 0
     }
   }
 }
@@ -236,9 +338,9 @@ query {
 ```
 query {
   solana {
-    uniqueValidatorsinTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
+    uniqueValidatorsinTimeRange(time: {from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z", resolution: ONE_MIN}) {
+      time
+      value
     }
   }
 }
@@ -250,7 +352,109 @@ query {
 {
   "data": {
     "solana": {
-      "uniqueValidatorsinTimeRange": []
+      "uniqueValidatorsinTimeRange": [
+        {
+          "time": "2021-06-29T23:32:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:33:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:34:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:35:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:36:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:37:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:38:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:39:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:40:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:41:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:42:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:43:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:44:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:45:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:46:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:47:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:48:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:49:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:50:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:51:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:52:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:53:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:54:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:55:00.000Z",
+          "value": 0
+        },
+        {
+          "time": "2021-06-29T23:56:00.000Z",
+          "value": 0
+        }
+      ]
     }
   }
 }
+```

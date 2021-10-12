@@ -237,9 +237,9 @@ query {
 ```
 query {
   solana {
-    accountBalancesOverTime(balance: 1000, time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
+    accountBalancesOverTime(balance: 1000000000, time: {from: "2021-08-11T03:54:05Z", to: "2021-08-11T07:54:05Z", resolution: ONE_MIN}) {
+      time
+      value
     }
   }
 }
@@ -251,7 +251,12 @@ query {
 {
   "data": {
     "solana": {
-      "accountBalancesOverTime": []
+      "accountBalancesOverTime": [
+        {
+          "time": "2021-08-11T03:54:00.000Z",
+          "value": 182087426666614140
+        }
+      ]
     }
   }
 }
@@ -327,7 +332,6 @@ query {
 
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: ``
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
 ### Example:
@@ -335,11 +339,12 @@ query {
 ```
 query {
   solana {
-    accountsCreatedOverTime(ƒtime:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
+    accountsCreatedOverTime(time: { from: "2021-08-11T03:54:05Z", to: "2021-08-11T03:54:05Z", resolution: ONE_DAY}) {
+      time
+      value
     }
   }
+}
 }
 ```
 
@@ -349,7 +354,12 @@ query {
 {
   "data": {
     "solana": {
-      "accountBalancesOverTime": []
+      "accountsCreatedOverTime": [
+        {
+          "time": "2021-08-11T00:00:00.000Z",
+          "value": 1830
+        }
+      ]
     }
   }
 }

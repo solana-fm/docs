@@ -131,7 +131,6 @@ query {
 
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: ``
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
 ### Example:
@@ -139,10 +138,10 @@ query {
 ```
 query {
   solana {
-    totalValidatorRewardInTimeRange(ƒtime:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
-    }
+     totalValidatorRewardInTimeRange(time: { from: "2021-08-11T00:00:00Z", to: "2021-08-11T04:00:00Z", resolution: ONE_MIN }) {
+       time
+       value
+     }
   }
 }
 ```
@@ -153,7 +152,12 @@ query {
 {
   "data": {
     "solana": {
-      "totalValidatorRewardInTimeRange": []
+      "totalValidatorRewardInTimeRange": [
+        {
+          "time": "2021-08-11T03:54:00.000Z",
+          "value": 97939815
+        }
+      ]
     }
   }
 }

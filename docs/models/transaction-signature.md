@@ -72,16 +72,31 @@ Returns of a list of transaction signatures via transaction Hash
 ```
 query {
   solana {
-    transactionSignatureBySignature(signature: "sBBfXQirqtxfSDCdRrgziYLmtvSyfijs65PZPG9oBaBJmV2UM2wzmAQhfXYMiB18qgjN89PRbSDPx2SD9pdDozj") {
-      signature
-      timestamp
-    }
+     transactionSignatureByTxHash(txHash: "2WEhAYuHmQrZQ59AqnhDD5W1mBVsXYQdw4Ksfy7hg3vaskygRXG7JHTEMs26UrJCH76JbFDSayjBnVzNX3KGkj8a") {
+       signature
+       timestamp
+       transactionHash
+     }
   }
 }
+
 ```
 
 #### Result:
 
 ```
+{
+  "data": {
+    "solana": {
+      "transactionSignatureByTxHash": [
+        {
+          "signature": "HCdrNJXorjZSYqaTeVUmrnSjaeWworxyLgV4pAraCAH6p4wJZPYuf4bzQer89g4EE6TuShsr3NAhtM5mUvnhpx5",
+          "timestamp": "2021-06-30T00:17:04.000Z",
+          "transactionHash": "2WEhAYuHmQrZQ59AqnhDD5W1mBVsXYQdw4Ksfy7hg3vaskygRXG7JHTEMs26UrJCH76JbFDSayjBnVzNX3KGkj8a"
+        }
+      ]
+    }
+  }
+}
 
 ```
