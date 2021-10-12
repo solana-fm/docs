@@ -15,14 +15,14 @@ For more information on Transactions: https://docs.solana.com/developing/program
 * logs: `<Object>` Transaction_Logs Object where the transaction Hashes matches the transactions_log's hashes 
 
 ### transactions
-Returns Transactions 
 
 
-#### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+#### ** Parameters ** :  
+- from: `<DateTime>` 
+- to: `<DateTime>` 
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 
 #### Example:
@@ -55,7 +55,7 @@ query{
 Returns a specific instance of a transaction.
 
 #### ** Parameters ** : 
-* Hash: `<String>` (required) Transaction Hash 
+* Hash: `<String>` (required) 
 
 #### Example:
 ```
@@ -80,7 +80,7 @@ query{
 ```
 
 ### transactionCount
-Returns number of transactions in a given time 
+Returns number of transactions in a given time range 
 
 #### ** Parameters ** :
 - from `<DateTime>`
@@ -110,10 +110,12 @@ query {
 ### transactionsByTimeRange
 
 #### ** Parameters ** :
-
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 #### Example:
 
@@ -140,7 +142,7 @@ query {
 } 
 ```
 ### medianFees
-Returns median fees over time range
+Returns median fees in a time range
 
 #### ** Parameters ** :
 - from `<DateTime>`
@@ -151,7 +153,7 @@ Returns median fees over time range
 ```
 query {
   solana {
-    blockCount(from: "2021-05-05")
+    medianFees(date{from: "2021-05-05T05:30:30", to:"2021-05-05T07:30:30"} )
   }
 }
 ```
@@ -162,7 +164,7 @@ query {
 {
   "data": {
     "solana": {
-      "blockCount": 10094
+      "Value": 5000
     }
   }
 }
@@ -174,13 +176,16 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 #### Example:
 
 ```
 query {
   solana {
-    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    totalMedianInTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
     timestamp
     value
     }
@@ -194,7 +199,7 @@ query {
 {
   "data": {
     "solana": {
-      "blocksCreatedByTimeRange": []
+      "totalMedianInTimeRange": []
     }
   }
 } 

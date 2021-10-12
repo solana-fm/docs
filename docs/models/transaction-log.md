@@ -9,14 +9,14 @@ title: Transaction Log
 * line: `<Int>`
 
 ### transactionLogs
-Returns transactionlogs
 
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
-- from: `<DateTime>` (Required)
+- from: `<DateTime>` 
 - to: `<DateTime>`
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 
 #### Example:
@@ -45,11 +45,14 @@ query{
 ```
 
 ### transactionLogsByHash
-Returns of a transactionlog
+Returns transactionlogs via transactionHash
 
 
 #### ** Parameters ** : 
 * txHash: `<String>` Unique Identifier of a transaction (Required)
+* paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 
 #### Example:
