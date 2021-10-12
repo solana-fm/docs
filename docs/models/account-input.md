@@ -20,10 +20,11 @@ Returns account Inputs.
 
 #### ** Parameters ** :
 
-- from: `<DateTime>` (Required)
+- from: `<DateTime>` 
 - to: `<DateTime>`
-- Paging: (Optional) `<int>`
-  - Page: `<int>`Start of Page
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
 #### Example:
 
@@ -81,18 +82,22 @@ Returns an account Input via Primary Key
 
 ### accountBalance
 
-Returns balances of accounts greater than balance input.
+Returns balances of accounts greater than balance input
 
 #### ** Parameters ** :
 
-- balance (Lamports)
+- balance `<Float>`(Required) 
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
+
 
 #### Example:
 
 ```
 query {
   solana {
-    accountBalance(balance:100000 ) {
+    accountBalance(balance:100000) {
       account
       balance
       timestamp
@@ -125,44 +130,49 @@ query {
         } ...
 ```
 
-### accountBalanceByToken
+### accountBalancesByToken
 
-Returns the number of transactions of a specific token within a time period.
+Returns the account balances a specific token within a time period.
 
 #### ** Parameters ** :
 
-- TokenId: `<String>` (required)
-- TimeFrame: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- tokenId: `<String>` (required)
+- from: `<DateTime>` 
+- to: `<DateTime>` 
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
-### Example:
+
+#### Example:
 
 ```
 query{
   solana{
-	accountBalanceByToken(tokenId:"",timeFrame:ONE_DAY){
+	accountBalanceByToken(tokenId:""){
 	  }
   }
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 TokenId still blank
 ```
 
-### accountEarliestBalance
+### accountFirstBalance
 
 #### ** Parameters ** :
 
-- AccountHash: `<String>` (required)
+- accountHash: `<String>` (required)
 
-### Example:
+#### Example:
 
 ```
 query {
   solana {
-    accountLatestBalance(accountHash: "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3") {
+    accountFirstBalance(accountHash: "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3") {
     account
     balance
     timestamp
@@ -171,7 +181,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -190,9 +200,9 @@ query {
 
 #### ** Parameters ** :
 
-- AccountHash: `<String>` (required)
+- accountHash: `<String>` (required)
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -206,7 +216,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -226,13 +236,16 @@ query {
 
 #### ** Parameters ** :
 
+- balance: `<Int>` (required)
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: ``
-- balance: `<Int>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
-### Example:
+
+#### Example:
 
 ```
 query {
@@ -245,7 +258,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -263,8 +276,12 @@ query {
 ```
 
 ### accountsWithHigestBalances
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
-### Example:
+
+#### Example:
 
 ```
 query {
@@ -277,7 +294,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -299,11 +316,12 @@ query {
 ```
 
 ### accountsCreated
-
 Returns number of accounts created
+
 #### ** Parameters ** :
 
-- timeStamp `<DateTime>`
+- from: `<DateTime>`
+- to: `<DateTime>`
 
 #### Example:
 
@@ -327,6 +345,9 @@ query {
 }
 ```
 ### accountsCreatedOverTime
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
 #### ** Parameters ** :
 
@@ -334,7 +355,7 @@ query {
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -348,7 +369,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -368,8 +389,8 @@ query {
 ### accountSerumProviders
 
 #### ** Parameters ** :
-
-- timeStamp `<DateTime>`
+- from: `<DateTime>`
+- to: `<DateTime>`
 
 #### Example:
 
@@ -393,35 +414,3 @@ query {
 }
 ```
 
-## accountBalancesByToken
-
-#### ** Parameters ** :
-
-- timeStamp `<DateTime>`
-
-#### Example:
-
-```
-query {
-  solana {
-    accountBalancesByToken(timestamp: "2021-09-09", tokenId: "SOL-LP_TOKEN") {
-      preBalance
-      preBalance
-      timestamp
-    }
-  }
-}
-
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountBalancesByToken": []
-    }
-  }
-}
-```
