@@ -6,23 +6,23 @@ For more information on Instructions: https://docs.solana.com/developing/program
 
 ### Elements of Instructions
 * txInstructionId: `<Int>` 
-* instructionTypeId: `<Float>` 
+* instructionTypeId: `<Int>` 
 * transactionHash: `<String>` 
 * program: `<String>` 
 * data: `<String>` Data an instruction has
-* parentIndex: `<Float>` 
+* parentIndex: `<Int>` 
 * timestamp: `<Datetime>`
 
 
 ### intructions
-Returns Instructions
 
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+- from: `<DateTime>` 
+- to: `<DateTime>` 
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 
 #### Example:
@@ -53,9 +53,9 @@ query{
 Returns a specific instance of an instruction
 
 #### ** Parameters ** : 
-* instructionId: `<Float>` (required) 
+* instructionId: `<Int>` (required) 
 * transactionHash: `<String>` 
-* parentIndex: `<Float>` 
+* parentIndex: `<Int>` 
 
 #### Example:
 ```

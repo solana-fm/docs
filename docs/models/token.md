@@ -1,7 +1,7 @@
 ---
 title: Token
 ---
-COMING SOON!
+More Queries COMING SOON!
 
 For more information on Tokens: https://docs.solana.com/terminology#token
 
@@ -23,10 +23,11 @@ Returns tokens
 
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
+- from: `<DateTime>` 
+- to: `<DateTime>` 
 
 #### Example:
 ```

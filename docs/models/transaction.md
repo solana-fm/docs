@@ -115,7 +115,7 @@ query {
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -128,7 +128,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -175,7 +175,7 @@ query {
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -188,7 +188,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -235,7 +235,7 @@ query {
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -248,7 +248,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {

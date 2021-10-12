@@ -2,7 +2,8 @@
 title: Epoch
 ---
 
-** Warning ** We are currently building this Query.
+No Data Available, Coming Soon! 
+
 For more information on Epochs: https://docs.solana.com/terminology#epoch
 
 ### Elements of Epochs
@@ -28,7 +29,7 @@ endTimestamp
 }
 ```
 
-### Result:
+#### Result:
 ```
 {
   "data": {
