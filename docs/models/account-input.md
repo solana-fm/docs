@@ -130,37 +130,6 @@ query {
         } ...
 ```
 
-### accountBalancesByToken
-
-Returns the account balances a specific token within a time period.
-
-#### ** Parameters ** :
-
-- tokenId: `<String>` (required)
-- from: `<DateTime>` 
-- to: `<DateTime>` 
-- paging: (Optional) `<int>`
-  - page: `<int>` Start of Page
-  - limit: `<int>` 
-
-
-#### Example:
-
-```
-query{
-  solana{
-	accountBalanceByToken(tokenId:""){
-	  }
-  }
-}
-```
-
-#### Result:
-
-```
-TokenId still blank
-```
-
 ### accountFirstBalance
 
 #### ** Parameters ** :
@@ -326,11 +295,13 @@ Returns number of accounts created
 #### Example:
 
 ```
-query {
-  solana {
-    accountsCreated(timeStamp: "2021-05-05")
+   query{
+    solana{
+accountsCreated(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
   }
-}
+  }
+ 
+ 
 ```
 
 #### Result:
@@ -339,7 +310,7 @@ query {
 {
   "data": {
     "solana": {
-      "accountsCreated": 10094
+      "accountsCreated": 4404
     }
   }
 }
@@ -358,15 +329,15 @@ query {
 #### Example:
 
 ```
-query {
-  solana {
-    accountsCreatedOverTime(time: { from: "2021-08-11T03:54:05Z", to: "2021-08-11T03:54:05Z", resolution: ONE_DAY}) {
-      time
-      value
-    }
+  query{
+    solana{
+accountsCreatedOverTime(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"}){
+  time
+  value
+}
   }
-}
-}
+  }
+ 
 ```
 
 #### Result:
@@ -377,8 +348,60 @@ query {
     "solana": {
       "accountsCreatedOverTime": [
         {
-          "time": "2021-08-11T00:00:00.000Z",
+          "time": "2021-08-11T03:54:04.000Z",
+          "value": 774
+        },
+        {
+          "time": "2021-08-11T03:54:05.000Z",
           "value": 1830
+        },
+        {
+          "time": "2021-08-11T03:54:06.000Z",
+          "value": 2343
+        },
+        {
+          "time": "2021-08-11T03:54:07.000Z",
+          "value": 1841
+        },
+        {
+          "time": "2021-08-11T03:54:10.000Z",
+          "value": 1805
+        },
+        {
+          "time": "2021-08-11T03:54:11.000Z",
+          "value": 2070
+        },
+        {
+          "time": "2021-08-11T03:54:12.000Z",
+          "value": 2696
+        },
+        {
+          "time": "2021-08-11T03:54:14.000Z",
+          "value": 2435
+        },
+        {
+          "time": "2021-08-11T03:54:15.000Z",
+          "value": 2226
+        },
+        {
+          "time": "2021-08-11T03:54:16.000Z",
+          "value": 1808
+        },
+        {
+          "time": "2021-08-11T03:54:17.000Z",
+          "value": 2592
+        },
+        {
+          "time": "2021-08-11T03:54:18.000Z",
+          "value": 2640
+        },
+        {
+          "time": "2021-08-11T03:54:19.000Z",
+          "value": 1151
+        },
+        {
+          "time": "2021-08-11T03:54:20.000Z",
+          "value": 1981
         }
       ]
     }
@@ -387,6 +410,7 @@ query {
 ```
 
 ### accountSerumProviders
+Coming Soon
 
 #### ** Parameters ** :
 - from: `<DateTime>`

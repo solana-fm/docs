@@ -109,11 +109,12 @@ query{
 #### Example:
 
 ```
-query {
-  solana {
-    totalValidatorReward(timeStamp: "2021-05-05")
+  query{
+    solana{
+totalValidatorReward(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
   }
-}
+  }
+ 
 ```
 
 #### Result:
@@ -122,7 +123,7 @@ query {
 {
   "data": {
     "solana": {
-      "totalValidatorReward": 10213094
+      "totalValidatorReward": 97939815
     }
   }
 }
