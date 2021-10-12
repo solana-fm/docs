@@ -2,7 +2,7 @@
 title: Block
 ---
 
-For more Information on Blocks: https://docs.solana.com/developing/programming-model/accounts
+For more Information on Blocks: https://docs.solana.com/proposals/block-confirmation
 
 
 
@@ -16,19 +16,19 @@ For more Information on Blocks: https://docs.solana.com/developing/programming-m
 * isSkipped: `<Boolean>` If an Block is skipped
 * epochId: `<Float>` The epoch the block belongs to
 * finality: `<Boolean>` Confirmation of the Block
-* timeStamp: `<DateTime>` 
-* transactions: `<Object>` The transactions that matches the returned block number
+* timestamp: `<DateTime>` 
+* transactions: `<Object>` The transactions that matches the returned block numbers
 
 
 
 ### blocks
-Returns Blocks
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>` 
+- from: `<DateTime>` 
+- to: `<DateTime>` 
 
 #### Example:
 ```
@@ -71,7 +71,7 @@ Returns a specific instance of a block
 
 
 #### ** Parameters ** : 
-* Number: `<int>` (Required) Block Number
+* Number: `<Int>` (Required) Block Number
 
 #### Example:
 ```
@@ -103,14 +103,15 @@ Returns the blocks in a specific Epoch.
 
 #### ** Parameters ** : 
 * epochID: `<String>` The Id of an Epoch
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
+* paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>` 
 
 #### Example:
 ```
 query{
   solana{
-    blocksByEpochId(epochId:"null"){
+    blocksByEpochId(epochId:"213"){
       hash
       number
     }
@@ -134,8 +135,8 @@ query{
 ```
 
 ### blockCount
-
 Returns number of blocks created
+
 #### ** Parameters ** :
 - from `<DateTime>`
 - to `<DateTime>`
@@ -169,8 +170,11 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+* paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -183,7 +187,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
@@ -299,7 +303,6 @@ query {
 ### uniqueValidators
 
 #### ** Parameters ** :
-
 - from `<DateTime>`
 - to `<DateTime>`
 
@@ -332,8 +335,11 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -346,7 +352,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {

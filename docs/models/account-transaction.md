@@ -5,7 +5,12 @@ title: Account Transaction
 ### Elements of Account Transactions 
 * transactionHash: `<String>` Unique Identifier of a Transaction
 * account: `<String>` Hash of an Account
-* role: `<String>` Role of an account in a transaction 
+* role: `<Enum>` Role of an account in a transaction 
+  - None
+  - FeePayer
+  - Signer
+  - ReadOnly 
+  - ReadWrite
 * timestamp: `<DateTime>`
 * transactions: `[Object]` Transaction Object where the account Hashes matches the transactions 
 * inputs: `[Object]` Account Inputs Object where the account Hashes matches the account Inputs 
@@ -14,10 +19,12 @@ title: Account Transaction
 Returns accountTransactions 
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
-- from: `<DateTime>` (Required)
-- to: `<DateTime>` (Required)
+- paging: (Optional) 
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
+- from: `<DateTime>` 
+- to: `<DateTime>`
+
 #### Example:
 ```
 query{
@@ -48,17 +55,19 @@ query{
 
 ```
 
-### accountTransactionByHash
-Returns an instance of Account Transaction.
+### accountTransactionsByHash
 
 #### ** Parameters ** : 
-* transactionHash: `<String>` The Hash of a transaction (required)
+* transactionHash: `<String>` (required)
+* paging: (Optional) 
+  - page: `<int>` 
+  - limit: `<int>` 
 
 #### Example:
 ```
 query{
   solana{
-    accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+    accountTransactionsByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
       transactionHash
       account
     }
@@ -66,11 +75,11 @@ query{
 }
 ```
 
-### Result:
+#### Result:
 ```
 {
   "data": {
-    "accountTransactionByHash": {
+    "accountTransactionsByHash": {
       "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
       "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx"
     }
@@ -82,9 +91,11 @@ query{
 Returns Account Transactions by Role
 
 #### ** Parameters ** : 
-* accountTransactionRole: `<String>` The role of an account in a transaction. 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
+* accountTransactionRole: `<Enum>` The role of an account in a transaction. 
+* paging: (Optional) 
+  - page: `<int>` 
+  - limit: `<int>` 
+
 
 #### Example:
 ```
@@ -114,10 +125,12 @@ query{
 
 
 ### accountTransactionsByAccount
-Returns an instance of Account Transaction.
 
 #### ** Parameters ** : 
-* account: `<String>` The Hash of an account (required)
+* account: `<String>` The hash of an account (required)
+* paging: (Optional) 
+  - page: `<int>` 
+  - limit: `<int>` 
 
 #### Example:
 ```
@@ -131,7 +144,7 @@ query{
 }
 ```
 
-### Result:
+#### Result:
 ```
 {
   "data": {
@@ -147,9 +160,9 @@ query{
 Returns specific instance of an Account Transaction 
 
 #### ** Parameters ** : 
-* accountTransactionRole: `<String>` The role of an account in a transaction (required)
-* transactionHash: `<String>` The transaction Hash (required)
-* account: `<String>` The account Hash (required)
+* accountTransactionRole: `<Enum>` The role of an account in a transaction (required)
+* transactionHash: `<String>` The transaction hash (required)
+* account: `<String>` The account hash (required)
 
 
 #### Example:
@@ -177,14 +190,15 @@ query {
       }
     }
   }
-}```
+}
+```
 
 ### accountActive
+Returns number of active Accounts within a time period
 
-Returns number of active Accounts
 #### ** Parameters ** :
-
-- timeStamp `<DateTime>`
+- from: `<DateTime>` 
+- to: `<DateTime>`
 
 #### Example:
 
@@ -214,10 +228,12 @@ query {
 
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: ``
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<int>` 
+  - limit: `<int>` 
 
-### Example:
+#### Example:
 
 ```
 query {
@@ -230,7 +246,7 @@ query {
 }
 ```
 
-### Result:
+#### Result:
 
 ```
 {
