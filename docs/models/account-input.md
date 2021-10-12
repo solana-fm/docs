@@ -345,15 +345,15 @@ query {
 }
 ```
 ### accountsCreatedOverTime
-- paging: (Optional) `<int>`
-  - page: `<int>` Start of Page
-  - limit: `<int>` 
 
 #### ** Parameters ** :
 
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
 #### Example:
 

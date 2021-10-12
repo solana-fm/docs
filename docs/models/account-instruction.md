@@ -12,11 +12,11 @@ title: Account Instruction
 * transactions: `<String>` Transaction Object where the account Hashes matches the transactions 
 
 ### accountInstructions
-Returns accountInstructions
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
+- paging: (Optional) `<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>`  
 - from: `<DateTime>` 
 - to: `<DateTime>` 
 
