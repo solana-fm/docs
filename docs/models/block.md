@@ -23,12 +23,12 @@ For more Information on Blocks: https://docs.solana.com/proposals/block-confirma
 
 ### blocks
 
-#### ** Parameters ** : 
-- paging: (Optional) 
-  - page: `<Int>` 
-  - limit: `<Int>` 
+#### ** Parameters ** :  
 - from: `<DateTime>` 
 - to: `<DateTime>` 
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
 
 #### Example:
 ```
@@ -138,8 +138,8 @@ query{
 Returns number of blocks created
 
 #### ** Parameters ** :
-- from `<DateTime>`
-- to `<DateTime>`
+- from: `<DateTime>`
+- to: `<DateTime>`
 
 #### Example:
 
@@ -170,7 +170,7 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-* paging: (Optional) 
+- paging: (Optional) 
   - page: `<Int>` 
   - limit: `<Int>`
 
@@ -303,8 +303,8 @@ query {
 ### uniqueValidators
 
 #### ** Parameters ** :
-- from `<DateTime>`
-- to `<DateTime>`
+- from: `<DateTime>`
+- to: `<DateTime>`
 
 #### Example:
 
@@ -322,7 +322,7 @@ query {
 {
   "data": {
     "solana": {
-      "uniqueValidators": 0
+      "uniqueValidators": 12
     }
   }
 }

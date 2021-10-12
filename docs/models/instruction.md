@@ -54,8 +54,8 @@ Returns a specific instance of an instruction
 
 #### ** Parameters ** : 
 * instructionId: `<Int>` (required) 
-* transactionHash: `<String>` 
-* parentIndex: `<Int>` 
+* transactionHash: `<String>` (required) 
+* parentIndex: `<Int>` (required) 
 
 #### Example:
 ```

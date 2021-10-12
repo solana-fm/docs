@@ -19,10 +19,11 @@ Returns blockRewards
 
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
+- paging: (Optional) 
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
 #### Example:
 ```
@@ -102,7 +103,8 @@ query{
 
 #### ** Parameters ** :
 
-- timeStamp `<DateTime>`
+- from: `<DateTime>`
+- to: `<DateTime>`
 
 #### Example:
 
@@ -128,10 +130,12 @@ query {
 ### totalValidatorRewardInTimeRange
 
 #### ** Parameters ** :
-
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<int>` Start of Page
+  - limit: `<int>` 
 
 #### Example:
 

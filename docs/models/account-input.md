@@ -240,7 +240,7 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) `<int>`
+- paging: (Optional) 
   - page: `<int>` Start of Page
   - limit: `<int>` 
 
@@ -276,7 +276,7 @@ query {
 ```
 
 ### accountsWithHigestBalances
-- paging: (Optional) `<int>`
+- paging: (Optional) 
   - page: `<int>` Start of Page
   - limit: `<int>` 
 
@@ -351,7 +351,7 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) `<int>`
+- paging: (Optional) 
   - page: `<int>` Start of Page
   - limit: `<int>` 
 
