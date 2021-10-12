@@ -42,16 +42,16 @@ function HomepageHeader() {
             <Link className="navbar__link" to="https://solana.fm/">
               <div className="card">
                 <div className="card__header">
-                  <h3>😊 Create a Free Account</h3>
+                  <h3>😊 Try out our queries</h3>
                 </div>
                 <div className="card__body">
-                  <p>Try out our Free Plan & Query on <b><u>Solana.FM</u></b>.</p>
+                  <p>Start searching and querying <b><u>Solana.FM</u></b>.</p>
                 </div>
               </div>
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <Link className="navbar__link" to="/docs/models/Account">
+            <Link className="navbar__link" to="/docs/models/Token">
               <div className="card">
                 <div className="card__header">
                   <h3>🤔 Standard Queries</h3>
@@ -82,10 +82,11 @@ function HomepageHeader() {
             <Link className="navbar__link" to="https://graphql.org/learn/queries/">
               <div className="card">
                 <div className="card__header">
-                  <h3> 📊 GraphQL Queries</h3>
+                  <h3> 📊 GraphQL Docs</h3>
                 </div>
                 <div className="card__body">
-                  <p>Find out how to query on <b><u>GraphQL</u></b> using their docs.</p>
+                  <p>Visit GraphQL documentation to find out how to query on <b><u>GraphQL</u></b>
+                  </p>
                 </div>
               </div>
             </Link>
