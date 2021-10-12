@@ -1,24 +1,24 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Solana.Fm Documentation',
-  tagline: 'The most robust and performant GraphQL-based analytics engine.',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Solana.FM Documentation',
+  tagline: 'Query Solana with GraphQL.',
+  url: 'https://docs.solana.fm',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo2.svg',
-  organizationName: 'nozomi', // Usually your GitHub org/user name.
-  projectName: 'nozomi-ai', // Usually your repo name.
+  organizationName: 'nozomi-ai', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'SolanaFM Logo',
         src: 'img/logo2.png',
       },
       items: [
         {
-          href: 'http://solana.fm',
+          href: 'https://solana.fm',
           label:'Home',
           position:'left',
         },
@@ -61,11 +61,11 @@ module.exports = {
           items: [
             {
               label: 'Nozomi',
-              href: 'https://blog.nozomi.ai/',
+              href: 'https://blog.solana.fm/',
             },
             {
               label: 'Linkedin',
-              href: 'https://www.linkedin.com/company/nozomi-one/',
+              href: 'https://www.linkedin.com/company/solanafm',
             },
             {
               label: 'Discord',
@@ -83,7 +83,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nozomi.ai`,
+      copyright: `Copyright © ${new Date().getFullYear()} Solana FM.`,
     },
   },
   presets: [
@@ -98,9 +98,8 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/nozomi-ai/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
