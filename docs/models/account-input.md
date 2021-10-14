@@ -2,7 +2,7 @@
 title: Account Input
 ---
 
-For more Information on AccountsInputs: https://docs.solana.com/developing/programming-model/accounts
+For more Information on Accounts in Solana: https://docs.solana.com/developing/programming-model/accounts
 
 ### Elements of Account Inputs
 
@@ -82,7 +82,7 @@ Returns an account Input via Primary Key
 
 ### accountBalance
 
-Returns balances of accounts greater than balance input
+Returns balances of accounts greater than the balance input
 
 #### ** Parameters ** :
 
