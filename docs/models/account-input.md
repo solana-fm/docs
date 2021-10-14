@@ -1,6 +1,7 @@
 ---
 title: Account Input
 ---
+Account inputs store an account's balance pre-transaction and post-transaction state, and indicates the balance in question with `tokenId` (If `tokenId` is empty, lamports is being transacted).
 
 For more Information on Accounts in Solana: https://docs.solana.com/developing/programming-model/accounts
 
