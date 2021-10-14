@@ -236,14 +236,15 @@ query {
 #### Example:
 
 ```
-query {
-  solana {
-    accountActiveOverTime(ƒtime:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
-    }
-  }
+  query{
+    solana{
+accountActiveOverTime(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"}){
+  time
+  value
 }
+  }
+  }
+ 
 ```
 
 #### Result:
@@ -252,7 +253,64 @@ query {
 {
   "data": {
     "solana": {
-      "accountActiveOverTime": []
+      "accountActiveOverTime": [
+        {
+          "time": "2021-08-11T03:54:04.000Z",
+          "value": 774
+        },
+        {
+          "time": "2021-08-11T03:54:05.000Z",
+          "value": 1830
+        },
+        {
+          "time": "2021-08-11T03:54:06.000Z",
+          "value": 2343
+        },
+        {
+          "time": "2021-08-11T03:54:07.000Z",
+          "value": 1841
+        },
+        {
+          "time": "2021-08-11T03:54:10.000Z",
+          "value": 1805
+        },
+        {
+          "time": "2021-08-11T03:54:11.000Z",
+          "value": 2070
+        },
+        {
+          "time": "2021-08-11T03:54:12.000Z",
+          "value": 2696
+        },
+        {
+          "time": "2021-08-11T03:54:14.000Z",
+          "value": 2435
+        },
+        {
+          "time": "2021-08-11T03:54:15.000Z",
+          "value": 2226
+        },
+        {
+          "time": "2021-08-11T03:54:16.000Z",
+          "value": 1808
+        },
+        {
+          "time": "2021-08-11T03:54:17.000Z",
+          "value": 2592
+        },
+        {
+          "time": "2021-08-11T03:54:18.000Z",
+          "value": 2640
+        },
+        {
+          "time": "2021-08-11T03:54:19.000Z",
+          "value": 1151
+        },
+        {
+          "time": "2021-08-11T03:54:20.000Z",
+          "value": 1981
+        }
+      ]
     }
   }
 }
