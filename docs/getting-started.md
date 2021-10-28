@@ -11,23 +11,22 @@ title: Getting Started
 
 
 ## Introduction
-Once you have [signed up to SolanaFM](https://solana.fm), you can proceed to create an [API key](https://solana.fm/ApiManagement) to build applications on top of the data we are providing and do additional on-the-fly computation for your analytical or visualisation needs.
+Once you have [signed up to SolanaFM](https://solana.fm), you can create an [API key](https://solana.fm/ApiManagement) to build applications on top of SolanaFM and do additional on-the-fly computation for your analytical or visualisation needs.
 
 ## Creating an API key {#creating-an-api-key}
 Head over to [API Management](https://solana.fm/ApiManagement) page, and generate a new API key for your project.
 
 ![SolanaFM API Management](/img/getting-started-tutorial/api-management-page.png)
 
-Proceed, by providing a name for your API key so that you can easily identify generated keys in the future to revoke them.
+Provide a name for your API key so that you can easily identify generated keys in the future to revoke them.
 
-Note that the generate API key will only be shown __once__ for security purposes, if you lose your key, you will have to revoke and recreate a new API key.
+**Note:** The generated API key will only be shown __once__ for security purposes, if you lose your key, you will have to revoke and regenerate an API key.
 
 ## Connect from your application {#connect-from-your-application}
-So long as you have access to any HTTP client libraries, you're able to connect to SolanaFM and retrieve data for your internal analysis.
+As long as you have access to any HTTP client libraries, you're able to connect to SolanaFM and retrieve data.
 
 ### Example usage with Python {#python-example}
-Replace `<your_api_key_here>` with the API key you generated in the previous step.
-
+Replace `<your_api_key_here>` with the generated API key. 
 ```python
 import requests
 import json
@@ -46,7 +45,7 @@ print(response.text)
 ```
 
 ### Example usage with NodeJS {#nodejs-example}
-Replace `<your_api_key_here>` with the API key you generated in the previous step.
+Replace `<your_api_key_here>` with the generated API key. 
 
 ```javascript
 var axios = require('axios');
