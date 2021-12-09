@@ -19,7 +19,7 @@ title: Account Transaction
 Returns accountTransactions 
 
 #### ** Parameters ** : 
-- paging: (Optional) 
+- paging: 
   - page: `<int>` Start of Page
   - limit: `<int>` 
 - from: `<DateTime>` 
@@ -58,7 +58,7 @@ query{
 ### accountTransactionsByHash
 
 #### ** Parameters ** : 
-* transactionHash: `<String>` (required)
+* txHash: `<String>` (required)
 * paging: (Optional) 
   - page: `<int>` 
   - limit: `<int>` 
@@ -67,7 +67,7 @@ query{
 ```
 query{
   solana{
-    accountTransactionsByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
+    accountTransactionsByHash(txHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
       transactionHash
       account
     }
@@ -80,7 +80,7 @@ query{
 {
   "data": {
     "accountTransactionsByHash": {
-      "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
+      "txHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
       "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx"
     }
   }
@@ -91,8 +91,8 @@ query{
 Returns Account Transactions by Role
 
 #### ** Parameters ** : 
-* accountTransactionRole: `<Enum>` The role of an account in a transaction. 
-* paging: (Optional) 
+* role: `<Enum>` The role of an account in a transaction. (Required)
+* paging: 
   - page: `<int>` 
   - limit: `<int>` 
 
@@ -104,7 +104,7 @@ query{
     accountTransactionByHash(transactionHash:"4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY"){
       transactionHash
       account
-      accountTransactionRole
+      role
     }
   }
 }
@@ -117,7 +117,7 @@ query{
     "accountTransactionByHash": {
       "transactionHash": "4YoJosRJXh7XcNEnXvcdrVTDVF9MNbLMjAPnRUL1rwnU79CtcbKznJV4Yw8T3RAvU923oV4DE3XkBhA9BWhdtWeY",
       "account": "9bRDrYShoQ77MZKYTMoAsoCkU7dAR24mxYCBjXLpfEJx",
-      "accountTransactionRole": "2"
+      "role": "2"
     }
   }
 }
@@ -128,7 +128,7 @@ query{
 
 #### ** Parameters ** : 
 * account: `<String>` The hash of an account (required)
-* paging: (Optional) 
+* paging: 
   - page: `<int>` 
   - limit: `<int>` 
 
@@ -205,7 +205,7 @@ Returns number of active Accounts within a time period
 ```
 query {
   solana {
-    accountsCreated(timeStamp: "2021-05-05")
+    accountsCreated(from: "2021-05-05T00:00:00Z", to: "2021-05-05T04:00:00Z")
   }
 }
 ```
@@ -228,8 +228,8 @@ query {
 
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) 
+- resolution: `<Enum>` (Required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: 
   - page: `<int>` 
   - limit: `<int>` 
 

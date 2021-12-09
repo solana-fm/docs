@@ -2,41 +2,47 @@
 title: Epoch
 ---
 
-No Data Available, Coming Soon! 
+No Data Available, Coming Soon!
 
 For more information on Epochs: https://docs.solana.com/terminology#epoch
 
 ### Elements of Epochs
-* id: `<ID>` Unique Identifier of an Epoch
-* highestSlot: `<Float>` 
-* lowestSlot: `<Float>` 
 
+* id: `<Int>`
+* highestSlot: `<Float>`
+* lowestSlot: `<Float>`
 
 ### epochById
+
 Returns a specific Epoch
 
+#### ** Parameters ** :
 
-#### ** Parameters ** : 
-* id: `<ID>` (required) Unique Identifier of an Epoch
-
+- id: `<String>` (required)
 
 #### Example:
+
 ```
 query{
-	epochById(epochId:188){
-endTimestamp
+  solana{
+	  epochById(epochId:188){
+      id
+      highestSlot
   }
+ }
 }
 ```
 
 #### Result:
+
 ```
 {
   "data": {
     "solana": {
-      "epochById": null
+      "id": 236,
+      "highestSlot" : 102383999
     }
   }
 }
-  
+
 ```

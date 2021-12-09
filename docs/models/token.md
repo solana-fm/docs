@@ -1,7 +1,7 @@
 ---
 title: Token
 ---
-More Queries COMING SOON!
+Queries COMING SOON!
 
 For more information on Tokens: https://docs.solana.com/terminology#token
 
@@ -18,7 +18,7 @@ For more information on Tokens: https://docs.solana.com/terminology#token
 * updatedTimestamp: `<DateTime>`
 
 
-### tokens
+<!-- ### tokens
 
 
 #### ** Parameters ** : 
@@ -91,4 +91,4 @@ query{
     }
   }
 }
-```
+``` -->

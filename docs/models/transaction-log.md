@@ -49,8 +49,10 @@ Returns transactionlogs via transactionHash
 
 
 #### ** Parameters ** : 
-* txHash: `<String>` Unique Identifier of a transaction (Required)
-* paging: (Optional) 
+- txHash: `<String>` (Required)
+- from: `<DateTime>` 
+- to: `<DateTime>`
+- paging: 
   - page: `<Int>` 
   - limit: `<Int>`
 

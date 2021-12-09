@@ -26,7 +26,7 @@ For more Information on Blocks: https://docs.solana.com/proposals/block-confirma
 #### ** Parameters ** :  
 - from: `<DateTime>` 
 - to: `<DateTime>` 
-- paging: (Optional) 
+- paging: 
   - page: `<Int>` 
   - limit: `<Int>`
 
@@ -71,7 +71,7 @@ Returns a specific instance of a block
 
 
 #### ** Parameters ** : 
-* Number: `<Int>` (Required) Block Number
+* Number: `<Int>` (Required) 
 
 #### Example:
 ```
@@ -102,8 +102,8 @@ query{
 Returns the blocks in a specific Epoch.
 
 #### ** Parameters ** : 
-* epochID: `<String>` The Id of an Epoch
-* paging: (Optional) 
+- epochId: `<String>` (Required)
+- paging:
   - page: `<Int>` 
   - limit: `<Int>` 
 
@@ -334,8 +334,8 @@ query {
 
 - from: `<DateTime>`
 - to: `<DateTime>`
-- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) 
+- resolution: `<Enum>` (Required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: 
   - page: `<Int>` 
   - limit: `<Int>`
 
@@ -361,59 +361,59 @@ query {
       "uniqueValidatorsinTimeRange": [
         {
           "time": "2021-06-29T23:32:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:33:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:34:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:35:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:36:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:37:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:38:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:39:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:40:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:41:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:42:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:43:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:44:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:45:00.000Z",
-          "value": 0
+          "value" : 1200
         },
         {
           "time": "2021-06-29T23:46:00.000Z",
@@ -464,3 +464,278 @@ query {
   }
 }
 ```
+
+### skippedBlocksInTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
+
+#### Example:
+
+```
+query {
+  solana {
+    skippedBlocksInTimeRange(time: {from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z", resolution: ONE_MIN}) {
+     time
+     value 
+    }
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "skippedBlocksInTimeRange": [
+        {
+          "time": "2021-06-29T23:32:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:33:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:34:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:35:00.000Z",
+          "value": 82
+        },
+        {
+          "time": "2021-06-29T23:36:00.000Z",
+          "value": 75
+        },
+        {
+          "time": "2021-06-29T23:37:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:38:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:39:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:40:00.000Z",
+          "value": 66
+        },
+        {
+          "time": "2021-06-29T23:41:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:42:00.000Z",
+          "value": 87
+        },
+        {
+          "time": "2021-06-29T23:43:00.000Z",
+          "value": 61
+        },
+        {
+          "time": "2021-06-29T23:44:00.000Z",
+          "value": 114
+        },
+        {
+          "time": "2021-06-29T23:45:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:46:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:47:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:48:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:49:00.000Z",
+          "value": 70
+        },
+        {
+          "time": "2021-06-29T23:50:00.000Z",
+          "value": 93
+        },
+        {
+          "time": "2021-06-29T23:51:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:52:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:53:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:54:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:55:00.000Z",
+          "value": 72
+        },
+        {
+          "time": "2021-06-29T23:56:00.000Z",
+          "value": 71
+        }
+      ]
+    }
+  }
+}
+```
+
+### finalisedBlocksInTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional) 
+  - page: `<Int>` 
+  - limit: `<Int>`
+
+#### Example:
+
+```
+query {
+  solana {
+    finalisedBlocksInTimeRange(time: {from: "2021-06-29T20:00:00Z", to: "2021-06-29T23:59:59Z", resolution: ONE_MIN}) {
+     time
+     value 
+    }
+  }
+}
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "finalisedBlocksInTimeRange": [
+        {
+          "time": "2021-06-29T23:32:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:33:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:34:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:35:00.000Z",
+          "value": 82
+        },
+        {
+          "time": "2021-06-29T23:36:00.000Z",
+          "value": 75
+        },
+        {
+          "time": "2021-06-29T23:37:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:38:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:39:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:40:00.000Z",
+          "value": 66
+        },
+        {
+          "time": "2021-06-29T23:41:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:42:00.000Z",
+          "value": 87
+        },
+        {
+          "time": "2021-06-29T23:43:00.000Z",
+          "value": 61
+        },
+        {
+          "time": "2021-06-29T23:44:00.000Z",
+          "value": 114
+        },
+        {
+          "time": "2021-06-29T23:45:00.000Z",
+          "value": 69
+        },
+        {
+          "time": "2021-06-29T23:46:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:47:00.000Z",
+          "value": 79
+        },
+        {
+          "time": "2021-06-29T23:48:00.000Z",
+          "value": 78
+        },
+        {
+          "time": "2021-06-29T23:49:00.000Z",
+          "value": 70
+        },
+        {
+          "time": "2021-06-29T23:50:00.000Z",
+          "value": 93
+        },
+        {
+          "time": "2021-06-29T23:51:00.000Z",
+          "value": 65
+        },
+        {
+          "time": "2021-06-29T23:52:00.000Z",
+          "value": 80
+        },
+        {
+          "time": "2021-06-29T23:53:00.000Z",
+          "value": 73
+        },
+        {
+          "time": "2021-06-29T23:54:00.000Z",
+          "value": 74
+        },
+        {
+          "time": "2021-06-29T23:55:00.000Z",
+          "value": 72
+        },
+        {
+          "time": "2021-06-29T23:56:00.000Z",
+          "value": 71
+        }
+      ]
+    }
+  }
+}
+```
+

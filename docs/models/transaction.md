@@ -5,27 +5,28 @@ title: Transaction
 For more information on Transactions: https://docs.solana.com/developing/programming-model/transactions
 
 ### Elements of Transactions
-* hash: `<String>` Unique Identifier of a Transaction
-* isConfirmed: `<Bool>` 
-* block: `<String>` 
-* Status: `<Int>` 
-* fee: `<Float>` Fee of the transaction (in Lamports)
-* timestamp: `<DateTime>`
-* signatures: `<Object>` Transaction_Signatures Object where the transaction Hashes matches the transactions_signature's hashes 
-* logs: `<Object>` Transaction_Logs Object where the transaction Hashes matches the transactions_log's hashes 
+
+- hash: `<String>` Unique Identifier of a Transaction
+- isConfirmed: `<Bool>`
+- block: `<String>`
+- Status: `<Int>`
+- fee: `<Float>` Fee of the transaction (in Lamports)
+- timestamp: `<DateTime>`
+- signatures: `<Object>` Transaction_Signatures Object where the transaction Hashes matches the transactions_signature's hashes
+- logs: `<Object>` Transaction_Logs Object where the transaction Hashes matches the transactions_log's hashes
 
 ### transactions
 
+#### ** Parameters ** :
 
-#### ** Parameters ** :  
-- from: `<DateTime>` 
-- to: `<DateTime>` 
-- paging: (Optional) 
-  - page: `<Int>` 
+- from: `<DateTime>`
+- to: `<DateTime>`
+- paging:
+  - page: `<Int>`
   - limit: `<Int>`
 
-
 #### Example:
+
 ```
 query{
 	transactions{
@@ -36,6 +37,7 @@ query{
 ```
 
 #### result:
+
 ```
 {
   {
@@ -52,12 +54,15 @@ query{
 ```
 
 ### transactionByTxHash
+
 Returns a specific instance of a transaction.
 
-#### ** Parameters ** : 
-* Hash: `<String>` (required) 
+#### ** Parameters ** :
+
+- Hash: `<String>` (required)
 
 #### Example:
+
 ```
 query{
 	transactionByTxnHash(txnHash:"2WGfxBa23ZoMoQ4Hsw9a4p7DR695tTRX6y6cAeURkim5LmT9axVM51iHARpR2bXQVpbDUmvAxcLqGAFK453sfwxo"){
@@ -68,6 +73,50 @@ query{
 ```
 
 #### Result:
+
+```
+{
+  "data": {
+    "transactionByTxnHash": {
+      "block": "3kF1owv5JsgpxRxdriAM3S5LHgFmUYedTSHXze9YzdCM",
+      "timestamp": 0
+    }
+  }
+}
+```
+
+### transactionsByStatus
+
+
+
+#### ** Parameters ** :
+
+- status: `<Enum>` (Required)
+- from: `<DateTime>`
+- to: `<DateTime>`
+- paging:
+  - page: `<Int>`
+  - limit: `<Int>`
+
+#### Example:
+
+```
+{
+  solana {
+    transactionsByStatus(
+      status: SUCCESS
+      date: {from: "2021-11-21T06:01:44Z", to: "2021-11-21T10:01:44Z"}
+    ) {
+      hash
+      block
+    }
+  }
+}
+
+```
+
+#### Result:
+
 ```
 {
   "data": {
@@ -80,9 +129,11 @@ query{
 ```
 
 ### transactionCount
-Returns number of transactions in a given time range 
+
+Returns number of transactions in a given time range
 
 #### ** Parameters ** :
+
 - from `<DateTime>`
 - to `<DateTime>`
 
@@ -102,32 +153,49 @@ query {
 {
   "data": {
     "solana": {
-      "transactionCount": 1369869
+      "transactionsByStatus": [
+        {
+          "hash": "32Wj9W1QKyKLTJ8185FyrQaqCpgSwwDxpUdwhvpZaYuNVFwxPMbAxM8gFiUiH7XBAAEVBs3UkBmRUwGPsPzJtTPv",
+          "block": 107942424
+        },
+        {
+          "hash": "3Z5nYtMBa5ZLE52NNf6M4dHr8MDZUpqz1VtkeWfUhWDd7BcJG938RHtpQCt3amBfCZKJjioFcWHh4vaPy44R4FZy",
+          "block": 107942424
+        },
+        {
+          "hash": "5V2qJdzGVKPCDSFkNyua1xibzDEmvMgVgo9aK4vkp6KrgTYPGV82prV4avCnygzriSM9hjudLHT12dQvT3xotnP2",
+          "block": 107942424
+        }
     }
   }
 }
 ```
+
 ### transactionsByTimeRange
 
 #### ** Parameters ** :
+
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) 
-  - page: `<Int>` 
+- paging: (Optional)
+  - page: `<Int>`
   - limit: `<Int>`
 
 #### Example:
 
 ```
-query {
+{
   solana {
-    blocksCreatedByTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
-    timestamp
-    value
+    transactionsByTimeRange(
+      time: {from: "2021-11-10T00:00:00Z", to: "2021-11-10T04:00:00Z", resolution: ONE_HOUR}
+    ) {
+      time
+      value
     }
   }
 }
+
 ```
 
 #### Result:
@@ -136,15 +204,160 @@ query {
 {
   "data": {
     "solana": {
-      "blocksCreatedByTimeRange": []
+      "transactionsByTimeRange": [
+        {
+          "time": "2021-11-10T00:00:00.000Z",
+          "value": 9238273
+        },
+        {
+          "time": "2021-11-10T01:00:00.000Z",
+          "value": 9486447
+        },
+        {
+          "time": "2021-11-10T02:00:00.000Z",
+          "value": 9076769
+        },
+        {
+          "time": "2021-11-10T03:00:00.000Z",
+          "value": 9492853
+        },
+        {
+          "time": "2021-11-10T04:00:00.000Z",
+          "value": 2973
+        }
+      ]
     }
   }
-} 
+}
 ```
+
+### successfulTransactionsByTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional)
+  - page: `<Int>`
+  - limit: `<Int>`
+
+#### Example:
+
+```
+{
+  solana {
+    successfulTransactionsByTimeRange(
+      time: {from: "2021-11-10T00:00:00Z", to: "2021-11-10T04:00:00Z", resolution: ONE_HOUR}
+    ) {
+      time
+      value
+    }
+  }
+}
+
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "successfulTransactionsByTimeRange": [
+        {
+          "time": "2021-11-10T00:00:00.000Z",
+          "value": 7840902
+        },
+        {
+          "time": "2021-11-10T01:00:00.000Z",
+          "value": 8122396
+        },
+        {
+          "time": "2021-11-10T02:00:00.000Z",
+          "value": 7801792
+        },
+        {
+          "time": "2021-11-10T03:00:00.000Z",
+          "value": 8120565
+        },
+        {
+          "time": "2021-11-10T04:00:00.000Z",
+          "value": 2023
+        }
+      ]
+    }
+  }
+}
+```
+
+### failedTransactionsByTimeRange
+
+#### ** Parameters ** :
+
+- from: `<DateTime>`
+- to: `<DateTime>`
+- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- paging: (Optional)
+  - page: `<Int>`
+  - limit: `<Int>`
+
+#### Example:
+
+```
+{
+  solana {
+    failedTransactionsByTimeRange(
+      time: {from: "2021-11-10T00:00:00Z", to: "2021-11-10T04:00:00Z", resolution: ONE_HOUR}
+    ) {
+      time
+      value
+    }
+  }
+}
+
+
+```
+
+#### Result:
+
+```
+{
+  "data": {
+    "solana": {
+      "failedTransactionsByTimeRange": [
+        {
+          "time": "2021-11-10T00:00:00.000Z",
+          "value": 1397371
+        },
+        {
+          "time": "2021-11-10T01:00:00.000Z",
+          "value": 1364051
+        },
+        {
+          "time": "2021-11-10T02:00:00.000Z",
+          "value": 1274977
+        },
+        {
+          "time": "2021-11-10T03:00:00.000Z",
+          "value": 1372288
+        },
+        {
+          "time": "2021-11-10T04:00:00.000Z",
+          "value": 950
+        }
+      ]
+    }
+  }
+}
+```
+
 ### medianFees
+
 Returns median fees in a time range
 
 #### ** Parameters ** :
+
 - from `<DateTime>`
 - to `<DateTime>`
 
@@ -169,6 +382,7 @@ query {
   }
 }
 ```
+
 ### totalMedianInTimeRange
 
 #### ** Parameters ** :
@@ -176,8 +390,8 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) 
-  - page: `<Int>` 
+- paging: (Optional)
+  - page: `<Int>`
   - limit: `<Int>`
 
 #### Example:
@@ -185,7 +399,7 @@ query {
 ```
 query {
   solana {
-    totalMedianInTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_MIN}){
+    totalMedianInTimeRange(time:{from:"2021-08-01T05:30:30Z",to:"2021-09-10T20:30:30Z",resolution:ONE_HOUR}){
     timestamp
     value
     }
@@ -199,15 +413,39 @@ query {
 {
   "data": {
     "solana": {
-      "totalMedianInTimeRange": []
+      "totalMedianInTimeRange": [
+        {
+          "time": "2021-11-10T00:00:00.000Z",
+          "value": 5000
+        },
+        {
+          "time": "2021-11-10T01:00:00.000Z",
+          "value": 5000
+        },
+        {
+          "time": "2021-11-10T02:00:00.000Z",
+          "value": 5000
+        },
+        {
+          "time": "2021-11-10T03:00:00.000Z",
+          "value": 5000
+        },
+        {
+          "time": "2021-11-10T04:00:00.000Z",
+          "value": 5000
+        }
+      ]
     }
   }
-} 
+}
 ```
+
 ### totalFees
+
 Returns Total Fees in Time Range
 
 #### ** Parameters ** :
+
 - from: `<DateTime>`
 - to: `<DateTime>`
 
@@ -219,7 +457,7 @@ Returns Total Fees in Time Range
 totalFees(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
   }
   }
- 
+
 ```
 
 #### Result:
@@ -233,6 +471,7 @@ totalFees(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
   }
 }
 ```
+
 ### totalFeesInTimeRange
 
 #### ** Parameters ** :
@@ -244,15 +483,18 @@ totalFees(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
 #### Example:
 
 ```
-  query{
-    solana{
-totalFeesInTimeRange(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"}){
-  time
-  value
+{
+  solana {
+    totalFeesInTimeRange(
+      time: {from: "2021-11-10T00:00:00Z", to: "2021-11-10T04:00:00Z", resolution: ONE_HOUR}
+    ) {
+      time
+      value
+    }
+  }
 }
-  }
-  }
- 
+
+
 ```
 
 #### Result:
@@ -263,60 +505,24 @@ totalFeesInTimeRange(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",t
     "solana": {
       "totalFeesInTimeRange": [
         {
-          "time": "2021-08-11T03:54:04.000Z",
-          "value": 1565000
+          "time": "2021-11-10T04:00:00.000Z",
+          "value": 14910000
         },
         {
-          "time": "2021-08-11T03:54:05.000Z",
-          "value": 4610000
+          "time": "2021-11-10T03:00:00.000Z",
+          "value": 47760600000
         },
         {
-          "time": "2021-08-11T03:54:06.000Z",
-          "value": 8910000
+          "time": "2021-11-10T02:00:00.000Z",
+          "value": 45659725000
         },
         {
-          "time": "2021-08-11T03:54:07.000Z",
-          "value": 5380000
+          "time": "2021-11-10T01:00:00.000Z",
+          "value": 47733290000
         },
         {
-          "time": "2021-08-11T03:54:10.000Z",
-          "value": 6270000
-        },
-        {
-          "time": "2021-08-11T03:54:11.000Z",
-          "value": 12835000
-        },
-        {
-          "time": "2021-08-11T03:54:12.000Z",
-          "value": 8805000
-        },
-        {
-          "time": "2021-08-11T03:54:14.000Z",
-          "value": 13905000
-        },
-        {
-          "time": "2021-08-11T03:54:15.000Z",
-          "value": 7290000
-        },
-        {
-          "time": "2021-08-11T03:54:16.000Z",
-          "value": 6515000
-        },
-        {
-          "time": "2021-08-11T03:54:17.000Z",
-          "value": 10570000
-        },
-        {
-          "time": "2021-08-11T03:54:18.000Z",
-          "value": 15085000
-        },
-        {
-          "time": "2021-08-11T03:54:19.000Z",
-          "value": 2925000
-        },
-        {
-          "time": "2021-08-11T03:54:20.000Z",
-          "value": 4415000
+          "time": "2021-11-10T00:00:00.000Z",
+          "value": 46545825000
         }
       ]
     }
@@ -325,12 +531,21 @@ totalFeesInTimeRange(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",t
 ```
 
 ### transactionByBlockNumber
+
 Returns a specific instance of a transaction.
 
-#### ** Parameters ** : 
-* block: `<Float>` (required) 
+#### ** Parameters ** :
+
+- block: `<Float>` (Required)
+- from: `<DateTime>`
+- to: `<DateTime>`
+- paging: 
+  - page: `<Int>`
+  - limit: `<Int>`
+
 
 #### Example:
+
 ```
   query{
     solana{
@@ -344,6 +559,7 @@ transactionsByBlockNumber(block: 91136732) {
 ```
 
 #### Result:
+
 ```
 {
   "data": {
@@ -449,6 +665,3 @@ transactionsByBlockNumber(block: 91136732) {
   }
 }
 ```
-
-
-

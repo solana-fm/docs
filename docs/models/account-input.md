@@ -7,13 +7,13 @@ For more Information on Accounts in Solana: https://docs.solana.com/developing/p
 
 ### Elements of Account Inputs
 
-- transactionHash : `<String>` The hash of a specific transaction
-- account: `<String>` The hash of a specific account
-- tokenId: `<String>` The ID of a specific Token
-- preBalance: `<Float>` The Pre Balance of an account in Lamports
-- postBalance: `<Float>` The Post Balance of an account in Lamports
-- timeStamp: `<Float>` Time (in epochs) it was created at
-- transactions: `<Object>` The transactions that matches the returned account Hashes
+* transactionHash : `<String>` The hash of a specific transaction
+* account: `<String>` The hash of a specific account
+* tokenId: `<String>` The ID of a specific Token
+* preBalance: `<Float>` The Pre Balance of an account in Lamports
+* postBalance: `<Float>` The Post Balance of an account in Lamports
+* timeStamp: `<Float>` Time (in epochs) it was created at
+* transactions: `<Object>` The transactions that matches the returned account Hashes
 
 ### accountInputs
 
@@ -71,6 +71,20 @@ Returns an account Input via Primary Key
 #### Example:
 
 ```
+query{
+  solana {
+    accountInputByPk(
+      txHash: "5oYvae3qgPYa9BBuhb5g8yD62SuJu2xKqMzubNpLgP68ix7pEvbCkNBSBE5Kv961Csd8x8A2ZSpE1E8v6me7UFSt",
+      accountHash: "2r8afzPadGoEJ8eqT71BGzN6ENJdeiwAGEcvu964yEQR",
+      tokenId: "",
+      date: {from:"2021-11-20T10:00:00Z", to: "2021-11-20T14:00:00Z"}
+    ) {
+      transactionHash
+      account
+      timestamp
+    }
+  }
+}
 
 
 ```
@@ -79,9 +93,19 @@ Returns an account Input via Primary Key
 
 ```
 
+  "data": {
+    "solana": {
+      "accountInputs": [
+        {
+          "account": "2Gx3UfV831BAh8uQv1FKSPKS9yajfeeD8GJ4ZNb2o2YP",
+          "transactionHash": "56LkkCQL61Fpb96eTCZvSzfnUtgqanCX9ZN1QMmS4xbWg42d2fUxD7Ma5xwvSUCm82FiCJWN4jLM6jsxZmujbJn3"
+          "timestamp": "2021-11-20T10:00:00Z"
+        }
+    }
+  }
 ```
 
-### accountBalance
+### accountSolBalance
 
 Returns balances of accounts greater than the balance input
 
@@ -131,119 +155,6 @@ query {
         } ...
 ```
 
-### accountFirstBalance
-
-#### ** Parameters ** :
-
-- accountHash: `<String>` (required)
-
-#### Example:
-
-```
-query {
-  solana {
-    accountFirstBalance(accountHash: "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3") {
-    account
-    balance
-    timestamp
-    }
-  }
-}
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountLatestBalance": {
-        "account": "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3",
-        "balance": 3,
-        "timestamp": "2021-08-17T05:27:33.000Z"
-      }
-    }
-  }
-}
-```
-### accountLatestBalance
-
-#### ** Parameters ** :
-
-- accountHash: `<String>` (required)
-
-#### Example:
-
-```
-query {
-  solana {
-    accountLatestBalance(accountHash: "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3") {
-    account
-    balance
-    timestamp
-    }
-  }
-}
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountLatestBalance": {
-        "account": "EGwohnADja2jGMoEtcntFb5bte5B7gZGCJgNX5q9nmM3",
-        "balance": 3,
-        "timestamp": "2021-08-17T05:27:33.000Z"
-      }
-    }
-  }
-}
-```
-
-### accountBalancesOverTime
-
-#### ** Parameters ** :
-
-- balance: `<Int>` (required)
-- from: `<DateTime>`
-- to: `<DateTime>`
-- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: (Optional) 
-  - page: `<int>` Start of Page
-  - limit: `<int>` 
-
-
-#### Example:
-
-```
-query {
-  solana {
-    accountBalancesOverTime(balance: 1000000000, time: {from: "2021-08-11T03:54:05Z", to: "2021-08-11T07:54:05Z", resolution: ONE_MIN}) {
-      time
-      value
-    }
-  }
-}
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountBalancesOverTime": [
-        {
-          "time": "2021-08-11T03:54:00.000Z",
-          "value": 182087426666614140
-        }
-      ]
-    }
-  }
-}
-```
 
 ### accountsWithHigestBalances
 - paging: (Optional) 
@@ -285,146 +196,32 @@ query {
         }
 ```
 
-### accountsCreated
-Returns number of accounts created
+### accountsActiveByTokenId
 
 #### ** Parameters ** :
-
-- from: `<DateTime>`
-- to: `<DateTime>`
-
-#### Example:
-
-```
-   query{
-    solana{
-accountsCreated(date: {from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"})
-  }
-  }
- 
- 
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountsCreated": 4404
-    }
-  }
-}
-```
-### accountsCreatedOverTime
-
-#### ** Parameters ** :
-
-- from: `<DateTime>`
-- to: `<DateTime>`
-- resolution: `<Enum>` (required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
+- tokenId: `<String>` (Required)
+- from: `<DateTime>` (Required)
+- to: `<DateTime>` (Required)
 - paging: (Optional) 
   - page: `<int>` Start of Page
   - limit: `<int>` 
 
+
 #### Example:
 
 ```
-  query{
-    solana{
-accountsCreatedOverTime(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",to:"2021-08-11T06:00:04Z"}){
-  time
-  value
-}
-  }
-  }
- 
-```
-
-#### Result:
-
-```
-{
-  "data": {
-    "solana": {
-      "accountsCreatedOverTime": [
-        {
-          "time": "2021-08-11T03:54:04.000Z",
-          "value": 774
-        },
-        {
-          "time": "2021-08-11T03:54:05.000Z",
-          "value": 1830
-        },
-        {
-          "time": "2021-08-11T03:54:06.000Z",
-          "value": 2343
-        },
-        {
-          "time": "2021-08-11T03:54:07.000Z",
-          "value": 1841
-        },
-        {
-          "time": "2021-08-11T03:54:10.000Z",
-          "value": 1805
-        },
-        {
-          "time": "2021-08-11T03:54:11.000Z",
-          "value": 2070
-        },
-        {
-          "time": "2021-08-11T03:54:12.000Z",
-          "value": 2696
-        },
-        {
-          "time": "2021-08-11T03:54:14.000Z",
-          "value": 2435
-        },
-        {
-          "time": "2021-08-11T03:54:15.000Z",
-          "value": 2226
-        },
-        {
-          "time": "2021-08-11T03:54:16.000Z",
-          "value": 1808
-        },
-        {
-          "time": "2021-08-11T03:54:17.000Z",
-          "value": 2592
-        },
-        {
-          "time": "2021-08-11T03:54:18.000Z",
-          "value": 2640
-        },
-        {
-          "time": "2021-08-11T03:54:19.000Z",
-          "value": 1151
-        },
-        {
-          "time": "2021-08-11T03:54:20.000Z",
-          "value": 1981
-        }
-      ]
+query{
+  solana {
+    accountsActiveByTokenId(
+      tokenHash: "",
+      time: {from:"2021-11-20T10:00:00Z", to: "2021-11-20T14:00:00Z", resolution: ONE_HOUR}
+    ) {
+     time
+      value
     }
   }
 }
-```
 
-### accountSerumProviders
-Coming Soon
-
-#### ** Parameters ** :
-- from: `<DateTime>`
-- to: `<DateTime>`
-
-#### Example:
-
-```
-query {
-  solana {
-    accountSerumProviders(timeStamp: "2021-05-05")
-  }
-}
 ```
 
 #### Result:
@@ -433,7 +230,28 @@ query {
 {
   "data": {
     "solana": {
-      "accountSerumProviders": 1212431
+      "accountsActiveByTokenId": [
+        {
+          "time": "2021-11-20T14:00:00.000Z",
+          "value": 2243
+        },
+        {
+          "time": "2021-11-20T13:00:00.000Z",
+          "value": 133399
+        },
+        {
+          "time": "2021-11-20T12:00:00.000Z",
+          "value": 123638
+        },
+        {
+          "time": "2021-11-20T11:00:00.000Z",
+          "value": 106969
+        },
+        {
+          "time": "2021-11-20T10:00:00.000Z",
+          "value": 107569
+        }
+      ]
     }
   }
 }

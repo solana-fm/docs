@@ -16,11 +16,10 @@ For more information on Instructions: https://docs.solana.com/developing/program
 
 ### intructions
 
-
 #### ** Parameters ** : 
 - from: `<DateTime>` 
 - to: `<DateTime>` 
-- paging: (Optional) 
+- paging: 
   - page: `<Int>` 
   - limit: `<Int>`
 
@@ -48,36 +47,3 @@ query{
           "transactionHash": "4ATViT4FmkNdK52vakMC1BGFmzWjioF6cmsM4uXKhKSi6AuQzX2ueuKd7r2c5eqUxPPtbNCwJnH6nhAhLsj955YF"
         }
 ```
-
-### instructionByKey
-Returns a specific instance of an instruction
-
-#### ** Parameters ** : 
-* instructionId: `<Int>` (required) 
-* transactionHash: `<String>` (required) 
-* parentIndex: `<Int>` (required) 
-
-#### Example:
-```
-query{
-  solana{
-	  instructionByKey(instructionId:1, transactionHash: "1219DHHBcQRzKk66qduFjyPyMkm4Ar8pYWBvv2BurQJV9dDMD4qiGQoZygd11HmhhxzWnzuLYC63hDQX9Yu2YAjP", parentIndex:"-1"){
-      data
-   }
-  }
-}
-```
-
-#### Result:
-```
-{
-  "data": {
-    "solana": {
-      "instructionByKey": {
-        "data": "{\"hash\":[134,71,50,174,231,22,114,84,172,147,235,36,221,190,61,195,1,165,112,236,109,176,46,150,57,137,159,36,217,247,180,201],\"slots\":[37499],\"timestamp\":null}"
-      }
-    }
-  }
-}
-```
-

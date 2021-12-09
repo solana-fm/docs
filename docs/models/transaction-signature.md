@@ -15,9 +15,9 @@ For more information of a transaction signature: https://docs.solana.com/develop
 Returns Transaction Signatures
 
 #### ** Parameters ** :
-* from: `<DateTime>` 
-* to: `<DateTime>` 
-* paging: (Optional) 
+- from: `<DateTime>` 
+- to: `<DateTime>` 
+- paging: (Optional) 
   - page: `<Int>` 
   - limit: `<Int>`
 
@@ -62,8 +62,10 @@ Returns of a list of transaction signatures via transaction Hash
 
 #### ** Parameters ** :
 
-- txHash: `<String>` (required) Unique Identifier of a transaction
-- paging: (Optional) 
+- txHash: `<String>` (Required) 
+- from: `<DateTime>` 
+- to: `<DateTime>` 
+- paging:  
   - page: `<Int>` 
   - limit: `<Int>`
 
