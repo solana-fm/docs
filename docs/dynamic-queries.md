@@ -1,5 +1,5 @@
 ---
-id: DynamicQ
+id: dynamic-queries
 title: Dynamic Queries
 sidebar_position: 3
 ---

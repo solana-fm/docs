@@ -65,7 +65,7 @@ function HomepageHeader() {
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <Link className="navbar__link" to="docs/DynamicQ">
+            <Link className="navbar__link" to="docs/dynamic-queries">
               <div className="card">
                 <div className="card__header">
                   <h3>🤩 Dynamic Queries</h3>
