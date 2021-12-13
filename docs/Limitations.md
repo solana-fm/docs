@@ -4,20 +4,8 @@ sidebar_position: 2
 ---
 
 # Limitations 
-1. Due to the massive amount of data Solana consumes, (approximately 10GB/min), we have decided to limit the amount of data per query to a 4 hour interval.  
-2. Accounts and Epochs tables has not been indexed. 
-3. Blocks between 60-62M & above 99.5M are avalaible, but have not caught up to the latest blocks, limitations are due to infrastructure migration hold ups with our cloud service provider.
- 
-## Solving Limitations
+1. Accounts & Tokens table have not been indexed. 
+2. Proposer column in Blocks table has not been indexed. 
 
-### Limiting Data
-In time to come, we will provide an increment in the interval to paid customers. 
-
-### Missing Tables
-This is at the top of our priority to ensure queries are made possible. 
-
-### Catching up to the blockchain 
-We have partenered with large institutions to allow faster and larger SQL Injection and are awaiting for thier approval. Furthermore, Solana.FM has a dedicated RPC node to extract,transform & load (ETL) data at fast pace. 
-
-# Find out more
-For future updates, follow our Twitter & Join our Discord Channel! :)
+## Future updates
+For future updates, follow our [Twitter](https://twitter.com/solanafm) & join our [Discord](https://discord.gg/dGAjqRfESF) Channel!

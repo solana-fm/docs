@@ -14,7 +14,7 @@ module.exports = {
   docs: [
     "intro",
     "getting-started",
-    "limitations",
+    "Limitations",
     "best-practices",
     {
       type: 'category',
