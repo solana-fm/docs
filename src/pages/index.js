@@ -32,7 +32,7 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Connect with the <b>Core Team</b> and other users!
+                    Connect with the <b>Core Team</b>! 
                   </p>
                 </div>
               </div>
@@ -45,20 +45,20 @@ function HomepageHeader() {
                   <h3>😊 Try out our queries</h3>
                 </div>
                 <div className="card__body">
-                  <p>Start searching and querying <b><u>Solana.FM</u></b>.</p>
+                  <p>Start searching and querying <b>Solana.FM</b>.</p>
                 </div>
               </div>
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <Link className="navbar__link" to="/docs/models/Token">
+            <Link className="navbar__link" to="/docs/models/Transaction">
               <div className="card">
                 <div className="card__header">
                   <h3>🤔 Standard Queries</h3>
                 </div>
                 <div className="card__body">
                   <p>
-                    Utilise our built-in queries to retrieve data on <b>Tokens</b>, <b>Blocks</b> & more!
+                    Utilise our built-in queries to retrieve data on <b>Transactions</b>, <b>Blocks</b> & more!
                   </p>
                 </div>
               </div>
@@ -72,7 +72,7 @@ function HomepageHeader() {
                 </div>
                 <div className="card__body">
                   <p>
-                    Build your own queries using <b><u>WHERE</u></b>, <b><u>ORDERBY</u></b> & <b><u>DISTINCT</u></b> clauses.
+                    Build your own queries using <b>WHERE</b>, <b>ORDERBY</b> & <b>DISTINCT</b> clauses.
                   </p>
                 </div>
               </div>
@@ -85,7 +85,7 @@ function HomepageHeader() {
                   <h3> 📊 GraphQL Docs</h3>
                 </div>
                 <div className="card__body">
-                  <p>Visit GraphQL documentation to find out how to query on <b><u>GraphQL</u></b>
+                  <p>Visit GraphQL documentation to find out how to query on <b>GraphQL</b>
                   </p>
                 </div>
               </div>
