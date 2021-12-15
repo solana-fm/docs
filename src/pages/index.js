@@ -7,7 +7,6 @@ import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext()
   return (
     <section className={styles.features}>
       <div className="container">
@@ -98,12 +97,11 @@ function HomepageHeader() {
 }
 
 function Home() {
-  const { siteConfig } = useDocusaurusContext()
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+      description="Get started with our standard &amp; dynamic queries to easily access Solana data"
+      >
       <HomepageHeader />
       <main>
         <HomepageFeatures />

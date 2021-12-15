@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Solana.FM Documentation',
+  title: 'Quick Start · SolanaFM Docs',
   tagline: 'Query Solana with GraphQL.',
   url: 'https://docs.solana.fm',
   baseUrl: '/',
