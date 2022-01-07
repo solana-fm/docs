@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/updated_SolFm.svg',
+  favicon: 'img/transaparent_logo.svg',
   organizationName: 'nozomi-ai', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
@@ -14,7 +14,7 @@ module.exports = {
       title: '',
       logo: {
         alt: 'SolanaFM Logo',
-        src: 'img/updated_SolFm.png',
+        src: 'img/transparent_logo.png',
       },
       items: [
         {
