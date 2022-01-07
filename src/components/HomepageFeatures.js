@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'The First Solana Indexer',
-    Svg: require('../../static/img/updated_SolFm.svg').default,
+    Svg: require('../../static/img/transparent_logo.svg').default,
     description: (
       <>
         Access data from the Solana Blockchain with a click of a button with built-in APIs.
