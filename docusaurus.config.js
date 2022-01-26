@@ -7,7 +7,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/transaparent_logo.svg',
-  organizationName: 'nozomi-ai', // Usually your GitHub org/user name.
+  organizationName: 'solana-fm', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -29,7 +29,7 @@ module.exports = {
           label: 'Documentation',
         },
         {
-          href: 'https://github.com/nozomi-ai',
+          href: 'https://github.com/solana-fm',
           label: 'GitHub',
           position: 'right',
         },
@@ -51,7 +51,7 @@ module.exports = {
           title: 'Social',
           items: [
             {
-              label: 'Nozomi',
+              label: 'SolanaFM',
               href: 'https://blog.solana.fm/',
             },
             {
@@ -69,7 +69,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/nozomi-ai'
+              href: 'https://github.com/solana-fm'
             },
           ],
         },
@@ -90,7 +90,7 @@ module.exports = {
         blog: {
           showReadingTime: true,
           editUrl:
-            'https://github.com/nozomi-ai/docs',
+            'https://github.com/solana-fm/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
