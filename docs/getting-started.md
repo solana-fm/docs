@@ -33,7 +33,7 @@ import json
 
 url = "https://api.solana.fm"
 
-payload="{\"query\":\"query {\\n  solana {\\n    blocksCreatedByTimeRange(time: { from: \\\"2021-10-28T00:00:00Z\\\", to: \\\"2021-10-28T04:00:00Z\\\", resolution: ONE_MIN }) {\\n      time\\n      value\\n    }\\n  }\\n}\",\"variables\":{}}"
+payload="{\"query\":\"query {\\n  solana {\\n    blocksCreatedInTimeRange(time: { from: \\\"2021-10-28T00:00:00Z\\\", to: \\\"2021-10-28T04:00:00Z\\\", resolution: ONE_MIN }) {\\n      time\\n      value\\n    }\\n  }\\n}\",\"variables\":{}}"
 headers = {
   'apikey': '<your_api_key_here>',
   'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ var axios = require('axios');
 var data = JSON.stringify({
   query: `query {
   solana {
-    blocksCreatedByTimeRange(time: { from: "2021-10-28T00:00:00Z", to: "2021-10-28T04:00:00Z", resolution: ONE_MIN }) {
+    blocksCreatedInTimeRange(time: { from: "2021-10-28T00:00:00Z", to: "2021-10-28T04:00:00Z", resolution: ONE_MIN }) {
       time
       value
     }
