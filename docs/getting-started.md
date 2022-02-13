@@ -11,10 +11,10 @@ title: Getting Started
 
 
 ## Introduction
-Once you have [signed up to SolanaFM](https://solana.fm), you can create an [API key](https://solana.fm/ApiManagement) to build applications on top of SolanaFM and do additional on-the-fly computation for your analytical or visualisation needs.
+Once you have [signed up to SolanaFM](https://solana.fm), you can create an [API key](https://solana.fm/api-management) to build applications on top of SolanaFM and do additional on-the-fly computation for your analytical or visualisation needs.
 
 ## Creating an API key {#creating-an-api-key}
-Head over to [API Management](https://solana.fm/ApiManagement) page, and generate a new API key for your project.
+Head over to [API Management](https://solana.fm/api-management) page, and generate a new API key for your project.
 
 ![SolanaFM API Management](/img/getting-started-tutorial/api-management-page.png)
 
