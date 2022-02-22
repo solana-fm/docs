@@ -1,22 +1,27 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Solana.Fm Documentation',
-  tagline: 'The most robust and performant GraphQL-based analytics engine.',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Quick Start · SolanaFM Docs',
+  tagline: 'Query Solana with GraphQL.',
+  url: 'https://docs.solana.fm',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/icon.svg',
-  organizationName: 'nozomi', // Usually your GitHub org/user name.
-  projectName: 'nozomi-ai', // Usually your repo name.
+  favicon: 'img/transaparent_logo.svg',
+  organizationName: 'solana-fm', // Usually your GitHub org/user name.
+  projectName: 'docs', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/nozomi.png',
+        alt: 'SolanaFM Logo',
+        src: 'img/transparent_logo.png',
       },
       items: [
+        {
+          href: 'https://solana.fm',
+          label:'Home',
+          position:'left',
+        },
         {
           type: 'doc',
           docId: 'intro',
@@ -24,13 +29,7 @@ module.exports = {
           label: 'Documentation',
         },
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'ChangeLog'
-        },
-        {
-          href: 'https://github.com/nozomi-ai',
+          href: 'https://github.com/solana-fm',
           label: 'GitHub',
           position: 'right',
         },
@@ -45,10 +44,6 @@ module.exports = {
             {
               label: 'Documentation',
               to: '/docs/intro',
-            },
-            {
-              label:'ChangeLog',
-              to: '/docs/intro'
             }
           ],
         },
@@ -56,12 +51,12 @@ module.exports = {
           title: 'Social',
           items: [
             {
-              label: 'Nozomi',
-              href: 'https://blog.nozomi.ai/',
+              label: 'SolanaFM',
+              href: 'https://blog.solana.fm/',
             },
             {
               label: 'Linkedin',
-              href: 'https://www.linkedin.com/company/nozomi-one/',
+              href: 'https://www.linkedin.com/company/solanafm',
             },
             {
               label: 'Discord',
@@ -74,12 +69,12 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/nozomi-ai'
+              href: 'https://github.com/solana-fm'
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Nozomi.ai`,
+      copyright: `Copyright © ${new Date().getFullYear()} Solana FM.`,
     },
   },
   presets: [
@@ -94,9 +89,8 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/solana-fm/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

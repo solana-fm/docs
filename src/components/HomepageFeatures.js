@@ -5,19 +5,19 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'The First Solana Indexer',
-    Svg: require('../../static/img/solana-sol-logo.svg').default,
+    Svg: require('../../static/img/transparent_logo.svg').default,
     description: (
       <>
-        Access data from the solana blockchain with a click of a button with built in APIs
+        Access data from the Solana Blockchain with a click of a button with built-in APIs.
       </>
     ),
   },
   {
-    title: 'Readable Data',
+    title: 'GraphQL Readable Data',
     Svg: require('../../static/img/graphql.svg').default,
     description: (
       <>
-        Solana.Fm allows data to be easily queried and displayed on GraphQL.
+        Solana.FM allows data to be easily retrieved and displayed on GraphQL.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('../../static/img/icon.svg').default,
     description: (
       <>
-        Built through accuracy and for scalability.
+        Built with accuracy for scalability.
       </>
     ),
   },

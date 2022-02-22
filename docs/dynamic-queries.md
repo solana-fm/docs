@@ -1,5 +1,5 @@
 ---
-id: DynamicQ
+id: dynamic-queries
 title: Dynamic Queries
 sidebar_position: 3
 ---
@@ -16,12 +16,12 @@ These dynamic queries work the same as SQL.
 * _isNull
 * _like
 * _notLike
-* _in: To come soon
+* _in: 
 * _lt: less than
 * _gt: greater than 
 
 ## Where
-To extract only those records that fulfill a specifified condition.
+To extract only those records that fulfill a specified condition.
 
 
 #### Example:
