@@ -7,10 +7,10 @@ Because Solana uses the LLVM compiler infrastructure, a program may be written i
 
 BPF provides an efficient instruction set that can be executed in an interpreted virtual machine or as efficient just-in-time compiled native instructions.
 
-For more Information on Blocks: https://docs.solana.com/developing/on-chain-programs/overview
+For more Information on Native BPF: https://docs.solana.com/developing/on-chain-programs/overview
 
 ### Elements of Native BPF
-* **txHash**: `<String>` The hash that uniquely identifies a transaction.
+* **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
 * **program**: `<String>` The hash that uniquely identifies an executable program.
 * **programData**: `<String>` The hash belonging to the program that stores the program data.
 * **programAuthority**: `<String>` The hash belonging to the account that has authority to upgrade a program.

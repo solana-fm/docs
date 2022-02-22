@@ -64,7 +64,7 @@ Returns an account Input via Primary Key
 
 #### ** Parameters ** :
 
-- txHash: `<String>` (Required)
+- transactionHash: `<String>` (Required)
 - accountHash: `<String>` (Required)
 - tokenId: `<String>` (Required)
 

@@ -5,8 +5,8 @@ Native Stake refers to the native stake program in Solana. This program contains
 
 
 ### Elements of Native Stake
-* **txHash**: `<String>` The hash that uniquely identifies a transaction.
-* **amount**: `<String>` The hash that uniquely identifies an associated token account.
+* **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
+* **amount**: `<String>` The amount of Solanas staked in Lamports.
 * **program**: `<String>` The hash that uniquely identifies a program.
 * **timestamp**: `<Datetime>`
 

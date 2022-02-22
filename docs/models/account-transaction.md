@@ -57,7 +57,7 @@ query{
 ### accountTransactionsByHash
 
 #### ** Parameters ** :
-* txHash: `<String>` (required)
+* transactionHash: `<String>` (required)
 * paging: (Optional)
   - page: `<int>`
   - limit: `<int>`

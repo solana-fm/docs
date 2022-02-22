@@ -1,7 +1,6 @@
 ---
 title: Serum
 ---
-help pleaseeeeee
 
 ### Elements of Serum
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.

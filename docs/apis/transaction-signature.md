@@ -2,7 +2,6 @@
 title: Transaction Signature
 ---
 
-
 ### Elements of Transaction Signature
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
 * **signature**: `<String>` The hash belonging to the account of the signer.

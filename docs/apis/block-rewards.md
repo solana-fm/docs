@@ -1,7 +1,7 @@
 ---
 title: Block Reward
 ---
-Stakers in Solana are rewarded for helping to validate the ledger. These rewards can come in a few forms, namely
+Stakers in Solana are rewarded for helping to validate the ledger. These rewards can come in a few forms, from validating transactions, validating rent payments, inflation and voting on a block.
 
 For more information: https://docs.solana.com/cluster/stake-delegation-and-rewards
 

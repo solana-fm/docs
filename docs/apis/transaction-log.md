@@ -2,7 +2,6 @@
 title: Transaction Log
 ---
 
-
 ### Elements of Transaction Log
 * **line**: `<String>` The line number of the transaction log.
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.

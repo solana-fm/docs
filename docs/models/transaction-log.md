@@ -3,19 +3,19 @@ title: Transaction Log
 ---
 
 ### Elements of Transaction Log
-* transactionHash: `<String>` 
-* data: `<String>` 
+* transactionHash: `<String>`
+* data: `<String>`
 * timestamp: `<DateTime>`
 * line: `<Int>`
 
 ### transactionLogs
 
 
-#### ** Parameters ** : 
-- from: `<DateTime>` 
+#### ** Parameters ** :
+- from: `<DateTime>`
 - to: `<DateTime>`
-- paging: (Optional) 
-  - page: `<Int>` 
+- paging: (Optional)
+  - page: `<Int>`
   - limit: `<Int>`
 
 
@@ -48,12 +48,12 @@ query{
 Returns transactionlogs via transactionHash
 
 
-#### ** Parameters ** : 
-- txHash: `<String>` (Required)
-- from: `<DateTime>` 
+#### ** Parameters ** :
+- transactionHash: `<String>` (Required)
+- from: `<DateTime>`
 - to: `<DateTime>`
-- paging: 
-  - page: `<Int>` 
+- paging:
+  - page: `<Int>`
   - limit: `<Int>`
 
 

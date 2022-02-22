@@ -1,7 +1,7 @@
 ---
 title: Account Instruction
 ---
-Simply put, account instructions are accounts that store a set of instructions targeting accounts.
+Account instructions are accounts that store a set of instructions targeting accounts.
 
 ### Elements of Account Instruction
 * **txInstructionId**: `<Float>` The refers to the index of the instruction.

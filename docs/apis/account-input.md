@@ -11,8 +11,8 @@ For more Information on Accounts in Solana: https://docs.solana.com/developing/p
 * **account**: `<String>` The hash that uniquely identifies an account.
 * **tokenId**: `<String>` The hash that uniquely identifies a Token.
   - lamports is used as an input parameter to represent an empty tokenId. (see sample query below)
-* **preBalance**: `<Float>` The balance of an account before a transaction in Lamports.
-* **postBalance**: `<Float>` The balance of an account after a transaction in Lamports.
+* **preBalance**: `<Float>` The balance of an account before a transaction. If the tokenId is null, this value is stored in Lamports.
+* **postBalance**: `<Float>` The balance of an account after a transaction. If the tokenId is null, this value is stored in Lamports.
 
 ### AccountInput GetAll
 

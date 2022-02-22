@@ -1,12 +1,12 @@
 ---
 title: Native Vote
 ---
-Native vote refers to the program that denotes the governance and system of voting in the Solana Blockchain
+Native vote refers to the program that denotes the governance and system of voting in the Solana.
 
 ### Elements of Native Vote
 * **transactionHash**: `<Int>` The hash that uniquely identifies a transaction.
 * **account**: `<Int>` The hash that uniquely identifies an account.
-* **amount**: `<Int>` amount of votes in Lamports.
+* **amount**: `<Int>` amount of voting power to be withdrawn in Lamports.
 * **authority**: `<String>` The account hash with the authority to vote.
 * **withdrawAuthority**: `<String>` The account hash with the authority to withdraw votes.
 * **node**: `<String>` The hash that uniquely identifies the node/validator that is voted on.

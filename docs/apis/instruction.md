@@ -8,7 +8,7 @@ An instruction is the smallest contiguous unit of execution logic in a program. 
 * **instructionTypeId**: `<Int>`
 * **transactionHash**: `<String>` The hash that uniquely identifies an account a transaction.
 * **program**: `<String>` The account hash belonging to a program that stores the instructions.
-* **data**: `<String>` The account hash belonging to a program that stores the program's data.
+* **data**: `<String>` The serialised data of instructions and inner instructions in a program.
 * **parentIndex**: `<Int>` parentIndex of value -1 represents the parent instruction while any other value represents another instruction nested under the parent.
 * **timestamp**: `<Datetime>`
 
