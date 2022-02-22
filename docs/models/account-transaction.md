@@ -2,27 +2,26 @@
 title: Account Transaction
 ---
 
-### Elements of Account Transactions 
+### Elements of Account Transactions
 * transactionHash: `<String>` Unique Identifier of a Transaction
 * account: `<String>` Hash of an Account
-* role: `<Enum>` Role of an account in a transaction 
+* role: `<Enum>` Role of an account in a transaction
   - None
   - FeePayer
   - Signer
-  - ReadOnly 
+  - ReadOnly
   - ReadWrite
 * timestamp: `<DateTime>`
-* transactions: `[Object]` Transaction Object where the account Hashes matches the transactions 
-* inputs: `[Object]` Account Inputs Object where the account Hashes matches the account Inputs 
+
 
 ### accountTransactions
-Returns accountTransactions 
+Returns accountTransactions
 
-#### ** Parameters ** : 
-- paging: 
+#### ** Parameters ** :
+- paging:
   - page: `<int>` Start of Page
-  - limit: `<int>` 
-- from: `<DateTime>` 
+  - limit: `<int>`
+- from: `<DateTime>`
 - to: `<DateTime>`
 
 #### Example:
@@ -57,11 +56,11 @@ query{
 
 ### accountTransactionsByHash
 
-#### ** Parameters ** : 
-* txHash: `<String>` (required)
-* paging: (Optional) 
-  - page: `<int>` 
-  - limit: `<int>` 
+#### ** Parameters ** :
+* transactionHash: `<String>` (required)
+* paging: (Optional)
+  - page: `<int>`
+  - limit: `<int>`
 
 #### Example:
 ```
@@ -90,11 +89,11 @@ query{
 ### accountTransactionsByRole
 Returns Account Transactions by Role
 
-#### ** Parameters ** : 
+#### ** Parameters ** :
 * role: `<Enum>` The role of an account in a transaction. (Required)
-* paging: 
-  - page: `<int>` 
-  - limit: `<int>` 
+* paging:
+  - page: `<int>`
+  - limit: `<int>`
 
 
 #### Example:
@@ -126,11 +125,11 @@ query{
 
 ### accountTransactionsByAccount
 
-#### ** Parameters ** : 
+#### ** Parameters ** :
 * account: `<String>` The hash of an account (required)
-* paging: 
-  - page: `<int>` 
-  - limit: `<int>` 
+* paging:
+  - page: `<int>`
+  - limit: `<int>`
 
 #### Example:
 ```
@@ -157,9 +156,9 @@ query{
 ```
 
 ### accountTransactionsByPk
-Returns specific instance of an Account Transaction 
+Returns specific instance of an Account Transaction
 
-#### ** Parameters ** : 
+#### ** Parameters ** :
 * accountTransactionRole: `<Enum>` The role of an account in a transaction (required)
 * transactionHash: `<String>` The transaction hash (required)
 * account: `<String>` The account hash (required)
@@ -197,7 +196,7 @@ query {
 Returns number of active Accounts within a time period
 
 #### ** Parameters ** :
-- from: `<DateTime>` 
+- from: `<DateTime>`
 - to: `<DateTime>`
 
 #### Example:
@@ -229,9 +228,9 @@ query {
 - from: `<DateTime>`
 - to: `<DateTime>`
 - resolution: `<Enum>` (Required) (ONE_DAY,ONE_WEEK,ONE_MONTH)
-- paging: 
-  - page: `<int>` 
-  - limit: `<int>` 
+- paging:
+  - page: `<int>`
+  - limit: `<int>`
 
 #### Example:
 
@@ -244,7 +243,7 @@ accountActiveOverTime(time: {resolution: ONE_SECOND,from:"2021-08-11T03:40:04Z",
 }
   }
   }
- 
+
 ```
 
 #### Result:
