@@ -30,17 +30,17 @@ https://api-alpha.solana.fm/api/v1/programs/stake/withdrawals?from=2021-10-16T00
 ```
 [
     {
-        "txHash": "3vRvzpcUL2gE7Uqzv3etzZNHG6pTTnxxffgkf3MoRaWR4cUcRKLoT75Pwz9QQ7jbGknzLrNLbk7M6y3iWH7UAv6W",
+        "transactionHash": "3vRvzpcUL2gE7Uqzv3etzZNHG6pTTnxxffgkf3MoRaWR4cUcRKLoT75Pwz9QQ7jbGknzLrNLbk7M6y3iWH7UAv6W",
         "amount": 4000000000,
         "timestamp": "2021-10-16T12:14:57Z"
     },
     {
-        "txHash": "RhXwDyPKKJK5MRA1u7hoV2TDacah4Lq3DYZpSetzH17U5eYTuEKT19FxLD8APiGcXnHjNx6t4wCtUwnafohGPZH",
+        "transactionHash": "RhXwDyPKKJK5MRA1u7hoV2TDacah4Lq3DYZpSetzH17U5eYTuEKT19FxLD8APiGcXnHjNx6t4wCtUwnafohGPZH",
         "amount": 131000000000,
         "timestamp": "2021-10-16T11:18:16Z"
     },
     {
-        "txHash": "e5XyGzGqeo59WSi2akGLisZv7XT8tePj4xVbCtUmFZqGz19j3mqGudBSER3FfzgDcQtfo2oykkz1j9X16XVsraa",
+        "transactionHash": "e5XyGzGqeo59WSi2akGLisZv7XT8tePj4xVbCtUmFZqGz19j3mqGudBSER3FfzgDcQtfo2oykkz1j9X16XVsraa",
         "amount": 200000000000,
         "timestamp": "2021-10-16T13:02:36Z"
     },
