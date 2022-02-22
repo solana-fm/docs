@@ -33,7 +33,7 @@ This query takes in the following parameters and returns the accounts involved i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-vote-account-withdrawals?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/vote/withdrawals?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -72,7 +72,7 @@ This query takes in the following parameters and returns the vote accounts in th
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-vote-vote-accounts?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/vote/accounts?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -112,7 +112,7 @@ This query takes in the following parameters and returns the node commissions in
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-vote-node-commissions?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/vote/update-commissions?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -148,7 +148,7 @@ This query takes in the following parameters and returns the updated validator i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-vote-updated-validator-identities?from=2021-11-21T00:00:00Z&to=2021-11-21T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/vote/update-validator-identities?from=2021-11-21T00:00:00Z&to=2021-11-21T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -184,7 +184,7 @@ This query takes in the following parameters and returns the votes in the specif
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-vote-votes?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/vote/votes?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

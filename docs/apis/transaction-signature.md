@@ -22,7 +22,7 @@ This query takes in the following parameters and returns all transaction signatu
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transaction-signatures?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/transaction-signatures?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -56,7 +56,7 @@ This query takes in the following parameters and returns all transactions with a
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transaction-signatures/signature/EAAM5XSdcRt9c6ae9QDSyaxooSFQq5mDnDfzqtAdHkQxg6tJcYYSm3gXXFvCwnCJ13gUhhYHnBfgzHv477gfQxp?from=2022-02-18T00:00:00Z&to=2022-02-19T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transaction-signatures/signature/EAAM5XSdcRt9c6ae9QDSyaxooSFQq5mDnDfzqtAdHkQxg6tJcYYSm3gXXFvCwnCJ13gUhhYHnBfgzHv477gfQxp?from=2022-02-18T00:00:00Z&to=2022-02-19T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -84,7 +84,7 @@ This query takes in the following parameters and returns all signatures of a spe
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transaction-signatures/tx-hash/4vfDV2KZfTeaqQAySp9Po9dhDmXpiza7ghuAZ2vR4ixJzFJdnuRzLhA8ANTGDEdx1Wz5caFAbcb7Gv336Gnie1L7?from=2022-02-18T00:00:00Z&to=2022-02-19T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transaction-signatures/tx-hash/4vfDV2KZfTeaqQAySp9Po9dhDmXpiza7ghuAZ2vR4ixJzFJdnuRzLhA8ANTGDEdx1Wz5caFAbcb7Gv336Gnie1L7?from=2022-02-18T00:00:00Z&to=2022-02-19T00:00:00Z
 ```
 #### Sample returned results
 ```

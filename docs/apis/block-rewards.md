@@ -26,7 +26,7 @@ This query takes in the following parameters and returns the total amount of val
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/block-rewards/history/validator-reward?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/validator-reward?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 #### Sample returned results
 ```
@@ -81,7 +81,7 @@ This query takes in the following parameters and returns the total amount of a s
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/block-rewards/history/validator-reward?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/reward-type/1?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 #### Sample returned results
 ```

@@ -44,7 +44,7 @@ This query takes in the following parameters and returns all transactions in the
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transactions?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -89,7 +89,7 @@ This query takes in the following parameters and returns the number of transacti
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/history/count?from= 2021-11-11T00:00:00Z&to= 2021-11-12T00:00:00Z&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/transaction-count?from= 2021-11-11T00:00:00Z&to= 2021-11-12T00:00:00Z&resolution=2
 ```
 #### Sample returned results
 ```
@@ -124,7 +124,7 @@ This query takes in the following parameters and returns the specific transactio
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/hash/2o6XZngqgf7sqdPqxvMFmSDGK6v62FFNyS2E5btRXiSAbfxJjf5RHh6jGbUuDaAdDZiK1Bu2KJ9WdGFcgSBtkKt8?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transactions/hash/2o6XZngqgf7sqdPqxvMFmSDGK6v62FFNyS2E5btRXiSAbfxJjf5RHh6jGbUuDaAdDZiK1Bu2KJ9WdGFcgSBtkKt8?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -152,7 +152,7 @@ This query takes in the following parameters and returns all transactions of a s
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/transaction-status/1?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transactions/transaction-status/1?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -189,7 +189,7 @@ This query takes in the following parameters and returns all transactions of a s
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/block/100811563?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transactions/block/100811563?from= 2021-10-11T00:00:00Z&to= 2021-10-12T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -234,7 +234,7 @@ This query takes in the following parameters and returns sum of fees in the spec
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/history/fees?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/transaction-fees?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 #### Sample returned results
 ```
@@ -277,7 +277,7 @@ This query takes in the following parameters and returns all successful transact
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/history/successful-transactions?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/successful-transactions?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 #### Sample returned results
 ```
@@ -320,7 +320,7 @@ This query takes in the following parameters and returns number of failed transa
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transactions/history/failed-transactions?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/failed-transactions?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 #### Sample returned results
 ```

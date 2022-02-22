@@ -32,7 +32,7 @@ This query takes in the following parameters and returns all the blocks in the s
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/blocks?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/blocks?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -76,7 +76,7 @@ This query takes in the following parameters and returns all the blocks that bel
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/epoch/250/blocks
+https://api-alpha.solana.fm/api/v1/epoch/250/blocks
 ```
 #### Sample returned results
 ```
@@ -120,7 +120,7 @@ This query takes in the following parameters and returns the block corresponding
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/blocks/108431999
+https://api-alpha.solana.fm/api/v1/blocks/108431999
 ```
 #### Sample returned results
 ```
@@ -158,7 +158,7 @@ This query takes in the following parameters and returns the number of blocks cr
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/blocks/history/blocks-created?from=2021-11-01&to=2021-11-05&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/blocks-created?from=2021-11-01&to=2021-11-05&resolution=2
 ```
 #### Sample returned results
 ```
@@ -205,7 +205,7 @@ This query takes in the following parameters and returns the number of unique va
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/blocks/history/unique-validators?from=2021-12-01&to=2021-12-05&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/unique-validators?from=2021-12-01&to=2021-12-05&resolution=2
 ```
 #### Sample returned results
 ```

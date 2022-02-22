@@ -27,7 +27,7 @@ This query takes in the following parameters and returns transactions involved i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-system-account-transfers?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/system/transfers?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -64,7 +64,7 @@ This query takes in the following parameters and returns all stake accounts crea
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-system-account-creations?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/system/account-creations?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -101,7 +101,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-system-account-assignments?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/system/assignments?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -136,7 +136,7 @@ This query takes in the following parameters and returns all transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-system-nonce-advancements?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/system/advance-nonce-accounts?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

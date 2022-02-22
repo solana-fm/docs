@@ -24,7 +24,7 @@ This query takes in the following parameters and returns the withdrawal transact
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-stake-withdrawals?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/stake/withdrawals?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -62,7 +62,7 @@ This query takes in the following parameters and returns transactions involved i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-stake-splits?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/stake/splits?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

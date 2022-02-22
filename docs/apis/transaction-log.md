@@ -22,7 +22,7 @@ This query takes in the following parameters and returns all transaction logs in
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transaction-logs?from=2020-10-13T00:00:00Z&to=2020-10-14T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transaction-logs?from=2020-10-13T00:00:00Z&to=2020-10-14T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -58,7 +58,7 @@ This query takes in the following parameters and returns all transaction logs of
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/transaction-logs/51ujtzece923uP3dy9VreMnChEUw7jG26VUZEuq9o6qS8j5xt51ozhSDoH3QJ4UQGtFD2ha5LfjnAgyHmTWgVRhe?from=2020-10-13T00:00:00Z&to=2020-10-14T00:00:00Z
+https://api-alpha.solana.fm/api/v1/transaction-logs/51ujtzece923uP3dy9VreMnChEUw7jG26VUZEuq9o6qS8j5xt51ozhSDoH3QJ4UQGtFD2ha5LfjnAgyHmTWgVRhe?from=2020-10-13T00:00:00Z&to=2020-10-14T00:00:00Z
 ```
 #### Sample returned results
 ```

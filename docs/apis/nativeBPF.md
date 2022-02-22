@@ -31,7 +31,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-ata?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/close?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -68,7 +68,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-bpf-upgradeable-deployment?from=2022-01-01T00:00:00Z&to=2022-01-02T00:00:00Z
+https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/deploy?from=2022-01-01T00:00:00Z&to=2022-01-02T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -105,7 +105,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-bpf-upgradeable-upgrade?from=2022-01-01T00:00:00Z&to=2022-01-02T00:00:00Z
+https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/upgrade?from=2022-01-01T00:00:00Z&to=2022-01-02T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -144,7 +144,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-bpf-write?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/write?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

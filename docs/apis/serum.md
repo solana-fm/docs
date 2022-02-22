@@ -54,7 +54,7 @@ This query takes in the following parameters and returns all Serum cancelled ord
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/serum-cancelled-order?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/serum/market/cancelled-orders?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -93,7 +93,7 @@ This query takes in the following parameters and returns all Serum orders in the
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/serum-order?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/serum/market/orders?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -148,7 +148,7 @@ This query takes in the following parameters and returns information of transact
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/serum-fee-sweep?from=2021-10-19T00:00:00Z&to=2021-10-19T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/serum/market/sweep-fees?from=2021-10-19T00:00:00Z&to=2021-10-19T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -187,7 +187,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/serum-market-disable?from=2021-10-12T00:00:00Z&to=2021-10-12T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/serum/market/disabled-markets?from=2021-10-12T00:00:00Z&to=2021-10-12T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -221,7 +221,7 @@ This query takes in the following parameters and returns Serum markets in the sp
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/serum-market?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/serum/markets?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

@@ -31,7 +31,7 @@ This query takes in the following parameters and returns all account instruction
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-instructions?from=2021-11-01&to=2021-11-02
+https://api-alpha.solana.fm/api/v1/account-instructions?from=2021-11-01&to=2021-11-02
 ```
 #### Sample returned results
 ```

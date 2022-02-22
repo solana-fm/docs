@@ -26,7 +26,7 @@ This query takes in the following parameters and returns all instructions in the
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/instructions?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/instructions?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -68,7 +68,7 @@ This query takes in the following parameters and returns all instructions of a s
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/instructions/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/instructions/TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```

@@ -28,7 +28,7 @@ Takes in the following parameters and returns all the accounts inputs within the
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-inputs?limit=100&page=1&from=2022-01-01T00:00:00Z&to=2022-01-01T23:59:59Z
+https://api-alpha.solana.fm/api/v1/account-inputs?limit=100&page=1&from=2022-01-01T00:00:00Z&to=2022-01-01T23:59:59Z
 ```
 
 #### Sample returned results
@@ -66,7 +66,7 @@ Takes in the following parameters and returns all the specified account inputs w
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-inputs/CroZVDJM6dBS6DtR8wkaxBfxvc3gaWissAMqMnA4N1wm?from=2021-12-31T00:00:00Z&to=2021-12-31T23:59:59Z
+https://api-alpha.solana.fm/api/v1/account-inputs/CroZVDJM6dBS6DtR8wkaxBfxvc3gaWissAMqMnA4N1wm?from=2021-12-31T00:00:00Z&to=2021-12-31T23:59:59Z
 ```
 
 #### Sample returned results
@@ -106,7 +106,7 @@ Takes in the following parameters and returns all the account inputs for a speci
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-inputs/tokens/lamports
+https://api-alpha.solana.fm/api/v1/account-inputs/tokens/lamports
 ```
 
 #### Sample returned results
@@ -152,7 +152,7 @@ Active accounts are accounts that have recent sending activities.
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-inputs/history/active-accounts?from=2021-11-01&to=2021-11-02&resolution=2
+https://api-alpha.solana.fm/api/v1/charts/active-accounts?from=2021-11-01&to=2021-11-02&resolution=2
 ```
 
 #### Sample returned results

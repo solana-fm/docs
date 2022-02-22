@@ -24,7 +24,7 @@ This query takes in the following parameters and returns all native associated t
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-ata?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/programs/associated-token-accounts?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -61,7 +61,7 @@ This query takes in the following parameters and returns all native token delega
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-token-mint-delegations?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/token/mint-delegations?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -105,7 +105,7 @@ Mint inflation refers to the instance where the mint authority mints or burns to
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-token-mint-inflations?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/token/mint-inflation?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -147,7 +147,7 @@ Mint movements refers to transfer of tokens between 2 accounts.
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-token-mint-movements?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/token/mint-movements?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -190,7 +190,7 @@ A native token mint state stores the information of the token which includes the
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/native-token-mint-states?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/token/mint-states?from=2021-10-16T00:00:00Z&to=2021-10-16T23:59:59Z
 ```
 #### Sample returned results
 ```

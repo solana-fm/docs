@@ -28,7 +28,7 @@ This query takes in the following parameters and returns all accounts involved i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-transactions?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/account-transactions?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -70,7 +70,7 @@ This query takes in the following parameters and returns all accounts involved i
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -112,7 +112,7 @@ This query takes in the following parameters and returns all transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
@@ -159,7 +159,7 @@ This query takes in the following parameters and returns all transactions involv
 
 #### Sample query
 ```
-https://api.solana.fm/api/v1/account-transactions/roles/1?from=2022-01-01&to=2022-01-02
+https://api-alpha.solana.fm/api/v1/account-transactions/roles/1?from=2022-01-01&to=2022-01-02
 ```
 #### Sample returned results
 ```
