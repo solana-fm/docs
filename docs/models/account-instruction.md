@@ -3,22 +3,28 @@ title: Account Instruction
 ---
 
 ### Elements of Account Instruction
-* instructionId: `<Float>` Unique Identifier of Instruction
+* txinstructionId: `<Float>` Unique Identifier of Instruction
+* transactionHash: `<String>` 
+* parentIndex: `<Int>`
 * index: `<Float>` 
-* AccountHash: `<String>` Hash of Account
+* account: `<String>` Hash of Account
+* timestamp: `<DateTime>`
+* transactions: `<String>` Transaction Object where the account Hashes matches the transactions 
 
 ### accountInstructions
-Returns accountInstructions
 
 #### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>`Start of Page 
+- paging:`<int>`
+  - page: `<int>` Start of Page
+  - limit: `<int>`  
+- from: `<DateTime>` 
+- to: `<DateTime>` 
 
 #### Example:
 ```
 query{
 	solana{
-   accountInstructions{
+   accountInstructions(date: {from:"2021-01-09T05:30:00Z", to: "2021-10-10T05:30:00Z"}){
     account
     instructionId
 			}
@@ -35,45 +41,6 @@ query{
         {
           "account": "4E7oqDNWg8hFiSQYNdetf7oGbQCJzrZDW1Czn5wjvXrg",
           "instructionId": 1
-        }instuction.debug
+        }
 ```
-
-### accountInstructionByKey
-Returns a specific instance of accountInstruction
-
-#### ** Parameters ** : 
-* instructionId: `<Float>` Unique Identifier of Instruction
-* index: `<Float>` 
-* accountHash: `<String>` Hash of Account
-
-#### Example:
-```
-query{
-  solana{
-	  accountInstructionByKey(accHash: "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
-          idx: 0,
-          iId: 1){
-      account
-      index
-      instructionId
-    }
-  }
-}
-```
-
-#### Result:
-```
-{
-  "data": {
-    "solana": {
-      "accountInstructionByKey": {
-        "account": "8XgHUtBRY6qePVYERxosyX3MUq8NQkjtmFDSzQ2WpHTJ",
-        "index": 0,
-        "instructionId": 1
-      }
-    }
-  }
-}
-```
-
 

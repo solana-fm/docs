@@ -3,23 +3,27 @@ title: Transaction Log
 ---
 
 ### Elements of Transaction Log
-* transactionHash: `<String>` Unique Identifier of a Transaction
-* data: `<String>` Data a transaction has
+* transactionHash: `<String>`
+* data: `<String>`
+* timestamp: `<DateTime>`
+* line: `<Int>`
 
 ### transactionLogs
-Returns transactionlogs
 
 
-#### ** Parameters ** : 
-* Paging: (Optional) `<int>` 
-  - Page: `<int>` Start of Page 
+#### ** Parameters ** :
+- from: `<DateTime>`
+- to: `<DateTime>`
+- paging: (Optional)
+  - page: `<Int>`
+  - limit: `<Int>`
 
 
 #### Example:
 ```
 query{
 	solana{
-   transactionLogs{
+   transactionLogs(date: {from:"2021-01-09T05:30:00Z", to: "2021-10-10T05:30:00Z"}){
     transactionHash
     data
   	}
@@ -41,11 +45,16 @@ query{
 ```
 
 ### transactionLogsByHash
-Returns of a transactionlog
+Returns transactionlogs via transactionHash
 
 
-#### ** Parameters ** : 
-* txHash: `<String>` Unique Identifier of a transaction (Required)
+#### ** Parameters ** :
+- transactionHash: `<String>` (Required)
+- from: `<DateTime>`
+- to: `<DateTime>`
+- paging:
+  - page: `<Int>`
+  - limit: `<Int>`
 
 
 #### Example:
