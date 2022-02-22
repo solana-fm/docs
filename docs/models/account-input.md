@@ -1,7 +1,7 @@
 ---
 title: Account Input
 ---
-Account inputs store an account's balance pre-transaction and post-transaction state, and indicates the balance in question with `tokenId` (If `tokenId` is empty, lamports is being transacted).
+Account inputs store an account's balance pre-transaction and post-transaction state, and indicates the balance in question with `tokenId`. If `tokenId` is empty, lamports is being transacted.
 
 For more Information on Accounts in Solana: https://docs.solana.com/developing/programming-model/accounts
 
@@ -10,9 +10,9 @@ For more Information on Accounts in Solana: https://docs.solana.com/developing/p
 * transactionHash : `<String>` The hash of a specific transaction
 * account: `<String>` The hash of a specific account
 * tokenId: `<String>` The ID of a specific Token
-* preBalance: `<Float>` The Pre Balance of an account in Lamports
-* postBalance: `<Float>` The Post Balance of an account in Lamports
-* timeStamp: `<Float>` Time (in epochs) it was created at
+* preBalance: `<Float>` The balance of an account before a transaction in Lamports
+* postBalance: `<Float>` The balance of an account after a transaction in Lamports
+* timeStamp: `<Float>` Time of creation in epochs
 * transactions: `<Object>` The transactions that matches the returned account Hashes
 
 ### accountInputs
@@ -21,11 +21,11 @@ Returns account Inputs.
 
 #### ** Parameters ** :
 
-- from: `<DateTime>` 
-- to: `<DateTime>`
+- from: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
+- to: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
 - paging: (Optional) `<int>`
   - page: `<int>` Start of Page
-  - limit: `<int>` 
+  - limit: `<int>`
 
 #### Example:
 
@@ -111,10 +111,10 @@ Returns balances of accounts greater than the balance input
 
 #### ** Parameters ** :
 
-- balance `<Float>`(Required) 
+- balance `<Float>`(Required)
 - paging: (Optional) `<int>`
   - page: `<int>` Start of Page
-  - limit: `<int>` 
+  - limit: `<int>`
 
 
 #### Example:
@@ -157,9 +157,9 @@ query {
 
 
 ### accountsWithHigestBalances
-- paging: (Optional) 
+- paging: (Optional)
   - page: `<int>` Start of Page
-  - limit: `<int>` 
+  - limit: `<int>`
 
 
 #### Example:
@@ -202,9 +202,9 @@ query {
 - tokenId: `<String>` (Required)
 - from: `<DateTime>` (Required)
 - to: `<DateTime>` (Required)
-- paging: (Optional) 
+- paging: (Optional)
   - page: `<int>` Start of Page
-  - limit: `<int>` 
+  - limit: `<int>`
 
 
 #### Example:
