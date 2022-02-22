@@ -18,7 +18,7 @@ For more Information on Blocks: https://docs.solana.com/proposals/block-confirma
 * **epochId**: `<Float>` The epoch the block belongs to.
 * **timestamp**: `<DateTime>`
 
-### Block GetAll
+### List all Blocks
 
 This query takes in the following parameters and returns all the blocks in the specified time range.
 
@@ -61,7 +61,7 @@ https://api-alpha.solana.fm/api/v1/blocks?from=2022-01-01&to=2022-01-02
 ]
 ```
 
-### Block GetByEpoch
+### Retrieve Blocks by a specific epoch
 
 This query takes in the following parameters and returns all the blocks that belongs to the specified epoch in the specified time range.
 
@@ -105,7 +105,7 @@ https://api-alpha.solana.fm/api/v1/epoch/250/blocks
 ]
 ```
 
-### Block GetByBlockNumber
+### Get a Block
 
 This query takes in the following parameters and returns the block corresponding to the specified block number in the specified time range.
 
@@ -136,7 +136,7 @@ https://api-alpha.solana.fm/api/v1/blocks/108431999
 }
 ```
 
-### Block BlocksCreatedInTimeRange
+### Retrieve blocks created chart
 
 This query takes in the following parameters and returns the number of blocks created in the specified timeframe resolution.
 
@@ -183,7 +183,7 @@ https://api-alpha.solana.fm/api/v1/charts/blocks-created?from=2021-11-01&to=2021
 ]
 ```
 
-### Block UniqueValidatorsInTimeRange
+### Retrieve unique validators chart
 
 This query takes in the following parameters and returns the number of unique validators in the specified timeframe resolution.
 

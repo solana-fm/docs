@@ -10,7 +10,7 @@ Native Stake refers to the native stake program in Solana. This program contains
 * **program**: `<String>` The hash that uniquely identifies a program.
 * **timestamp**: `<Datetime>`
 
-### NativeStake Withdrawal
+### List all stake withdrawals
 
 This query takes in the following parameters and returns the withdrawal transactions from a native stake in the specified time range.
 
@@ -48,7 +48,7 @@ https://api-alpha.solana.fm/api/v1/programs/stake/withdrawals?from=2021-10-16T00
 ]
 ```
 
-### NativeStake GetStakeSplit
+### List all stake splits
 
 This query takes in the following parameters and returns transactions involved in splitting a stake account.
 

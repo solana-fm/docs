@@ -17,7 +17,7 @@ For more Information on Native BPF: https://docs.solana.com/developing/on-chain-
 * **programBuffer**: `<String>` The hash belonging to the account that will hold the Lamports in the event that program deployment fails
 * **timestamp**: `<Datetime>`
 
-### NativeBPF GetUpgradeableClosure
+### List all closures
 
 This query takes in the following parameters and returns the transactions involved in a program closure in the specified time range.
 
@@ -54,7 +54,7 @@ https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/close?from=2022-0
 ]
 ```
 
-### NativeBPF GetUpgradeableDeployment
+### List all deployments
 
 This query takes in the following parameters and returns the transactions involved in a program deployment in the specified time range.
 
@@ -91,7 +91,7 @@ https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/deploy?from=2022-
 ]
 ```
 
-### NativeBPF GetUpgradeableUpgrade
+### List all upgrades
 
 This query takes in the following parameters and returns the transactions involved in a program upgrade in the specified time range.
 
@@ -130,7 +130,7 @@ https://api-alpha.solana.fm/api/v1/programs/upgradeable-loader/upgrade?from=2022
 ]
 ```
 
-### NativeBPF GetNativeWrite
+### List all writes
 
 This query takes in the following parameters and returns the transactions involved in writing instructions into an account.
 

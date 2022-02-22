@@ -7,7 +7,7 @@ title: Transaction Log
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
 * **timestamp**: `<Datetime>`
 
-### TransactionLog GetAll
+### List all TransactionLogs
 
 This query takes in the following parameters and returns all transaction logs in the specified time range.
 
@@ -42,7 +42,7 @@ https://api-alpha.solana.fm/api/v1/transaction-logs?from=2020-10-13T00:00:00Z&to
 ]
 ```
 
-### TransactionLog GetByHash
+### Retrieve TransactionLog by a specific transaction
 
 This query takes in the following parameters and returns all transaction logs of a specified transaction in the specified time range.
 

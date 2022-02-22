@@ -30,7 +30,7 @@ title: Transaction
   - AccountBorrowOutstanding = 20,
 * **timestamp**: `<Datetime>`
 
-### Transaction GetAll
+### List all transactions
 
 This query takes in the following parameters and returns all transactions in the specified time range.
 
@@ -67,7 +67,7 @@ https://api-alpha.solana.fm/api/v1/transactions?from= 2021-10-11T00:00:00Z&to= 2
 ]
 ```
 
-### Transaction TransactionCountInTimeRange
+### Retrieve transaction count chart
 
 This query takes in the following parameters and returns the number of transactions in the specified timeframe resolution.
 
@@ -110,7 +110,7 @@ https://api-alpha.solana.fm/api/v1/charts/transaction-count?from= 2021-11-11T00:
 ]
 ```
 
-### Transaction GetByTransaction
+### Retrieve a transaction
 
 This query takes in the following parameters and returns the specific transaction in the specified time range.
 
@@ -137,11 +137,12 @@ https://api-alpha.solana.fm/api/v1/transactions/hash/2o6XZngqgf7sqdPqxvMFmSDGK6v
 }
 ```
 
-### Transaction GetByStatus
+### Retrieve transactions by a specific status
 
 This query takes in the following parameters and returns all transactions of a specified status in the specified time range.
-:::note specify status enum in the following format /transaction-status/{status}
-
+:::note
+specify status enum in the following format /transaction-status/{status}
+::: 
 #### ** Parameters ** :
 
 - **from**: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
@@ -175,7 +176,7 @@ https://api-alpha.solana.fm/api/v1/transactions/transaction-status/1?from= 2021-
 ]
 ```
 
-### Transaction GetByBlockNumber
+### Retrieve transactions by a specific block
 
 This query takes in the following parameters and returns all transactions of a specified block in the specified time range.
 
@@ -212,7 +213,7 @@ https://api-alpha.solana.fm/api/v1/transactions/block/100811563?from= 2021-10-11
 ]
 ```
 
-### Transaction TotalFeesInTimeRange
+### Retrieve transaction fees chart
 
 This query takes in the following parameters and returns sum of fees in the specified time range.
 
@@ -255,7 +256,7 @@ https://api-alpha.solana.fm/api/v1/charts/transaction-fees?from=2021-11-01&to=20
 ]
 ```
 
-### Transaction SuccessfulTransactionsInTimeRange
+### Retrieve successsful transactions chart
 
 This query takes in the following parameters and returns all successful transactions in the specified time range.
 
@@ -298,7 +299,7 @@ https://api-alpha.solana.fm/api/v1/charts/successful-transactions?from=2021-11-0
 ]
 ```
 
-### Transaction FailedTransactionsInTimeRange
+### Retrieve failed transactions chart
 
 This query takes in the following parameters and returns number of failed transactions in the specified time range.
 

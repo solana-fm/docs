@@ -14,7 +14,7 @@ For more Information on Accounts in Solana: https://docs.solana.com/developing/p
 * **preBalance**: `<Float>` The balance of an account before a transaction. If the tokenId is null, this value is stored in Lamports.
 * **postBalance**: `<Float>` The balance of an account after a transaction. If the tokenId is null, this value is stored in Lamports.
 
-### AccountInput GetAll
+### List all account inputs
 
 Takes in the following parameters and returns all the accounts inputs within the specified time range.
 
@@ -53,7 +53,7 @@ https://api-alpha.solana.fm/api/v1/account-inputs?limit=100&page=1&from=2022-01-
     ...
 ]
 ```
-### AccountInput GetByAccount:
+### Retrieve account inputs by a specific account
 
 Takes in the following parameters and returns all the specified account inputs within the specified time range.
 
@@ -92,7 +92,7 @@ https://api-alpha.solana.fm/api/v1/account-inputs/CroZVDJM6dBS6DtR8wkaxBfxvc3gaW
 ]
 ```
 
-### AccountInput GetByToken:
+### Retrieve account inputs by a specific token
 
 Takes in the following parameters and returns all the account inputs for a specific token within the specified time range.
 
@@ -131,7 +131,7 @@ https://api-alpha.solana.fm/api/v1/account-inputs/tokens/lamports
     ...
 ]
 ```
-### AccountInput ActiveAccountsInTimeRange:
+### Retrieve active accounts chart
 
 Takes in the following parameters and returns the account inputs for active accounts within the specified timeframe resolution.
 Active accounts are accounts that have recent sending activities.
@@ -159,20 +159,16 @@ https://api-alpha.solana.fm/api/v1/charts/active-accounts?from=2021-11-01&to=202
 ```
 [
     {
-        "transactionHash": "24JdZtssvK1apSEBT3DxfRWxyzANeSqpVbg8vXeG9aENQyBFbNpU8UeRgjdp5ViBiKRMYyzdtFaGtnnsvzw5TD3T",
-        "account": "9jQ16ZjBN1vmXn3dpRDc5eZkRPU1kUTp5MPnJuSFWb1U",
-        "tokenId": "",
-        "preBalance": 97497474797,
-        "postBalance": 97497469797,
-        "timestamp": "2022-02-19T22:07:16Z"
+        "time": "2021-11-01T00:00:00Z",
+        "value": 141017
     },
     {
-        "transactionHash": "24JdZtssvK1apSEBT3DxfRWxyzANeSqpVbg8vXeG9aENQyBFbNpU8UeRgjdp5ViBiKRMYyzdtFaGtnnsvzw5TD3T",
-        "account": "HMArFr5hNKhVY7bPjYc6WJEbDmJHyUvgiJZgrceqHNAL",
-        "tokenId": "",
-        "preBalance": 51126996143,
-        "postBalance": 51126996143,
-        "timestamp": "2022-02-19T22:07:16Z"
+        "time": "2021-11-01T01:00:00Z",
+        "value": 124297
+    },
+    {
+        "time": "2021-11-01T02:00:00Z",
+        "value": 117306
     },
     ...
 ]

@@ -11,13 +11,13 @@ Account instructions are accounts that store a set of instructions targeting acc
 * **account**: `<String>` The hash that uniquely identifies an account.
 * **timestamp**: `<DateTime>`
 
-:::note The unique account instruction hash can be derived by taking the the txinstructionId + transactionHash + parentIndex
-
+:::note
+The unique account instruction hash can be derived by taking the the txinstructionId + transactionHash + parentIndex
 #### Sample
 0 + transactionHash + 1 would mean that the instruction is nested under the parent instruction of index 1 with the first index
 0 + transactionHash + -1 would mean that the instruction is a parent instruction at the first index
-
-### AccountInstruction GetAll
+::: 
+### List all account instructions
 
 This query takes in the following parameters and returns all account instructions in a specified time range.
 

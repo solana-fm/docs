@@ -19,7 +19,7 @@ Native vote refers to the program that denotes the governance and system of voti
 * **lastSlotTimestamp**: `<String>`
 * **timestamp**: `<Datetime>`
 
-### NativeVote GetAccountWithdrawals
+### List all withdrawals
 
 This query takes in the following parameters and returns the accounts involved in withdrawing votes in the specified time range.
 
@@ -58,7 +58,7 @@ https://api-alpha.solana.fm/api/v1/programs/vote/withdrawals?from=2021-10-16T00:
 ]
 ```
 
-### NativeVote GetVoteAccounts
+### List all vote accounts
 
 This query takes in the following parameters and returns the vote accounts in the specified time range.
 
@@ -98,7 +98,7 @@ https://api-alpha.solana.fm/api/v1/programs/vote/accounts?from=2021-10-16T00:00:
 ]
 ```
 
-### NativeVote GetNodeCommissions
+### List all node commissions
 
 This query takes in the following parameters and returns the node commissions in the specified time range.
 
@@ -134,7 +134,7 @@ https://api-alpha.solana.fm/api/v1/programs/vote/update-commissions?from=2021-10
 ]
 ```
 
-### NativeVote GetUpdatedValidatorIdentities
+### List all updated validator indentities
 
 This query takes in the following parameters and returns the updated validator identities in the specified time range.
 
@@ -170,7 +170,7 @@ https://api-alpha.solana.fm/api/v1/programs/vote/update-validator-identities?fro
 ]
 ```
 
-### NativeVote GetVotes
+### List all votes
 
 This query takes in the following parameters and returns the votes in the specified time range.
 

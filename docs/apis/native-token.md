@@ -10,7 +10,7 @@ Native token is a program that handles non-native transfers. Simply put, amounts
 * **mint**: `<String>` The hash that uniquely identifies a token.
 * **timestamp**: `<Datetime>`
 
-### Native ATA
+### List all ATA accounts
 
 This query takes in the following parameters and returns all native associated token account in the specified time range.
 
@@ -47,7 +47,7 @@ https://api-alpha.solana.fm/api/v1/programs/associated-token-accounts?from=2022-
 ]
 ```
 
-### NativeToken GetMintDelegations
+### List all mint delegations
 
 This query takes in the following parameters and returns all native token delegations in the specified time range.
 
@@ -90,7 +90,7 @@ https://api-alpha.solana.fm/api/v1/programs/token/mint-delegations?from=2021-10-
 ]
 ```
 
-### NativeToken GetMintInflations
+### List all mint inflation
 
 This query takes in the following parameters and returns the native mint inflation in the specified time range.
 Mint inflation refers to the instance where the mint authority mints or burns tokens resulting in either an inflation or deflation.
@@ -132,7 +132,7 @@ https://api-alpha.solana.fm/api/v1/programs/token/mint-inflation?from=2021-10-16
 ]
 ```
 
-### NativeToken GetMintMovements
+### List all mint movements
 
 This query takes in the following parameters and returns the native token movements in the specified time range.
 Mint movements refers to transfer of tokens between 2 accounts.
@@ -175,7 +175,7 @@ https://api-alpha.solana.fm/api/v1/programs/token/mint-movements?from=2021-10-16
 ```
 
 
-### NativeToken GetMintStates
+### List all mint states
 
 This query takes in the following parameters and returns the native token mint states in the specified time range.
 A native token mint state stores the information of the token which includes the mint authority and freeze authority.

@@ -7,7 +7,7 @@ title: Transaction Signature
 * **signature**: `<String>` The hash belonging to the account of the signer.
 * **timestamp**: `<Datetime>`
 
-### TransactionSignature GetAll
+### List all Transaction Signatures
 
 This query takes in the following parameters and returns all transaction signatures in the specified time range.
 
@@ -40,7 +40,7 @@ https://api-alpha.solana.fm/api/v1/transaction-signatures?from=2021-10-16T00:00:
 ]
 ```
 
-### TransactionSignature GetBySignature
+### Retrieve Transaction Signature by a specific signature
 
 This query takes in the following parameters and returns all transactions with a specified signature in the specified time range.
 
@@ -68,7 +68,7 @@ https://api-alpha.solana.fm/api/v1/transaction-signatures/signature/EAAM5XSdcRt9
 ]
 ```
 
-### TransactionSignature GetByTransaction
+### Retrive Transaction Signature by a specific transaction
 
 This query takes in the following parameters and returns all signatures of a specified transaction in the specified time range.
 

@@ -2,7 +2,7 @@
 title: Native System
 ---
 
-### Elements of Native Stake
+### Elements of Native System
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
 * **amount**: `<String>` Amount of Solana in Lamports.
 * **source**: `<String>` The account hash of the sender.
@@ -13,7 +13,7 @@ title: Native System
 * **nonceAccount**: `<String>` A temporary account that can be assigned to have control over another account.
 * **timestamp**: `<Datetime>`
 
-### NativeSystem GetAccountTransfers
+### List all account transfers
 
 This query takes in the following parameters and returns transactions involved in sending Lamports to stake accounts.
 
@@ -50,7 +50,7 @@ https://api-alpha.solana.fm/api/v1/programs/system/transfers?from=2021-10-16T00:
 ]
 ```
 
-### NativeSystem GetAccountCreations
+### List all account creations
 
 This query takes in the following parameters and returns all stake accounts created in the specified time range.
 
@@ -87,7 +87,7 @@ https://api-alpha.solana.fm/api/v1/programs/system/account-creations?from=2021-1
 ]
 ```
 
-### NativeSystem GetAccountAssignments
+### List all account assignments
 
 This query takes in the following parameters and returns the transactions involved in the assignment of an account to a program.
 
@@ -122,7 +122,7 @@ https://api-alpha.solana.fm/api/v1/programs/system/assignments?from=2021-10-16T0
 ]
 ```
 
-### NativeSystem GetNonceAdvancements
+### List all advance nonce accounts
 
 This query takes in the following parameters and returns all transactions involved in invoking nonce advancement instructions in the specified time range.
 

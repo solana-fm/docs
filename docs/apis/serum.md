@@ -39,7 +39,7 @@ title: Serum
 * **pcDustThreshold**: `<Int>` The counter currency's dust threshold. Dust refers to residual amounts of counter currencies that can be returned.
 * **timestamp**: `<Datetime>`
 
-### Serum GetCancelledOrders
+### List all cancelled orders
 
 This query takes in the following parameters and returns all Serum cancelled orders in the specified time range.
 
@@ -78,7 +78,7 @@ https://api-alpha.solana.fm/api/v1/programs/serum/market/cancelled-orders?from=2
 ]
 ```
 
-### Serum GetSerumOrders
+### List all orders
 
 This query takes in the following parameters and returns all Serum orders in the specified time range.
 
@@ -133,7 +133,7 @@ https://api-alpha.solana.fm/api/v1/programs/serum/market/orders?from=2021-10-16T
 ]
 ```
 
-### Serum GetFeeSweeps
+### List all fee sweeps
 
 This query takes in the following parameters and returns information of transactions involved in collecting Serum fees in the specified time range.
 
@@ -172,7 +172,7 @@ https://api-alpha.solana.fm/api/v1/programs/serum/market/sweep-fees?from=2021-10
 ]
 ```
 
-### Serum GetMarketDisable
+### List all disabled markets
 
 This query takes in the following parameters and returns the transactions involved in disabling a Serum market in the specified time range.
 
@@ -206,7 +206,7 @@ https://api-alpha.solana.fm/api/v1/programs/serum/market/disabled-markets?from=2
 ]
 ```
 
-### Serum GetMarket
+### List all markets
 
 This query takes in the following parameters and returns Serum markets in the specified time range.
 

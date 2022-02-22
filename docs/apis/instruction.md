@@ -12,7 +12,7 @@ An instruction is the smallest contiguous unit of execution logic in a program. 
 * **parentIndex**: `<Int>` parentIndex of value -1 represents the parent instruction while any other value represents another instruction nested under the parent.
 * **timestamp**: `<Datetime>`
 
-### Instruction GetAll
+### List all Instructions
 
 This query takes in the following parameters and returns all instructions in the specified time range.
 
@@ -53,7 +53,7 @@ https://api-alpha.solana.fm/api/v1/instructions?from=2022-01-01&to=2022-01-02
 ]
 ```
 
-### Instruction GetByProgram
+### Get Instructions by a specific program
 
 This query takes in the following parameters and returns all instructions of a specified program in the specified time range.
 

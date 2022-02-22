@@ -14,7 +14,7 @@ Account transactions refer to all accounts involved in transactions.
   - ReadWrite = 4
 * **timestamp**: `<DateTime>`
 
-### AccountTransaction GetAll
+### List all account transactions
 
 This query takes in the following parameters and returns all accounts involved in transactions in the specified time range.
 
@@ -55,7 +55,7 @@ https://api-alpha.solana.fm/api/v1/account-transactions?from=2022-01-01&to=2022-
 ]
 ```
 
-### AccountTransaction GetByTransaction
+### Retrieve account transactions by a specific transaction
 
 This query takes in the following parameters and returns all accounts involved in a specified transaction in the specified time range.
 
@@ -97,7 +97,7 @@ https://api-alpha.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfE
 ]
 ```
 
-### AccountTransaction GetByAccount
+### Retrieves account transactions by a specific account
 
 This query takes in the following parameters and returns all transactions involving a specified account in the specified time range.
 
@@ -139,7 +139,7 @@ https://api-alpha.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfE
 ]
 ```
 
-### AccountTransaction GetByRole
+### Retrieve account transactions by a specific role
 
 This query takes in the following parameters and returns all transactions involving a specified role in the specified time range.
 

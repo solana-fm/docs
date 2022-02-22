@@ -5,7 +5,7 @@ Stakers in Solana are rewarded for helping to validate the ledger. These rewards
 
 For more information: https://docs.solana.com/cluster/stake-delegation-and-rewards
 
-### BlockRewards TotalValidatorRewardsInTimeRange
+### Retrieve validator rewards chart
 
 This query takes in the following parameters and returns the total amount of validator rewards in the specified timeframe resolution.
 
@@ -51,7 +51,7 @@ https://api-alpha.solana.fm/api/v1/charts/validator-reward?from=2021-11-01&to=20
 ]
 ```
 
-### BlockRewards TotalRewardsByType
+### Retrieve block rewards chart by specific type
 
 This query takes in the following parameters and returns the total amount of a specified reward type in the specified timeframe resolution.
 
