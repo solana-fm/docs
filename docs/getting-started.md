@@ -7,9 +7,12 @@ title: Getting Started
 
 ## Objectives
 - [Creation of API key](#creating-an-api-key)
-- [Connect from your application](#connect-from-your-application)
-  - [Python](#python-example)
-  - [NodeJS](#nodejs-example)
+- [Connect from your application via GraphQL](#connect-from-your-application-via-graphql)
+  - [Python](#python-graphql-example)
+  - [NodeJS](#nodejs-graphql-example)
+- [Connect from your application via REST](#connect-from-your-application-via-rest)
+  - [Python](#python-rest-example)
+  - [NodeJS](#nodejs-rest-example)
 
 
 ## Setting Up
@@ -24,10 +27,10 @@ Provide a name for your API key so that you can easily identify generated keys i
 
 **Note:** The generated API key will only be shown __once__ for security purposes, if you lose your key, you will have to revoke and regenerate a new API key.
 
-## Connect from your application {#connect-from-your-application}
+## Connect from your application via GraphQL {#connect-from-your-application-via-graphql}
 As long as you have access to any HTTP client libraries, you're able to connect to SolanaFM and retrieve data.
 
-### Example usage with Python {#python-example}
+### Example usage with Python {#python-graphql-example}
 Replace `<your_api_key_here>` with the generated API key.
 ```python
 import requests
@@ -46,7 +49,7 @@ response = requests.request("POST", url, headers=headers, data=payload)
 print(response.text)
 ```
 
-### Example usage with NodeJS {#nodejs-example}
+### Example usage with NodeJS {#nodejs-graphql-example}
 Replace `<your_api_key_here>` with the generated API key.
 
 ```javascript
@@ -82,3 +85,44 @@ axios(config)
 });
 ```
 
+## Connect from your application via REST {#connect-from-your-application-via-rest}
+### Example usage with Python {#python-rest-example}
+Replace `<your_api_key_here>` with the generated API key.
+
+```python
+import requests
+
+url = "https://api-alpha.solana.fm/api/v1/blocks?from=2022-01-01&to=2022-01-02"
+
+payload={}
+headers = {
+  'apikey': '<your_api_key_here>'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+### Example usage with NodeJS {#nodejs-rest-example}
+Replace `<your_api_key_here>` with the generated API key.
+
+```javascript
+var axios = require('axios');
+
+var config = {
+  method: 'get',
+  url: 'https://api-alpha.solana.fm/api/v1/blocks?from=2022-01-01&to=2022-01-02',
+  headers: { 
+    'apikey': '<your_api_key_here>'
+  }
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+```
