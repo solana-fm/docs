@@ -3,12 +3,19 @@ import clsx from 'clsx'
 import Layout from '@theme/Layout'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Head from '@docusaurus/Head'
 import styles from './index.module.css'
 import HomepageFeatures from '../components/HomepageFeatures'
 
 function HomepageHeader() {
   return (
     <section className={styles.features}>
+      <Head>
+        <meta property="og:image" content="https://res.cloudinary.com/materwelon/image/upload/v1645612610/SolanaFM/solanafm-logo_tuyrvv.png"/>
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+      </Head>
+
       <div className="container">
         <div className="row cards__container">
           <div className={clsx('col col--4', styles.feature)}>
