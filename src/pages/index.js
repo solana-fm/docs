@@ -11,6 +11,7 @@ function HomepageHeader() {
   return (
     <section className={styles.features}>
       <Head>
+        <meta name="twitter:card" content="summary"/>
         <meta property="twitter:image" content="https://res.cloudinary.com/materwelon/image/upload/v1645612610/SolanaFM/solanafm-logo_tuyrvv.png"/>
         <meta property="og:image" content="https://res.cloudinary.com/materwelon/image/upload/v1645612610/SolanaFM/solanafm-logo_tuyrvv.png"/>
         <meta property="og:image:width" content="512" />
