@@ -49,7 +49,9 @@ title: Step Finance
   - Routed = 1
 * **timestamp**: `<Datetime>`
 
-:::note fees are calculated by numerator/denominator and returns a percentage
+:::note
+Fees are calculated by numerator/denominator and returns a percentage
+::: 
 
 ### List all peg updates
 
