@@ -34,6 +34,7 @@ module.exports = {
         "apis/transaction",
         "apis/transaction-log",
         "apis/transaction-signature",
+        "apis/step-finance"
       ]
     },
     {
