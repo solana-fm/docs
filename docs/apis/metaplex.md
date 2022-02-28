@@ -50,7 +50,7 @@ Metaplex is a collection of tools, smart contracts, and more designed to make th
 * **auctionManagerStore**: `<String>` The account hash belonging to the store tagged to the auction manager.
 * **acceptPaymentAccount**: `<String>` The account hash belonging to that account which will store the winning bids.
 * **safetyDepositConfigAccount**: `<String>` The account hash belonging to the account that stores the safety deposit box configurations.
-* **potentialPayingTokenAccount**: `<String>` The account hash belonging to the account that is potentially making payment for the bid. See more:
+* **potentialPayingTokenAccount**: `<String>` The account hash belonging to the account that is potentially making payment for the bid. See more on participation NFTs: https://docs.metaplex.com/architecture/deep_dive/metaplex#types-of-token-sales
 * **newEdition**: `<String>` The account hash belonging to the account storing the data on the NFT print. See more: https://docs.metaplex.com/architecture/deep_dive/overview#edition
 * **masterEdition**: `<String>` The token hash of a master edition token. See more: https://docs.metaplex.com/about/terminology#master-edition
 * **newTokenMint**: `<String>` The token hash of a print. See more: https://docs.metaplex.com/about/terminology#print
