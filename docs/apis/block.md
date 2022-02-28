@@ -8,7 +8,7 @@ For more Information on Blocks: https://docs.solana.com/proposals/block-confirma
 ### Elements of Block
 * **number**: `<Float>` The number that uniquely identifies a block.
 * **hash**: `<String>` The hash that uniquely identifies a block.
-* **fetchstatus**: `<Int>` refers to the status of the block.
+* **fetchstatus**: `<Enum>` refers to the status of the block.
   - Fetching = 0
   - Fetch Failed = 1
   - Fetched = 2

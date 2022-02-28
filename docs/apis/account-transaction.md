@@ -55,48 +55,6 @@ https://api-alpha.solana.fm/api/v1/account-transactions?from=2022-01-01&to=2022-
 ]
 ```
 
-### Retrieve account transactions by a specific transaction
-
-This query takes in the following parameters and returns all accounts involved in a specified transaction in the specified time range.
-
-#### ** Parameters ** :
-
-- **transactionHash**: `<String>` The hash that uniquely identifies an account a transaction
-- **from**: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
-- **to**: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
-- **paging**: (Optional) `<int>`
-  - page: `<int>` Start of Page
-  - limit: `<int>` Number of records shown per page
-
-#### Sample query
-```
-https://api-alpha.solana.fm/api/v1/account-transactions/transactions/5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez?from=2022-01-01&to=2022-01-02
-```
-#### Sample returned results
-```
-[
-    {
-        "transactionHash": "5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez",
-        "account": "C93eFMEWACgFkqc3QjaY3UgeY8reFTcDh8SrHy7rwGzL",
-        "role": 0,
-        "timestamp": "2022-01-01T16:00:00Z"
-    },
-    {
-        "transactionHash": "5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez",
-        "account": "DzpARSggzEgNc2HLdrMEguSf9KGPh5RG1NMBqNnF8ZuU",
-        "role": 0,
-        "timestamp": "2022-01-01T16:00:00Z"
-    },
-    {
-        "transactionHash": "5u6rWLd5cfEioX14rdchPEBKUmxThziAKxbyadXU8nZUbL9VQqdMsX1H4Qk3oSRJZZipSToz3r6W5WpkK9H9i8Ez",
-        "account": "BVktiXyU9xYQeSKbicGRa7MCuzQrUzY5Euxe5qa3mhuW",
-        "role": 0,
-        "timestamp": "2022-01-01T16:00:00Z"
-    },
-    ...
-]
-```
-
 ### Retrieves account transactions by a specific account
 
 This query takes in the following parameters and returns all transactions involving a specified account in the specified time range.

@@ -26,6 +26,7 @@ module.exports = {
         "apis/block",
         "apis/block-rewards",
         "apis/instruction",
+        "apis/native-ata",
         "apis/native-stake",
         "apis/native-vote",
         "apis/native-token",
@@ -34,7 +35,9 @@ module.exports = {
         "apis/transaction",
         "apis/transaction-log",
         "apis/transaction-signature",
-        "apis/step-finance"
+        "apis/step-finance",
+        "apis/metaplex"
+
       ]
     },
     {
