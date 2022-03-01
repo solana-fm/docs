@@ -286,7 +286,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api-alpha.solana.fm/api/v1/programs/metaplex/ended-auctions?from=2021-10-06T00:00:00Z&to=2021-10-07T00:00:00Z
+https://api-alpha.solana.fm/api/v1/programs/metaplex/auctions-ended?from=2021-10-06T00:00:00Z&to=2021-10-07T00:00:00Z
 ```
 #### Sample returned results
 ```
@@ -353,7 +353,7 @@ This query takes in the following parameters and returns the transactions involv
 
 #### Sample query
 ```
-https://api-alpha.solana.fm/api/v1/programs/metaplex/auction-started-auctions?from=2021-10-06T00:00:00Z&to=2021-10-07T00:00:00Z
+https://api-alpha.solana.fm/api/v1/programs/metaplex/started-inactive-auctions?from=2021-10-06T00:00:00Z&to=2021-10-07T00:00:00Z
 ```
 #### Sample returned results
 ```
