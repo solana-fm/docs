@@ -49,7 +49,9 @@ title: Step Finance
   - Routed = 1
 * **timestamp**: `<Datetime>`
 
-:::note fees are calculated by numerator/denominator and returns a percentage
+:::note
+Fees are calculated by numerator/denominator and returns a percentage
+::: 
 
 ### List all peg updates
 
@@ -100,7 +102,7 @@ This query takes in the following parameters and returns transactions interactin
 
 #### Sample query
 ```
-https://api-alpha.solana.fm/api/v1/programs/step-finance/swap/peg-fee-updates?from=2022-02-14T00:00:00Z&to=2022-02-14T23:59:59Z
+https://api-alpha.solana.fm/api/v1/programs/step-finance/swap/peg-token-movements?from=2021-10-24T00:00:00Z&to=2021-10-24T23:59:59Z
 ```
 #### Sample returned results
 ```
@@ -190,7 +192,7 @@ This query takes in the following parameters and returns the transactions of swa
 
 #### Sample query
 ```
-https://api-alpha.solana.fm/api/v1/programs/step-finance/swap/pegs?from=2022-02-14T00:00:00Z&to=2022-02-15T00:00:00Z
+https://api-alpha.solana.fm/api/v1/programs/step-finance/swaps?from=2021-10-24T00:00:00Z&to=2021-10-25T00:00:00Z
 ```
 #### Sample returned results
 ```
