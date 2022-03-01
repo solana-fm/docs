@@ -23,20 +23,20 @@ Metaplex is a collection of tools, smart contracts, and more designed to make th
 * **store**: `<String>` The account hash belonging to the account storing the store details. This hash uniquely identifies a store in Metaplex.
 * **resource**: `<String>` This is an ID which uniquely identifies the object being auctioned off.
 * **bidderPayingAccount**: `<String>` The account hash belonging to the account which the bidder is using to place a bid.
-* **potSpl**: `<String>` whats this?
+* **potSpl**: `<String>` The ATA which stores the tokens for the pot account
 * **transferAuthority**: `<String>` The account hash belonging to the account with the authority to transfer ownership of a token.
 * **payer**: `<String>` The account hash belonging to the account that will sign the transaction.
-* **amount**: `<Int>` Amount of Solanas placed as a bid in Lamports.
+* **amount**: `<Int>` Amount of Solana placed as a bid in Lamports.
 * **winners**: `<Int>` The number of winners involved in an auction.
 * **endAuctionAt**: `<Int>` The lifespan of an auction.
 * **endAuctionGap**: `<Int>` The time after the previous where the auction ends. Most auctions do not use this so it is not uncommon to see a 0 value. See more: https://docs.metaplex.com/storefront/auction#gap-time
 * **priceFloor**: `<String>` Refers to the floor price of the token.
-* **tickSize**: `<String>` The amount of price increment for each bid. (Amount of Solanas in Lamports.)
+* **tickSize**: `<String>` The amount of price increment for each bid. (Amount of Solana in Lamports.)
 * **gapTickSizePercentage**: `<Int>` The minimum percentage increase each bid must make when bidding in the ending phase of an auction. This is used together with endAuctionGap.
 * **instantSalePrice**: `<String>` The price that will allow a bidder to buy the token instantly in Lamports.
 * **creator**: `<String>` The account hash belonging to the account that created the auction.
-* **revealedPrice**: `<String>` whats this
-* **revealedSalt**: `<String>` whats this
+* **revealedPrice**: `<String>` Inner instructions ( Yet to index, will come soon!)
+* **revealedSalt**: `<String>` Inner instructions ( Yet to index, will come soon!)
 * **newAuthority**: `<String>` The account hash belonging to the new account that has been given authority to update the auction.
 * **vault/vaultAccount**: `<String>` The account hash belonging to an account that stores safety deposit boxes.
 * **vaultProgram**: `<String>` The account hash belonging to the program that handles the vault events.
