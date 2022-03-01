@@ -5,47 +5,14 @@ Native token is a program that handles non-native transfers. Simply put, amounts
 
 ### Elements of Native Token
 * **transactionHash**: `<String>` The hash that uniquely identifies a transaction.
-* **ataAddress**: `<String>` The hash that uniquely identifies an associated token account.
-* **walletAddress**: `<String>` The hash that uniquely identifies a wallet.
-* **mint**: `<String>` The hash that uniquely identifies a token.
+* **delegationType**: `<Enum>` refers to the status of the block.
+  - Approved = 0
+  - Revoked = 1
+* **source**: `<String>`
+* **delegate**: `<String>`
+* **owner**: `<String>`
+* **amount** `<Int>`
 * **timestamp**: `<Datetime>`
-
-### List all ATA accounts
-
-This query takes in the following parameters and returns all native associated token account in the specified time range.
-
-#### ** Parameters ** :
-
-- **from**: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
-- **to**: `<DateTime>` in the format of YYYY-MM-DDTHH:MM:SSZ
-- **paging**: (Optional) `<int>`
-  - page: `<int>` Start of Page
-  - limit: `<int>` Number of records shown per page
-
-#### Sample query
-```
-https://api-alpha.solana.fm/api/v1/programs/associated-token-accounts?from=2022-01-01&to=2022-01-02
-```
-#### Sample returned results
-```
-[
-    {
-        "transactionHash": "3dEz5gcEjo43eiW6v3wz9T2k6T3y45UhJF5y4giw5JZAdGsSEBG2LaCWbXg8u77uzsqbSuXKUV9NXog5PiSPrpsk",
-        "ataAddress": "3pCwyzyvQVMvD5K2Y5yWQoWWkgfGVxvfs3r4UU2YfRkM",
-        "walletAddress": "3DeokdY21HSELRMSVyZnt1cBDZpSYf27veH2c4nBzTTd",
-        "mint": "G1qzNDmp3yxMQX1P6gZ647oBKaiVpt6Xhn98SpMB3ibQ",
-        "timestamp": "2021-12-31T23:56:11Z"
-    },
-    {
-        "transactionHash": "2pFjWCSes9q7wB13Z4xG3wjcggnKuj9eWu4s1pakmccnFtxS6CNUebsphhaqyJgxRzRfJZiSuniGvLLGmkqXGSCK",
-        "ataAddress": "Gh8NRw6SjsujFGcgveUJikCDBsYGFeBWNQhRSuBpEHQB",
-        "walletAddress": "ZcEbNxPqom2sHJJYBdxVdZpANgXD8jcoRFBvCoApq7p",
-        "mint": "cqNTpypmbwghrf1G9VGvSENcw7M7wGSQ7JS8UTQWXwb",
-        "timestamp": "2021-12-31T23:56:11Z"
-    },
-    ...
-]
-```
 
 ### List all mint delegations
 
