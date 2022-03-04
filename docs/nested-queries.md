@@ -479,3 +479,57 @@ query {
           "transactionSignatures": []
         }
 ```
+
+## Transaction Signature
+Elements of transaction signature are inner joined with other tables via a "from" and "to" timestamp together with a transaction_hash
+
+### Tables that inner joins with Transaction Signature
+1. account-input
+2. account-transaction 
+3. account-instruction 
+4. instruction
+5. transaction
+6. transaction-log
+
+#### Example 
+```
+query {
+    solana {
+    transactionSignatures {
+      signature
+      timestamp
+      instructions {
+        txInstructionId
+        instructionTypeId
+        transactionHash
+        program
+        data
+        parentIndex
+        timestamp
+      }
+    }
+    }
+}
+```
+
+
+#### Result 
+```
+{
+  "data": {
+    "solana": {
+      "transactionSignatures": [
+        {
+          "signature": "mNYPrHkKHoo6Gg7V4xGjaAz9W8KHGZeJAt6CSLnBvqwe9MVEjMFstKGNdB4shdsTyvC9mjq1SLcXCESDS2N2Sd6",
+          "timestamp": "2022-03-04T15:21:17.000Z",
+          "instructions": [
+            {
+              "txInstructionId": 0,
+              "instructionTypeId": 0,
+              "transactionHash": "38KZ6oV23SKYc5ejxGYRcFaSGtjCkVfVZEQKwZp6A56bEJ41snTZ4v4q5bunUfvLZ4jqHySovx3whnuzWdmrwq8q",
+              "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+              "data": "3s3fNbv94mju",
+              "parentIndex": 2,
+              "timestamp": "2022-03-04T15:21:17.000Z"
+            },
+```
