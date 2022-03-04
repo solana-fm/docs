@@ -61,7 +61,7 @@ Elements of account inputs are inner joined with other tables via a "from" and "
 1. transaction_hash
 2. account_hash 
 
-### Tables that inner joins with Account Input 
+### Tables that inner joins with Account Instruction 
 1. account-input
   - Joined via account_hash & timestamp 
 2. account-transaction 
@@ -103,3 +103,5 @@ query {
 ```
 
 ```
+
+
