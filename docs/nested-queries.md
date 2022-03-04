@@ -227,3 +227,118 @@ query {
             },
 ```
 
+## Block Rewards
+Elements of block rewards are inner joined with other tables via a "from" and "to" timestamp together with account_hash
+
+### Tables that inner joins with Block Rewards
+1. account-instruction
+  - Joined via account_hash & timestamp 
+
+#### Example 
+```
+query {
+    solana {
+       blockRewards {
+         account
+         hash
+         rewardType
+         amount
+         postBalance
+         timestamp
+        accountInstructions {
+          txInstructionId
+          transactionHash
+          parentIndex
+          account
+          index
+          timestamp
+        }
+       }
+    }
+}
+
+```
+
+
+#### Result 
+```
+{
+  "data": {
+    "solana": {
+      "blockRewards": [
+        {
+          "account": "XkCriyrNwS3G4rzAXtG5B1nnvb5Ka1JtCku93VqeKAr",
+          "hash": "5FhHfUvMu1Y8Pm6LDB1iQJXz8mYF2uur1cQpbwMJ2i5",
+          "rewardType": "RENT",
+          "amount": 334,
+          "postBalance": 4023371849772,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "accountInstructions": [
+            {
+              "txInstructionId": 0,
+              "transactionHash": "2EX8EXvFjNcn2BXYt2EDumGAi6eUg23HHAKcfF7evdWmJjUcg4Nt1Vb6bWyBhyP3Hof4y5tNcxCwphjR3uXXHnjJ",
+              "parentIndex": -1,
+              "account": "XkCriyrNwS3G4rzAXtG5B1nnvb5Ka1JtCku93VqeKAr",
+              "index": 3,
+              "timestamp": "2022-03-04T15:03:20.000Z"
+            },
+            {
+              "txInstructionId": 0,
+              "transactionHash": "3i4rAUNFgaEGNofftqdA244v5AP225FDHU4ygmcc8g67gAwJDP7h9ykVNmktTnff6x7Ch3GCNTR6F14y1sCq4Yu6",
+              "parentIndex": -1,
+              "account": "XkCriyrNwS3G4rzAXtG5B1nnvb5Ka1JtCku93VqeKAr",
+              "index": 3,
+              "timestamp": "2022-03-04T15:03:20.000Z"
+            }
+          ]
+        },
+```
+## Account Transaction 
+Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
+1. transaction_hash
+2. account_hash 
+
+### Tables that inner joins with Account Transaction 
+1. account-input
+  - Joined via account_hash & timestamp 
+2. account-instruction
+- Joined via account_hash & timestamp 
+3. transaction
+- Joined via transaction_hash & timestamp 
+4. transaction-signature
+- Joined via transaction_hash & timestamp 
+5. transaction-log 
+- Joined via transaction_hash & timestamp 
+6. instruction
+- Joined via transaction_hash & timestamp 
+
+#### Example 
+```
+query {
+    solana {
+        accountTransactions {
+          transactionHash
+          account
+          role
+          timestamp
+          instructions {
+            txInstructionId
+            instructionTypeId
+            transactionHash
+            program
+            data
+            parentIndex
+            timestamp
+          }
+        }
+    }
+}
+
+```
+
+
+#### Result 
+```
+
+```
+
