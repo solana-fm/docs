@@ -296,7 +296,7 @@ query {
 ## Instructions
 Elements of instructions are inner joined with other tables via a "from" and "to" timestamp together with eiher a transaction_hash
 
-### Tables that inner joins with Account Transaction 
+### Tables that inner joins with Instructions
 1. account-input
 2. account-instruction
 3. account-transaction
@@ -358,5 +358,72 @@ query {
             }
           ]
         },
+```
+
+## Transaction
+
+Elements of transaction are inner joined with other tables via a "from" and "to" timestamp together with transaction_hash
+
+
+### Tables that inner joins with Transaction
+1. account-instructiom
+2. account-transaction 
+3. instruction
+4. transaction-signature
+5. transaction-log 
+
+#### Example 
+```
+query {
+    solana {
+     transactions {
+       block
+       status
+       fee
+       timestamp
+      transactionSignatures {
+        signature
+        timestamp
+      }
+     }
+    }
+}
+```
+
+
+#### Result 
+```
+{
+  "data": {
+    "solana": {
+      "transactions": [
+        {
+          "block": 123455135,
+          "status": "INSTRUCTION_ERROR",
+          "fee": 5000,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": []
+        },
+        {
+          "block": 123455135,
+          "status": "INSTRUCTION_ERROR",
+          "fee": 5000,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": []
+        },
+        {
+          "block": 123455135,
+          "status": "INSTRUCTION_ERROR",
+          "fee": 5000,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": []
+        },
+        {
+          "block": 123455135,
+          "status": "INSTRUCTION_ERROR",
+          "fee": 5000,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": []
+        }
 ```
 
