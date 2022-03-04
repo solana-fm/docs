@@ -427,3 +427,55 @@ query {
         }
 ```
 
+## Transaction Log
+Elements of transaction log are inner joined with other tables via a "from" and "to" timestamp together with a transaction_hash
+
+### Tables that inner joins with Transaction Log
+1. account-input
+2. account-transaction 
+3. account-instruction 
+4. instruction
+5. transaction
+6. transaction-signature 
+
+#### Example 
+```
+query {
+    solana {
+     transactionLogs {
+       transactionHash
+       line
+       data
+       timestamp
+      transactionSignatures {
+        signature
+        timestamp
+      }
+     }
+    }
+}
+```
+
+
+#### Result 
+```
+ {
+          "transactionHash": "3huPMwcoN3ncs1u3EobpFWXucCVkxeoh87mes3gN3RnmK5fSJrNSbPoPWWQfFPo1CBQwRuRFAsEa1efJGxFyFD3r",
+          "line": 0,
+          "data": "Program Memo1UhkJRfHyvLMcVucJwxXeuD728EqVDDwQDxFMNo invoke [1]",
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": [
+            {
+              "signature": "v4EM2AZbWj3uBRPYyGuk17FNtWGtVAyj7HaTJzRodwJLXn5BbKiKFYunF46v5eeDXJWdm7PMDwZkCxegUJJ3ARS",
+              "timestamp": "2022-03-04T15:03:20.000Z"
+            }
+          ]
+        },
+        {
+          "transactionHash": "4dVgsoK7TuoikA4ZA9NEASV5JU9b4yJL7fpdF5WBNdhKYdN4Vjqo3wmd8yW21kBNYW5BprMMRPNsqkr9QKaeYkYj",
+          "line": 0,
+          "data": "Program Vote111111111111111111111111111111111111111 invoke [1]",
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionSignatures": []
+        }
+```
