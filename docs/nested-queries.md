@@ -14,11 +14,17 @@ Elements of account inputs are inner joined with other tables either via a "from
 
 ### Tables that inner joins with Account Input 
 1. account-instruction
+  - Joined via account_hash & timestamp 
 2. account-transaction 
+- Joined via account_hash & timestamp 
 3. transaction
+- Joined via transaction_hash & timestamp 
 4. transaction-signature
+- Joined via transaction_hash & timestamp 
 5. transaction-log 
+- Joined via transaction_hash & timestamp 
 6. transaction-instruction 
+- Joined via transaction_hash & timestamp 
 
 #### Example 
 ```
