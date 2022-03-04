@@ -293,44 +293,36 @@ query {
           ]
         },
 ```
-## Account Transaction 
-Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
-1. transaction_hash
-2. account_hash 
+## Instructions
+Elements of instructions are inner joined with other tables via a "from" and "to" timestamp together with eiher a transaction_hash
 
 ### Tables that inner joins with Account Transaction 
 1. account-input
-  - Joined via account_hash & timestamp 
 2. account-instruction
-- Joined via account_hash & timestamp 
-3. transaction
-- Joined via transaction_hash & timestamp 
+3. account-transaction
 4. transaction-signature
-- Joined via transaction_hash & timestamp 
 5. transaction-log 
-- Joined via transaction_hash & timestamp 
-6. instruction
-- Joined via transaction_hash & timestamp 
+6. transaction
 
 #### Example 
 ```
 query {
     solana {
-        accountTransactions {
+      instructions {
+        txInstructionId
+        instructionTypeId
+        transactionHash
+        program
+        data
+        parentIndex
+        timestamp
+        transactionLogs {
           transactionHash
-          account
-          role
+          line
+          data
           timestamp
-          instructions {
-            txInstructionId
-            instructionTypeId
-            transactionHash
-            program
-            data
-            parentIndex
-            timestamp
-          }
         }
+      }
     }
 }
 
@@ -339,6 +331,32 @@ query {
 
 #### Result 
 ```
-
+{
+  "data": {
+    "solana": {
+      "instructions": [
+        {
+          "txInstructionId": 0,
+          "instructionTypeId": 0,
+          "transactionHash": "2MWWRtLFggMezPqSvmAPJasYVkcNJSF874a1mWw1wDKwC7ArQdYuLd3TmFqXgCNAboKrcRpv4hmZk38yuQnJdrVy",
+          "program": "Vote111111111111111111111111111111111111111",
+          "data": "[2,0,0,0,5,0,0,0,0,0,0,0,145,198,91,7,0,0,0,0,146,198,91,7,0,0,0,0,147,198,91,7,0,0,0,0,148,198,91,7,0,0,0,0,149,198,91,7,0,0,0,0,115,10,39,250,35,210,26,70,5,116,231,116,253,127,198,121,10,63,111,247,88,18,163,155,13,97,153,76,23,48,59,229,1,51,42,34,98,0,0,0,0]",
+          "parentIndex": -1,
+          "timestamp": "2022-03-04T15:03:20.000Z",
+          "transactionLogs": [
+            {
+              "transactionHash": "2MWWRtLFggMezPqSvmAPJasYVkcNJSF874a1mWw1wDKwC7ArQdYuLd3TmFqXgCNAboKrcRpv4hmZk38yuQnJdrVy",
+              "line": 0,
+              "data": "Program Vote111111111111111111111111111111111111111 invoke [1]",
+              "timestamp": "2022-03-04T15:03:20.000Z"
+            },
+            {
+              "transactionHash": "2MWWRtLFggMezPqSvmAPJasYVkcNJSF874a1mWw1wDKwC7ArQdYuLd3TmFqXgCNAboKrcRpv4hmZk38yuQnJdrVy",
+              "line": 1,
+              "data": "Program Vote111111111111111111111111111111111111111 failed: custom program error: 0x0",
+              "timestamp": "2022-03-04T15:03:20.000Z"
+            }
+          ]
+        },
 ```
 
