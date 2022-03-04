@@ -8,7 +8,7 @@ Using SolanaFM, you can dive deeper into the Solana blockchain by navigating thr
 
 ## Account Input 
 
-Elements of account inputs are inner joined with other tables either via a "from" and "to" timestamp 
+Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
 1. transaction_hash
 2. account_hash 
 
@@ -52,4 +52,54 @@ query {
 #### Result 
 ```
 xxx
+
+```
+
+
+## Account Instruction 
+Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
+1. transaction_hash
+2. account_hash 
+
+### Tables that inner joins with Account Input 
+1. account-input
+  - Joined via account_hash & timestamp 
+2. account-transaction 
+- Joined via account_hash & timestamp 
+3. transaction-signature
+- Joined via transaction_hash & timestamp 
+4. transaction-log 
+- Joined via transaction_hash & timestamp 
+5. instruction 
+- Joined via transaction_hash & timestamp 
+6. transaction
+- Joined via transaction_hash & timestamp 
+
+#### Example 
+```
+query {
+    solana {
+      accountInstructions {
+        txInstructionId
+        transactionHash
+        parentIndex
+        account
+        index
+        timestamp
+        accountTransactions {
+          transactionHash
+          account
+          role
+          timestamp
+        }
+      }
+       }
+    }
+
+```
+
+
+#### Result 
+```
+
 ```
