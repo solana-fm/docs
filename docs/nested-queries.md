@@ -37,7 +37,7 @@ query {
          preBalance
          postBalance
          timestamp
-        accountTransactions {
+         accountTransactions {
           transactionHash
           account
           role
@@ -50,9 +50,31 @@ query {
 
 
 #### Result 
-```
-xxx
-
+```json
+{
+  "data": {
+    "solana": {
+      "accountInputs": [
+        {
+          "transactionHash": "5GdpbDGFEUnjM5GMUiX1dkyC5VBu6VsASbcrp53WyEVr7Ga4DxpRtDn5K6e9jpSdF3nDCGkjvfYGxJrjAYrhjk5Z",
+          "account": "A2SMhqA1kMTudVeAeWdzCaYYeG6Dts19iEZd4ZQQAcUm",
+          "tokenId": "EchesyfXePKdLtoiZSL8pBe8Myagyy8ZRqsACNCFGnvp",
+          "preBalance": 366926,
+          "postBalance": 366926,
+          "timestamp": "2022-03-07T13:20:02.000Z",
+          "accountTransactions": [
+            {
+              "transactionHash": "5GdpbDGFEUnjM5GMUiX1dkyC5VBu6VsASbcrp53WyEVr7Ga4DxpRtDn5K6e9jpSdF3nDCGkjvfYGxJrjAYrhjk5Z",
+              "account": "A2SMhqA1kMTudVeAeWdzCaYYeG6Dts19iEZd4ZQQAcUm",
+              "role": "NONE",
+              "timestamp": "2022-03-07T13:20:02.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 
@@ -78,30 +100,58 @@ Elements of account inputs are inner joined with other tables via a "from" and "
 #### Example 
 ```
 query {
-    solana {
-      accountInstructions {
-        txInstructionId
+  solana {
+    accountInstructions {
+      txInstructionId
+      transactionHash
+      parentIndex
+      account
+      index
+      timestamp
+      accountTransactions {
         transactionHash
-        parentIndex
         account
-        index
+        role
         timestamp
-        accountTransactions {
-          transactionHash
-          account
-          role
-          timestamp
-        }
       }
-       }
     }
-
+  }
+}
 ```
 
 
 #### Result 
-```
-
+```json
+{
+  "data": {
+    "solana": {
+      "accountInstructions": [
+        {
+          "txInstructionId": 10,
+          "transactionHash": "EUBd36ttfv8p8WNE3qb4ExYNLf1zmnZPwmdU2ngCGTNHr2dRuEFCMvvhoBatfaPYuaVbZTtMd41AsCC58UD2MMc",
+          "parentIndex": -1,
+          "account": "9YYpVyE4x5PRF1FyjXJtfjo1z7cyH2vfEoX6d7weQZo",
+          "index": 0,
+          "timestamp": "2022-03-07T13:36:00.000Z",
+          "accountTransactions": [
+            {
+              "transactionHash": "EUBd36ttfv8p8WNE3qb4ExYNLf1zmnZPwmdU2ngCGTNHr2dRuEFCMvvhoBatfaPYuaVbZTtMd41AsCC58UD2MMc",
+              "account": "9YYpVyE4x5PRF1FyjXJtfjo1z7cyH2vfEoX6d7weQZo",
+              "role": "READ_ONLY",
+              "timestamp": "2022-03-07T13:36:00.000Z"
+            },
+            {
+              "transactionHash": "2DbadmvQEEs59toYFj82rVcWnd1rZotA1MMxzXbWw6pZa4DVdNSnAX5YnUE5UrvtzZznJDRyQkfqr8ueThUgxhC7",
+              "account": "9YYpVyE4x5PRF1FyjXJtfjo1z7cyH2vfEoX6d7weQZo",
+              "role": "READ_ONLY",
+              "timestamp": "2022-03-07T13:36:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 ## Account Transaction 
 Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
@@ -143,13 +193,45 @@ query {
         }
     }
 }
-
 ```
 
 
 #### Result 
-```
-
+```json
+{
+  "data": {
+    "solana": {
+      "accountTransactions": [
+        {
+          "transactionHash": "3Sj55E7ipPPda7BFk9dmfNUsQ3VUyv9MdR3QkoKetBCy3LRaJveU4MV4CpiNy91B8WajuheLmKpThRaqXiuGL1Qo",
+          "account": "HafEHQe422gNyTwW2mFAZVG7LpoC34rmFsRWhjeC1U9U",
+          "role": "NONE",
+          "timestamp": "2022-03-07T13:36:00.000Z",
+          "instructions": [
+            {
+              "txInstructionId": 1,
+              "instructionTypeId": 0,
+              "transactionHash": "3Sj55E7ipPPda7BFk9dmfNUsQ3VUyv9MdR3QkoKetBCy3LRaJveU4MV4CpiNy91B8WajuheLmKpThRaqXiuGL1Qo",
+              "program": "mv3ekLzLbnVPNxjSKvqBpU3ZeZXPQdEC3bp5MDEBG68",
+              "data": "[39,0,0,0,255]",
+              "parentIndex": -1,
+              "timestamp": "2022-03-07T13:36:00.000Z"
+            },
+            {
+              "txInstructionId": 5,
+              "instructionTypeId": 0,
+              "transactionHash": "3Sj55E7ipPPda7BFk9dmfNUsQ3VUyv9MdR3QkoKetBCy3LRaJveU4MV4CpiNy91B8WajuheLmKpThRaqXiuGL1Qo",
+              "program": "mv3ekLzLbnVPNxjSKvqBpU3ZeZXPQdEC3bp5MDEBG68",
+              "data": "[12,0,0,0,130,33,0,0,0,0,0,0,224,147,4,0,0,0,0,0,248,62,129,113,73,128,58,0,1,4,0]",
+              "parentIndex": -1,
+              "timestamp": "2022-03-07T13:36:00.000Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 ## Block 
 Elements of account inputs are inner joined with other tables via a "from" and "to" timestamp together with eiher a
@@ -196,7 +278,7 @@ query {
 
 
 #### Result 
-```
+```json
 {
   "data": {
     "solana": {
@@ -224,7 +306,13 @@ query {
               "amount": -13872,
               "postBalance": 1720224,
               "timestamp": "2022-03-04T14:44:55.000Z"
-            },
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Block Rewards
@@ -261,7 +349,7 @@ query {
 
 
 #### Result 
-```
+```json
 {
   "data": {
     "solana": {
@@ -291,7 +379,11 @@ query {
               "timestamp": "2022-03-04T15:03:20.000Z"
             }
           ]
-        },
+        }
+      ]
+    }
+  }
+}
 ```
 ## Instructions
 Elements of instructions are inner joined with other tables via a "from" and "to" timestamp together with eiher a transaction_hash
@@ -330,7 +422,7 @@ query {
 
 
 #### Result 
-```
+```json
 {
   "data": {
     "solana": {
@@ -357,7 +449,11 @@ query {
               "timestamp": "2022-03-04T15:03:20.000Z"
             }
           ]
-        },
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Transaction
@@ -392,7 +488,7 @@ query {
 
 
 #### Result 
-```
+```json
 {
   "data": {
     "solana": {
@@ -425,6 +521,10 @@ query {
           "timestamp": "2022-03-04T15:03:20.000Z",
           "transactionSignatures": []
         }
+      ]
+    }
+  }
+}
 ```
 
 ## Transaction Log
@@ -447,37 +547,40 @@ query {
        line
        data
        timestamp
-      transactionSignatures {
+       transactionSignatures {
         signature
         timestamp
-      }
-     }
+       }
     }
+  }
 }
 ```
 
 
 #### Result 
-```
- {
-          "transactionHash": "3huPMwcoN3ncs1u3EobpFWXucCVkxeoh87mes3gN3RnmK5fSJrNSbPoPWWQfFPo1CBQwRuRFAsEa1efJGxFyFD3r",
-          "line": 0,
-          "data": "Program Memo1UhkJRfHyvLMcVucJwxXeuD728EqVDDwQDxFMNo invoke [1]",
-          "timestamp": "2022-03-04T15:03:20.000Z",
-          "transactionSignatures": [
-            {
-              "signature": "v4EM2AZbWj3uBRPYyGuk17FNtWGtVAyj7HaTJzRodwJLXn5BbKiKFYunF46v5eeDXJWdm7PMDwZkCxegUJJ3ARS",
-              "timestamp": "2022-03-04T15:03:20.000Z"
-            }
-          ]
-        },
+```json
+{
+  "data": {
+    "solana": {
+      "transactionLogs": [
         {
-          "transactionHash": "4dVgsoK7TuoikA4ZA9NEASV5JU9b4yJL7fpdF5WBNdhKYdN4Vjqo3wmd8yW21kBNYW5BprMMRPNsqkr9QKaeYkYj",
+          "transactionHash": "5YCGJenVC5Z3J66ymJL8xAX73syYA4zFSHm8YQwEDRhNRAecp5jHjAMVqESAQiDJzcRya6KfaToSmNs85EcPR8bW",
           "line": 0,
           "data": "Program Vote111111111111111111111111111111111111111 invoke [1]",
-          "timestamp": "2022-03-04T15:03:20.000Z",
+          "timestamp": "2022-03-07T13:36:00.000Z",
+          "transactionSignatures": []
+        },
+        {
+          "transactionHash": "63V1d29Jpq4RSLJFyKg6qSX9adW8f7N5SuqcuSKiiYnsLhcGfqQmyZRUr4R5ssADbCez5A2XkQrsgcVJ4vCTjHgV",
+          "line": 0,
+          "data": "Program Vote111111111111111111111111111111111111111 invoke [1]",
+          "timestamp": "2022-03-07T13:36:00.000Z",
           "transactionSignatures": []
         }
+      ]
+    }
+  }
+}
 ```
 
 ## Transaction Signature
@@ -508,13 +611,13 @@ query {
         timestamp
       }
     }
-    }
+  }
 }
 ```
 
 
 #### Result 
-```
+```json
 {
   "data": {
     "solana": {
@@ -531,5 +634,11 @@ query {
               "data": "3s3fNbv94mju",
               "parentIndex": 2,
               "timestamp": "2022-03-04T15:21:17.000Z"
-            },
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
