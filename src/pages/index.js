@@ -33,7 +33,7 @@ function HomepageHeader() {
             </Link>
           </div>
           <div className={clsx('col col--4', styles.feature)}>
-            <Link className="navbar__link" to="https://discord.gg/TrRmqvG4">
+            <Link className="navbar__link" to="https://discord.gg/dGAjqRfESF">
               <div className="card">
                 <div className="card__header">
                   <h3>🙌 Join our Discord Community</h3>
